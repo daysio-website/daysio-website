@@ -155,7 +155,7 @@ export function ContactSection() {
                   <div className="text-muted-foreground">〒171-0022</div>
                   <div className="text-muted-foreground">東京都豊島区南池袋2-30-12 BITビル</div>
                   <div className="text-muted-foreground">TEL: 03-3985-9256</div>
-                  <div className="text-muted-foreground">FAX: 03-3982-7287</div>
+                  <div className="text-muted-foreground">FAX: 03-3985-9268</div>
                 </div>
               </div>
             </div>
