@@ -98,7 +98,7 @@ export function CompanySection() {
                       <br />
                       TEL: 03-3985-9256
                       <br />
-                      FAX: 03-3982-7287
+                      FAX: 03-3985-9268
                     </div>
                   </div>
                 </div>
