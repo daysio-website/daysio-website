@@ -129,10 +129,10 @@ export function ContactSection() {
 
           <div className="space-y-4">
             <div>
-              <h4 className="text-lg font-bold mb-3">本社アクセス</h4>
+              <h4 className="text-lg font-bold mb-3">池袋オフィスアクセス</h4>
               <div className="space-y-3">
                 <div className="text-muted-foreground">
-                  <div className="font-medium">本社所在地</div>
+                  <div className="font-medium">池袋オフィス所在地</div>
                   <div>東京都豊島区南池袋2-30-12 BITビル</div>
                 </div>
                 <Button asChild className="w-full bg-slate-800 hover:bg-slate-700">
@@ -151,7 +151,7 @@ export function ContactSection() {
               <h3 className="text-xl font-bold mb-4">お問い合わせ先</h3>
               <div className="space-y-4">
                 <div>
-                  <div className="font-medium">本社</div>
+                  <div className="font-medium">池袋オフィス</div>
                   <div className="text-muted-foreground">〒171-0022</div>
                   <div className="text-muted-foreground">東京都豊島区南池袋2-30-12 BITビル</div>
                   <div className="text-muted-foreground">TEL: 03-3985-9256</div>
