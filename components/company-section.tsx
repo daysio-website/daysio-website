@@ -1,5 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Hospital, RefreshCcw, Calendar, Clock } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card"
+import { Hospital, RefreshCcw, Calendar, Clock } from "lucide-react"
 
 export function CompanySection() {
   return (
@@ -13,7 +13,7 @@ export function CompanySection() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* 左：会社情報 */}
+          {/* 左カラム：会社情報 + 事業所 */}
           <div className="space-y-8 h-fit">
             <Card className="h-full">
               <CardContent className="p-6 h-full flex flex-col">
@@ -24,11 +24,7 @@ export function CompanySection() {
                     <div className="col-span-2">
                       株式会社DAYSIO
                       <div className="mt-3">
-                        <img
-                          src="/daysio-logo-company.png"
-                          alt="DAYSIO"
-                          className="h-8 w-auto object-contain"
-                        />
+                        <img src="/daysio-logo-company.png" alt="DAYSIO" className="h-8 w-auto object-contain" />
                       </div>
                     </div>
                   </div>
@@ -109,7 +105,7 @@ export function CompanySection() {
             </Card>
           </div>
 
-          {/* 右：実績などのカード */}
+          {/* 右カラム：実績などのカード */}
           <div className="flex flex-col">
             <div className="grid grid-cols-2 gap-6 h-full content-center">
               <Card className="text-center">
@@ -152,5 +148,5 @@ export function CompanySection() {
         </div>
       </div>
     </section>
-  );
+  )
 }
