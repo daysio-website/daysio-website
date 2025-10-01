@@ -1,5 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card"
-import { Hospital, RefreshCcw, Calendar, Clock } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card";
+import { Hospital, RefreshCcw, Calendar, Clock } from "lucide-react";
 
 export function CompanySection() {
   return (
@@ -13,6 +13,7 @@ export function CompanySection() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
+          {/* 左：会社情報 */}
           <div className="space-y-8 h-fit">
             <Card className="h-full">
               <CardContent className="p-6 h-full flex flex-col">
@@ -23,10 +24,15 @@ export function CompanySection() {
                     <div className="col-span-2">
                       株式会社DAYSIO
                       <div className="mt-3">
-                        <img src="/daysio-logo-company.png" alt="DAYSIO" className="h-8 w-auto object-contain" />
+                        <img
+                          src="/daysio-logo-company.png"
+                          alt="DAYSIO"
+                          className="h-8 w-auto object-contain"
+                        />
                       </div>
                     </div>
                   </div>
+
                   <div className="grid grid-cols-3 gap-4">
                     <div className="font-medium">親会社</div>
                     <div className="col-span-2">
@@ -49,14 +55,17 @@ export function CompanySection() {
                       </div>
                     </div>
                   </div>
+
                   <div className="grid grid-cols-3 gap-4">
                     <div className="font-medium">代表者</div>
                     <div className="col-span-2">代表取締役社長　山下 時彦</div>
                   </div>
+
                   <div className="grid grid-cols-3 gap-4">
                     <div className="font-medium">資本金</div>
                     <div className="col-span-2">5,000万円</div>
                   </div>
+
                   <div className="grid grid-cols-3 gap-4">
                     <div className="font-medium">事業内容</div>
                     <div className="col-span-2">健診システムの開発・運営</div>
@@ -65,39 +74,42 @@ export function CompanySection() {
               </CardContent>
             </Card>
 
-<Card className="h-full">
-  <CardContent className="p-6 h-full flex flex-col">
-    <h3 className="text-xl font-bold mb-4">事業所</h3>
-    <div className="space-y-6 flex-1">
-      {/* 本社 */}
-      <div>
-        <div className="font-medium mb-2">本社</div>
-        <div className="text-muted-foreground">
-          〒163-1435
-          <br />
-          東京都新宿区西新宿3-20-2 東京オペラシティタワー35F
-          <br />
-          TEL: 03-5333-6750
-        </div>
-      </div>
+            {/* 事業所 */}
+            <Card className="h-full">
+              <CardContent className="p-6 h-full flex flex-col">
+                <h3 className="text-xl font-bold mb-4">事業所</h3>
+                <div className="space-y-6 flex-1">
+                  {/* 本社 */}
+                  <div>
+                    <div className="font-medium mb-2">本社</div>
+                    <div className="text-muted-foreground">
+                      〒163-1435
+                      <br />
+                      東京都新宿区西新宿3-20-2 東京オペラシティタワー35F
+                      <br />
+                      TEL: 03-5333-6750
+                    </div>
+                  </div>
 
-      {/* 池袋オフィス */}
-      <div>
-        <div className="font-medium mb-2">池袋オフィス</div>
-        <div className="text-muted-foreground">
-          〒171-0022
-          <br />
-          東京都豊島区南池袋2-30-12 BITビル
-          <br />
-          TEL: 03-3985-9256
-          <br />
-          FAX: 03-3982-7287
-        </div>
-      </div>
-    </div>
-  </CardContent>
-</Card>
+                  {/* 池袋オフィス */}
+                  <div>
+                    <div className="font-medium mb-2">池袋オフィス</div>
+                    <div className="text-muted-foreground">
+                      〒171-0022
+                      <br />
+                      東京都豊島区南池袋2-30-12 BITビル
+                      <br />
+                      TEL: 03-3985-9256
+                      <br />
+                      FAX: 03-3982-7287
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
 
+          {/* 右：実績などのカード */}
           <div className="flex flex-col">
             <div className="grid grid-cols-2 gap-6 h-full content-center">
               <Card className="text-center">
@@ -107,6 +119,7 @@ export function CompanySection() {
                   <div className="text-base text-muted-foreground">導入医療施設</div>
                 </CardContent>
               </Card>
+
               <Card className="text-center">
                 <CardContent className="p-6 flex flex-col justify-center">
                   <RefreshCcw className="h-12 w-12 text-primary mx-auto mb-4" />
@@ -114,6 +127,7 @@ export function CompanySection() {
                   <div className="text-base text-muted-foreground">ご利用継続率</div>
                 </CardContent>
               </Card>
+
               <Card className="text-center">
                 <CardContent className="p-6 flex flex-col justify-center">
                   <Calendar className="h-12 w-12 text-primary mx-auto mb-4" />
@@ -121,6 +135,7 @@ export function CompanySection() {
                   <div className="text-base text-muted-foreground">サービス運営実績</div>
                 </CardContent>
               </Card>
+
               <Card className="text-center">
                 <CardContent className="p-6 flex flex-col justify-center">
                   <Clock className="h-12 w-12 text-primary mx-auto mb-4" />
@@ -129,6 +144,7 @@ export function CompanySection() {
                 </CardContent>
               </Card>
             </div>
+
             <div className="text-center mt-4">
               <p className="text-sm text-muted-foreground">2025年10月現在</p>
             </div>
@@ -136,5 +152,5 @@ export function CompanySection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
