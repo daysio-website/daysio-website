@@ -65,26 +65,38 @@ export function CompanySection() {
               </CardContent>
             </Card>
 
-            <Card className="h-full">
-              <CardContent className="p-6 h-full flex flex-col">
-                <h3 className="text-xl font-bold mb-4">事業所</h3>
-                <div className="space-y-4 flex-1">
-                  <div>
-                    <div className="font-medium mb-2">本社</div>
-                    <div className="text-muted-foreground">
-                      〒171-0022
-                      <br />
-                      東京都豊島区南池袋2-30-12 BITビル
-                      <br />
-                      TEL: 03-3985-9256
-                      <br />
-                      FAX: 03-3982-7287
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+<Card className="h-full">
+  <CardContent className="p-6 h-full flex flex-col">
+    <h3 className="text-xl font-bold mb-4">事業所</h3>
+    <div className="space-y-6 flex-1">
+      {/* 本社 */}
+      <div>
+        <div className="font-medium mb-2">本社</div>
+        <div className="text-muted-foreground">
+          〒163-1435
+          <br />
+          東京都新宿区西新宿3-20-2 東京オペラシティタワー35F
+          <br />
+          TEL: 03-5333-6750
+        </div>
+      </div>
+
+      {/* 池袋オフィス */}
+      <div>
+        <div className="font-medium mb-2">池袋オフィス</div>
+        <div className="text-muted-foreground">
+          〒171-0022
+          <br />
+          東京都豊島区南池袋2-30-12 BITビル
+          <br />
+          TEL: 03-3985-9256
+          <br />
+          FAX: 03-3982-7287
+        </div>
+      </div>
+    </div>
+  </CardContent>
+</Card>
 
           <div className="flex flex-col">
             <div className="grid grid-cols-2 gap-6 h-full content-center">
