@@ -58,7 +58,7 @@ ${formData.message || "なし"}
     `.trim()
 
     // メールアプリを開く
-    const mailtoLink = `mailto:sales@daysio.co.jp?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    const mailtoLink = `mailto:cloud_sales@daysio.co.jp?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
     window.open(mailtoLink)
 
     // フォームをリセット
