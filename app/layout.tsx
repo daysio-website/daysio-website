@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: "株式会社DAISIO - 健康診断システム",
   description: "医療機関向け次世代健康診断システムソリューション",
   generator: "v0.app",
+  icons: {
+    icon: "/favicon.ico",       // 通常のファビコン
+    shortcut: "/favicon.ico",   // ショートカット用
+    apple: "/favicon.png",      // iOS・Androidホーム画面用
+  },
 }
 
 export default function RootLayout({
@@ -18,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
