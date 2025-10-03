@@ -46,6 +46,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
+      <head>
+        {/* 構造化データ (Google 検索結果用) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "株式会社DAISIO",
+              "url": "https://www.daysio.co.jp/",
+              "logo": "https://www.daysio.co.jp/apple-touch-icon.png",
+            }),
+          }}
+        />
+        <meta name="application-name" content="株式会社DAISIO" />
+      </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable}`}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
