@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   description: "医療機関向け次世代健康診断システムソリューション",
   generator: "v0.app",
   icons: {
-    icon: "/favicon.ico",       // 通常のファビコン
-    shortcut: "/favicon.ico",   // ショートカット用
-    apple: "/favicon.png",      // iOS・Androidホーム画面用
+    icon: "/favicon.ico",              // 通常のファビコン
+    shortcut: "/favicon.ico",          // ショートカット用
+    apple: "/apple-touch-icon.png",    // iOS・Android ホーム画面用（180x180）
   },
   openGraph: {
     title: "株式会社DAISIO - 健康診断システム",
