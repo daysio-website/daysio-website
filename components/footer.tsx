@@ -69,7 +69,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
-          <p className="text-sm opacity-90">© 2024 株式会社DAYSIO. All rights reserved.</p>
+          <p className="text-sm opacity-90">© 2025 株式会社DAYSIO. All rights reserved.</p>
         </div>
       </div>
     </footer>
