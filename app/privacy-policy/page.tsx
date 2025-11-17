@@ -1,13 +1,9 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import Link from "next/link"
 import { ArrowLeft } from 'lucide-react'
 
 export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
 
@@ -87,15 +83,13 @@ export default function PrivacyPolicyPage() {
             </section>
 
             <div className="text-right mt-12">
-              <p className="text-muted-foreground">制定日：2024年10月1日</p>
+              <p className="text-muted-foreground">制定日：2025年10月1日</p>
               <p className="text-muted-foreground">株式会社DAYSIO</p>
             </div>
 
           </div>
         </div>
       </main>
-
-      <Footer />
     </div>
   )
 }
