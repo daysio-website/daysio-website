@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Menu } from "lucide-react"
+import { Menu } from 'lucide-react'
 import Link from "next/link"
 import Image from "next/image"
 
@@ -38,8 +38,10 @@ export function Header() {
               ログイン
             </a>
           </Button>
-          <Button asChild>
-            <Link href="/consultation">無料相談</Link>
+          <Button variant="outline" asChild>
+            <a href="https://www.daysio.co.jp/consultation" target="_blank" rel="noopener noreferrer">
+              無料相談
+            </a>
           </Button>
           <Button variant="ghost" size="icon" className="md:hidden">
             <Menu className="h-5 w-5" />

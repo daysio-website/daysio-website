@@ -171,7 +171,9 @@ export function ContactSection() {
                   className="w-full bg-blue-500 hover:bg-blue-600 text-white border-0"
                   asChild
                 >
-                  <Link href="/consultation">デモを申し込む</Link>
+                  <a href="https://www.daysio.co.jp/consultation" target="_blank" rel="noopener noreferrer">
+                    デモを申し込む
+                  </a>
                 </Button>
               </CardContent>
             </Card>

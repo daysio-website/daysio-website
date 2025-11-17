@@ -9,8 +9,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowLeft, Send } from 'lucide-react'
-import Link from "next/link"
+import { Send } from 'lucide-react'
 
 export default function ConsultationPage() {
   const [formData, setFormData] = useState({
@@ -77,15 +76,6 @@ ${formData.message || "なし"}
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
       <div className="container mx-auto px-4 py-8">
-        <div className="mb-8">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            トップページに戻る
-          </Link>
-        </div>
 
         <div className="max-w-2xl mx-auto">
           <Card>

@@ -1,7 +1,7 @@
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import Link from "next/link"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft } from 'lucide-react'
 
 export default function PrivacyPolicyPage() {
   return (
@@ -10,15 +10,6 @@ export default function PrivacyPolicyPage() {
 
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <div className="mb-8">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              トップページに戻る
-            </Link>
-          </div>
 
           <h1 className="text-4xl font-bold text-center mb-8 text-balance">プライバシーポリシー</h1>
 
@@ -100,15 +91,6 @@ export default function PrivacyPolicyPage() {
               <p className="text-muted-foreground">株式会社DAYSIO</p>
             </div>
 
-            <div className="text-center mt-12 pt-8 border-t">
-              <Link
-                href="/"
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
-              >
-                <ArrowLeft className="h-4 w-4" />
-                トップページに戻る
-              </Link>
-            </div>
           </div>
         </div>
       </main>

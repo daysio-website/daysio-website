@@ -60,7 +60,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/privacy-policy" className="hover:opacity-100 transition-opacity">
+                <a href="https://www.daysio.co.jp/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-opacity">
                   プライバシーポリシー
                 </a>
               </li>
