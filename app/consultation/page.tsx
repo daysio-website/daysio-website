@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowLeft, Send } from "lucide-react"
+import { ArrowLeft, Send } from 'lucide-react'
 import Link from "next/link"
 
 export default function ConsultationPage() {
@@ -58,7 +58,7 @@ ${formData.message || "なし"}
     `.trim()
 
     // メールアプリを開く
-    const mailtoLink = `mailto:cloud_sales@daysio.co.jp?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    const mailtoLink = `mailto:sales@daysio.co.jp?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
     window.open(mailtoLink)
 
     // フォームをリセット
@@ -123,7 +123,7 @@ ${formData.message || "なし"}
                       value={formData.company}
                       onChange={(e) => setFormData((prev) => ({ ...prev, company: e.target.value }))}
                       required
-                      placeholder="株式会社○○病院"
+                      placeholder="○○病院"
                       className="bg-white border-gray-300"
                     />
                   </div>

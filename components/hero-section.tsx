@@ -9,7 +9,7 @@ export function HeroSection() {
   const images = [
     { src: "/004.jpg", alt: "健診結果入力システムのインターフェイス" },
     { src: "/003.jpg", alt: "予約管理システムのインターフェイス" },
-    { src: "/105.jpg", alt: "検査項目設定システムのインターフェイス" },
+    { src: "/V105.jpg", alt: "検査項目設定システムのインターフェイス" },
     { src: "/103.jpg", alt: "受診者管理システムのインターフェイス" },
   ]
 

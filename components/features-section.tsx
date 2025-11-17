@@ -5,7 +5,7 @@ import { CheckCircle, Smartphone, Cloud, Lock, ChevronLeft, ChevronRight } from 
 import { useState } from "react"
 
 const features = [
-  "直感的なユーザーインターフェース",
+  "直感的なユーザーインターface",
   "モバイル対応(Googlechrome)",
   "クラウドベース",
   "低コストで導入が可能",
