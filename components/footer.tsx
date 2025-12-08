@@ -7,9 +7,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <a href="https://www.daysio.co.jp/" className="block">
-                <Image src="/daysio-logo-white.png" alt="DAYSIO" width={120} height={40} className="h-8 w-auto" />
-              </a>
+              <Image src="/daysio-logo-white.png" alt="DAYSIO" width={120} height={40} className="h-8 w-auto" />
             </div>
             <p className="text-sm opacity-90 text-pretty">
               医療機関の健康診断業務を革新する、次世代システムソリューション。
@@ -27,16 +25,6 @@ export function Footer() {
               <li>
                 <a href="#features" className="hover:opacity-100 transition-opacity">
                   医療現場に最適化された先進機能
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://www.daysio.co.jp/days-daidai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-bold text-white hover:opacity-80 transition-opacity"
-                >
-                  DAYS-Daidai
                 </a>
               </li>
             </ul>
@@ -72,12 +60,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="https://www.daysio.co.jp/privacy-policy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:opacity-100 transition-opacity"
-                >
+                <a href="https://www.daysio.co.jp/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-opacity">
                   プライバシーポリシー
                 </a>
               </li>
@@ -86,7 +69,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
-          <p className="text-sm opacity-90">© 2025 株式会社DAYSIO. All rights reserved.</p>
+          <p className="text-sm opacity-90">© 2024 株式会社DAYSIO. All rights reserved.</p>
         </div>
       </div>
     </footer>

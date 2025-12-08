@@ -7,9 +7,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center">
-          <a href="https://www.daysio.co.jp/" className="block">
-            <Image src="/daysio-logo.png" alt="DAYSIO" width={160} height={50} className="h-10 w-auto" />
-          </a>
+          <Image src="/daysio-logo.png" alt="DAYSIO" width={160} height={50} className="h-10 w-auto" />
         </div>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -30,14 +28,6 @@ export function Header() {
           </a>
           <a href="#news" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             お知らせ
-          </a>
-          <a
-            href="https://www.daysio.co.jp/days-daidai"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-bold text-[#1e3a5f] hover:opacity-80 transition-opacity"
-          >
-            DAYS-Daidai
           </a>
         </nav>
 
