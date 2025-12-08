@@ -7,7 +7,9 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <Image src="/daysio-logo-white.png" alt="DAYSIO" width={120} height={40} className="h-8 w-auto" />
+              <a href="https://www.daysio.co.jp/" className="block">
+                <Image src="/daysio-logo-white.png" alt="DAYSIO" width={120} height={40} className="h-8 w-auto" />
+              </a>
             </div>
             <p className="text-sm opacity-90 text-pretty">
               医療機関の健康診断業務を革新する、次世代システムソリューション。
@@ -60,7 +62,12 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://www.daysio.co.jp/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 transition-opacity">
+                <a
+                  href="https://www.daysio.co.jp/privacy-policy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-100 transition-opacity"
+                >
                   プライバシーポリシー
                 </a>
               </li>
