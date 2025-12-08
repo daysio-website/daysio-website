@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Menu } from 'lucide-react'
-import Link from "next/link"
+import { Menu } from "lucide-react"
 import Image from "next/image"
 
 export function Header() {
@@ -35,7 +34,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           <Button variant="outline" asChild>
             <a href="https://kenshin-cloud.com/mypage/login" target="_blank" rel="noopener noreferrer">
-              ログイン
+              会員ページログイン
             </a>
           </Button>
           <Button variant="outline" asChild>
