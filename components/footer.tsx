@@ -29,6 +29,16 @@ export function Footer() {
                   医療現場に最適化された先進機能
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://www.daysio.co.jp/days-daidai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-white hover:opacity-80 transition-opacity"
+                >
+                  DAYS-Daidai
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -76,7 +86,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
-          <p className="text-sm opacity-90">© 2024 株式会社DAYSIO. All rights reserved.</p>
+          <p className="text-sm opacity-90">© 2025 株式会社DAYSIO. All rights reserved.</p>
         </div>
       </div>
     </footer>

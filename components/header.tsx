@@ -31,6 +31,14 @@ export function Header() {
           <a href="#news" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             お知らせ
           </a>
+          <a
+            href="https://www.daysio.co.jp/days-daidai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-bold text-[#1e3a5f] hover:opacity-80 transition-opacity"
+          >
+            DAYS-Daidai
+          </a>
         </nav>
 
         <div className="flex items-center gap-4">
