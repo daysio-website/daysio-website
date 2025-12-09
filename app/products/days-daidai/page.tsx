@@ -152,8 +152,8 @@ export default function Home() {
             <div className="relative flex justify-center items-center">
               <img
                 src="/images/hero-medical-staff.png"
-                alt="医師と看護師がタブレットで健診データを確認"
-                className="w-3/4 rounded-xl border-4 border-[#4AA8C7]"
+                alt="医師と看護師と患者のイラスト - DAYS-Daidai健診クラウドシステム"
+                className="w-full max-w-lg"
               />
             </div>
           </div>

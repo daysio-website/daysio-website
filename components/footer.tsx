@@ -8,7 +8,13 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-2">
               <a href="https://www.daysio.co.jp/">
-                <Image src="/daysio-logo-white.png" alt="DAYSIO" width={120} height={40} className="h-8 w-auto" />
+                <Image
+                  src="/daysio-logo.png"
+                  alt="DAYSIO"
+                  width={120}
+                  height={40}
+                  className="h-8 w-auto brightness-0 invert"
+                />
               </a>
             </div>
             <p className="text-sm opacity-90 text-pretty">
