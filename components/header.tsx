@@ -8,7 +8,7 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center">
           <a href="https://www.daysio.co.jp/">
-            <Image src="/new-daysio-logo.png" alt="DAYSIO" width={160} height={50} className="h-10 w-auto" />
+            <Image src="/daysio-logo.png" alt="DAYSIO" width={160} height={50} className="h-10 w-auto" />
           </a>
         </div>
 
