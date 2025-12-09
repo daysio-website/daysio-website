@@ -31,15 +31,6 @@ export function Header() {
           <a href="#news" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             お知らせ
           </a>
-          <a
-            href="https://www.daysio.co.jp/products/days-daidai"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium hover:opacity-80 transition-opacity"
-            style={{ color: "#1e3a5f" }}
-          >
-            DAYS-Daidai
-          </a>
         </nav>
 
         <div className="flex items-center gap-4">

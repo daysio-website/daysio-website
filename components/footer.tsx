@@ -20,14 +20,6 @@ export function Footer() {
             <p className="text-sm opacity-90 text-pretty">
               医療機関の健康診断業務を革新する、次世代システムソリューション。
             </p>
-            <a
-              href="https://www.daysio.co.jp/products/days-daidai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-medium text-white hover:opacity-80 transition-opacity block"
-            >
-              DAYS-Daidai
-            </a>
           </div>
 
           <div>
