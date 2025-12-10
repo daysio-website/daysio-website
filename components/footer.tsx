@@ -36,9 +36,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/products/days-daidai" className="hover:opacity-100 transition-opacity text-white">
-                  LP
-                </Link>
+                <span className="opacity-90 text-white">LP</span>
               </li>
             </ul>
           </div>

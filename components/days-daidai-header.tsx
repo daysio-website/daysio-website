@@ -23,9 +23,11 @@ export function DaysDaidaiHeader() {
         <nav className="hidden md:flex items-center gap-8">
           <a
             href="/products/days-daidai#about"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+            onClick={(e) => {
+              e.preventDefault()
+              window.open("/products/days-daidai#about", "_blank", "noopener,noreferrer")
+            }}
+            className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
           >
             DAYS-Daidai-とは
           </a>
