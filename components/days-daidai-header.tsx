@@ -15,18 +15,20 @@ export function DaysDaidaiHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center">
-          <button onClick={() => window.open("/", "_blank")} className="cursor-pointer border-0 bg-transparent p-0">
+          <Link href="/" className="cursor-pointer">
             <Image src="/images/daysio-logo.png" alt="DAYSIO" width={160} height={50} className="h-10 w-auto" />
-          </button>
+          </Link>
         </div>
 
         <nav className="hidden md:flex items-center gap-8">
-          <Link
+          <a
             href="/products/days-daidai#about"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm font-medium text-foreground hover:text-primary transition-colors"
           >
             DAYS-Daidai-とは
-          </Link>
+          </a>
 
           <div
             className="relative"
