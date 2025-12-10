@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card"
 import { ArrowRight, Shield, Cloud, CheckCircle } from "lucide-react"
 import Link from "next/link"
 import DaysDaidaiHeader from "@/components/days-daidai-header"
-import Footer from "@/components/footer"
+import DaysDaidaiFooter from "@/components/days-daidai-footer"
 
 export default function DaysDaidaiPage() {
   const [showDropdown, setShowDropdown] = useState(false)
@@ -547,7 +547,7 @@ export default function DaysDaidaiPage() {
       </section>
 
       {/* Footer */}
-      <Footer />
+      <DaysDaidaiFooter />
     </div>
   )
 }

@@ -15,8 +15,8 @@ export function DaysDaidaiHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center">
-          <Link href="/">
-            <Image src="/daysio-logo.png" alt="DAYSIO" width={160} height={50} className="h-10 w-auto" />
+          <Link href="https://www.daysio.co.jp/products/days-daidai" target="_blank" rel="noopener noreferrer">
+            <Image src="/images/daysio-logo.png" alt="DAYSIO" width={160} height={50} className="h-10 w-auto" />
           </Link>
         </div>
 
@@ -127,11 +127,13 @@ export function DaysDaidaiHeader() {
         <div className="flex items-center gap-4">
           <Button variant="outline" asChild>
             <Link href="https://kenshin-cloud.com/mypage/login" target="_blank" rel="noopener noreferrer">
-              会員ページログイン
+              ログイン
             </Link>
           </Button>
           <Button variant="outline" asChild>
-            <Link href="/consultation">無料相談</Link>
+            <Link href="https://www.daysio.co.jp/consultation" target="_blank" rel="noopener noreferrer">
+              お問い合わせ
+            </Link>
           </Button>
           <Button variant="ghost" size="icon" className="md:hidden">
             <Menu className="h-5 w-5" />
