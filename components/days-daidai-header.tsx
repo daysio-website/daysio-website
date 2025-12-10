@@ -14,7 +14,7 @@ export function DaysDaidaiHeader() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <div className="flex items-center">
+        <div className="flex items-center gap-4">
           <Link href="/" className="cursor-pointer">
             <Image src="/images/daysio-logo.png" alt="DAYSIO" width={160} height={50} className="h-10 w-auto" />
           </Link>
@@ -22,9 +22,7 @@ export function DaysDaidaiHeader() {
 
         <nav className="hidden md:flex items-center gap-8">
           <Link
-            href="https://www.daysio.co.jp/products/days-daidai#about"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/products/days-daidai#about"
             className="text-sm font-medium text-foreground hover:text-primary transition-colors"
           >
             DAYS-Daidai-とは

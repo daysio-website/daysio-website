@@ -32,7 +32,9 @@ export function Header() {
             お知らせ
           </a>
           <a
-            href="/products/days-daidai"
+            href="https://www.daysio.co.jp/products/days-daidai"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm font-medium text-[#1e3a5f] hover:text-primary transition-colors"
           >
             DAYS-Daidai
