@@ -26,12 +26,6 @@ export function DaysDaidaiHeader() {
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
-            onClick={(e) => {
-              console.log("[v0] DAYS-Daidai link clicked", {
-                href: e.currentTarget.href,
-                target: e.currentTarget.target,
-              })
-            }}
           >
             DAYS-Daidai-とは
           </a>
