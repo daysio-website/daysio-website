@@ -18,54 +18,14 @@ import {
   JapaneseYen,
   FileCheck,
 } from "lucide-react"
-import Link from "next/link"
+import DaysDaidaiHeader from "@/components/days-daidai-header"
+import Footer from "@/components/footer"
 
 export default function PricingPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="border-b border-gray-200">
-        <div className="container mx-auto px-6 py-4">
-          <nav className="flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-[#0f172a] rounded flex items-center justify-center">
-                <span className="text-white font-bold text-sm">DD</span>
-              </div>
-              <span className="text-xl font-bold text-[#0f172a]">DAYS-Daidai-</span>
-            </Link>
-
-            <div className="hidden md:flex items-center gap-6 text-sm">
-              <a href="/#about" className="text-gray-600 hover:text-[#0f172a]">
-                DAYS-Daidai-とは
-              </a>
-              <a href="/pricing" className="text-gray-600 hover:text-[#0f172a]">
-                機能・料金
-              </a>
-              <a href="#" className="text-gray-600 hover:text-[#0f172a]">
-                自社関連製品
-              </a>
-              <a href="#" className="text-gray-600 hover:text-[#0f172a]">
-                他システム連携
-              </a>
-              <a href="#" className="text-gray-600 hover:text-[#0f172a]">
-                FAQ
-              </a>
-              <a href="#" className="text-gray-600 hover:text-[#0f172a]">
-                新着情報
-              </a>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <Button variant="ghost" className="text-gray-600">
-                ログイン
-              </Button>
-              <Link href="https://www.daysio.co.jp/consultation" target="_blank" rel="noopener noreferrer">
-                <Button className="bg-[#0f172a] hover:bg-[#1e293b] text-white">お問い合わせ</Button>
-              </Link>
-            </div>
-          </nav>
-        </div>
-      </header>
+      <DaysDaidaiHeader />
 
       {/* Hero Section */}
       <section className="bg-white py-16">
@@ -695,92 +655,7 @@ export default function PricingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#0f172a] text-white py-12">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-white rounded flex items-center justify-center">
-                  <span className="text-[#0f172a] font-bold text-sm">DD</span>
-                </div>
-                <span className="font-bold">DAYS-Daidai-</span>
-              </div>
-              <p className="text-sm text-gray-400">
-                医療機関の健診業務を
-                <br />
-                DX化でカンタン・正確・スマートに
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-bold mb-4">サービス</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-white">
-                    機能一覧
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    料金プラン
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    導入事例
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-bold mb-4">サポート</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-white">
-                    FAQ
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    お問い合わせ
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    使い方ガイド
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-bold mb-4">会社情報</h3>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li>
-                  <a href="#" className="hover:text-white">
-                    会社概要
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    プライバシーポリシー
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white">
-                    利用規約
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-700 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2025 DAYS-Daidai-. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

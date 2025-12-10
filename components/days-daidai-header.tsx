@@ -15,27 +15,30 @@ export function DaysDaidaiHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center">
-          <a href="https://www.daysio.co.jp/">
+          <Link href="/">
             <Image src="/daysio-logo.png" alt="DAYSIO" width={160} height={50} className="h-10 w-auto" />
-          </a>
+          </Link>
         </div>
 
         <nav className="hidden md:flex items-center gap-8">
-          <a href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+          <Link
+            href="/products/days-daidai#about"
+            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+          >
             DAYS-Daidai-とは
-          </a>
+          </Link>
 
           <div
             className="relative"
             onMouseEnter={() => setShowDropdown(true)}
             onMouseLeave={() => setShowDropdown(false)}
           >
-            <a
-              href="#features"
+            <Link
+              href="/products/days-daidai#features"
               className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
             >
               機能・料金
-            </a>
+            </Link>
             {showDropdown && (
               <div className="absolute top-full left-0 pt-2">
                 <div className="w-56 bg-white border border-gray-200 rounded-lg shadow-lg py-2">
@@ -55,12 +58,12 @@ export function DaysDaidaiHeader() {
             onMouseEnter={() => setShowProductsDropdown(true)}
             onMouseLeave={() => setShowProductsDropdown(false)}
           >
-            <a
-              href="#products"
+            <Link
+              href="/products/days-daidai#products"
               className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
             >
               自社関連製品
-            </a>
+            </Link>
             {showProductsDropdown && (
               <div className="absolute top-full left-0 pt-2">
                 <div className="w-56 bg-white border border-gray-200 rounded-lg shadow-lg py-2">
@@ -86,12 +89,12 @@ export function DaysDaidaiHeader() {
             onMouseEnter={() => setShowIntegrationDropdown(true)}
             onMouseLeave={() => setShowIntegrationDropdown(false)}
           >
-            <a
-              href="#integration"
+            <Link
+              href="/products/days-daidai#integration"
               className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
             >
               他システム連携
-            </a>
+            </Link>
             {showIntegrationDropdown && (
               <div className="absolute top-full left-0 pt-2">
                 <div className="w-56 bg-white border border-gray-200 rounded-lg shadow-lg py-2">
@@ -106,25 +109,29 @@ export function DaysDaidaiHeader() {
             )}
           </div>
 
-          <a href="#faq" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+          <Link
+            href="/products/days-daidai#faq"
+            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+          >
             FAQ
-          </a>
+          </Link>
 
-          <a href="#multilingual" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+          <Link
+            href="/products/days-daidai#multilingual"
+            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+          >
             多言語
-          </a>
+          </Link>
         </nav>
 
         <div className="flex items-center gap-4">
           <Button variant="outline" asChild>
-            <a href="https://kenshin-cloud.com/mypage/login" target="_blank" rel="noopener noreferrer">
+            <Link href="https://kenshin-cloud.com/mypage/login" target="_blank" rel="noopener noreferrer">
               会員ページログイン
-            </a>
+            </Link>
           </Button>
           <Button variant="outline" asChild>
-            <a href="https://www.daysio.co.jp/consultation" target="_blank" rel="noopener noreferrer">
-              無料相談
-            </a>
+            <Link href="/consultation">無料相談</Link>
           </Button>
           <Button variant="ghost" size="icon" className="md:hidden">
             <Menu className="h-5 w-5" />
