@@ -37,13 +37,15 @@ export function DaysDaidaiHeader() {
               機能・料金
             </a>
             {showDropdown && (
-              <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50 py-2">
-                <Link
-                  href="/pricing"
-                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0ea5e9] transition-colors"
-                >
-                  各プランの詳細はこちら
-                </Link>
+              <div className="absolute top-full left-0 pt-2">
+                <div className="w-56 bg-white border border-gray-200 rounded-lg shadow-lg py-2">
+                  <Link
+                    href="/pricing"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0ea5e9] transition-colors"
+                  >
+                    各プランの詳細はこちら
+                  </Link>
+                </div>
               </div>
             )}
           </div>
@@ -60,19 +62,21 @@ export function DaysDaidaiHeader() {
               自社関連製品
             </a>
             {showProductsDropdown && (
-              <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50 py-2">
-                <Link
-                  href="/products/kenshin-plus"
-                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0ea5e9] transition-colors"
-                >
-                  KenshinPlus
-                </Link>
-                <Link
-                  href="/products/nijiken-tracker"
-                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0ea5e9] transition-colors"
-                >
-                  NIJIKEN Tracker
-                </Link>
+              <div className="absolute top-full left-0 pt-2">
+                <div className="w-56 bg-white border border-gray-200 rounded-lg shadow-lg py-2">
+                  <Link
+                    href="/products/kenshin-plus"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0ea5e9] transition-colors"
+                  >
+                    KenshinPlus
+                  </Link>
+                  <Link
+                    href="/products/nijiken-tracker"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0ea5e9] transition-colors"
+                  >
+                    NIJIKEN Tracker
+                  </Link>
+                </div>
               </div>
             )}
           </div>
@@ -89,13 +93,15 @@ export function DaysDaidaiHeader() {
               他システム連携
             </a>
             {showIntegrationDropdown && (
-              <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50 py-2">
-                <Link
-                  href="/integrations"
-                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0ea5e9] transition-colors"
-                >
-                  連携イメージはこちら
-                </Link>
+              <div className="absolute top-full left-0 pt-2">
+                <div className="w-56 bg-white border border-gray-200 rounded-lg shadow-lg py-2">
+                  <Link
+                    href="/integrations"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0ea5e9] transition-colors"
+                  >
+                    連携イメージはこちら
+                  </Link>
+                </div>
               </div>
             )}
           </div>

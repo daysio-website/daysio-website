@@ -7,7 +7,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <a href="https://www.daysio.co.jp/">
+              <a href="/">
                 <Image src="/daysio-logo-white.png" alt="DAYSIO" width={120} height={40} className="h-8 w-auto" />
               </a>
             </div>
@@ -20,22 +20,17 @@ export function Footer() {
             <h4 className="font-bold mb-4">サービス</h4>
             <ul className="space-y-2 text-sm opacity-90">
               <li>
-                <a href="#services" className="hover:opacity-100 transition-opacity">
+                <a href="/#services" className="hover:opacity-100 transition-opacity">
                   包括的な健康診断ソリューション
                 </a>
               </li>
               <li>
-                <a href="#features" className="hover:opacity-100 transition-opacity">
+                <a href="/#features" className="hover:opacity-100 transition-opacity">
                   医療現場に最適化された先進機能
                 </a>
               </li>
               <li>
-                <a
-                  href="/products/days-daidai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:opacity-100 transition-opacity text-white"
-                >
+                <a href="/products/days-daidai" className="hover:opacity-100 transition-opacity text-white">
                   DAYS-Daidai
                 </a>
               </li>
@@ -46,7 +41,7 @@ export function Footer() {
             <h4 className="font-bold mb-4">導入事例</h4>
             <ul className="space-y-2 text-sm opacity-90">
               <li>
-                <a href="#testimonials" className="hover:opacity-100 transition-opacity">
+                <a href="/#testimonials" className="hover:opacity-100 transition-opacity">
                   導入医療施設からの声
                 </a>
               </li>
@@ -57,23 +52,23 @@ export function Footer() {
             <h4 className="font-bold mb-4">会社情報</h4>
             <ul className="space-y-2 text-sm opacity-90">
               <li>
-                <a href="#company" className="hover:opacity-100 transition-opacity">
+                <a href="/#company" className="hover:opacity-100 transition-opacity">
                   会社概要
                 </a>
               </li>
               <li>
-                <a href="#news" className="hover:opacity-100 transition-opacity">
+                <a href="/#news" className="hover:opacity-100 transition-opacity">
                   お知らせ
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:opacity-100 transition-opacity">
+                <a href="/consultation" className="hover:opacity-100 transition-opacity">
                   お問い合わせ
                 </a>
               </li>
               <li>
                 <a
-                  href="https://www.daysio.co.jp/privacy-policy"
+                  href="/privacy-policy"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:opacity-100 transition-opacity"
