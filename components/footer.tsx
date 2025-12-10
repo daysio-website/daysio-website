@@ -35,6 +35,11 @@ export function Footer() {
                   DAYS-Daidai
                 </Link>
               </li>
+              <li>
+                <Link href="/products/days-daidai" className="hover:opacity-100 transition-opacity text-white">
+                  LP
+                </Link>
+              </li>
             </ul>
           </div>
 
