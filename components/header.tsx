@@ -31,6 +31,12 @@ export function Header() {
           <a href="#news" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             お知らせ
           </a>
+          <a
+            href="/products/days-daidai"
+            className="text-sm font-medium text-[#1e3a5f] hover:text-primary transition-colors"
+          >
+            DAYS-Daidai
+          </a>
         </nav>
 
         <div className="flex items-center gap-4">
@@ -52,3 +58,5 @@ export function Header() {
     </header>
   )
 }
+
+export default Header

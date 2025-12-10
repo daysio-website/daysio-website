@@ -29,6 +29,16 @@ export function Footer() {
                   医療現場に最適化された先進機能
                 </a>
               </li>
+              <li>
+                <a
+                  href="/products/days-daidai"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-100 transition-opacity text-white"
+                >
+                  DAYS-Daidai
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -82,3 +92,5 @@ export function Footer() {
     </footer>
   )
 }
+
+export default Footer
