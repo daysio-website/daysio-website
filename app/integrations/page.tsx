@@ -1,10 +1,10 @@
-import Header from "@/components/header"
+import DaysDaidaiHeader from "@/components/days-daidai-header"
 import Footer from "@/components/footer"
 
 export default function IntegrationsPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Header />
+      <DaysDaidaiHeader />
 
       {/* Integration Video Section */}
       <section className="py-20 bg-white">

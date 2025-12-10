@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ArrowRight, Shield, Cloud, CheckCircle } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
+import DaysDaidaiHeader from "@/components/days-daidai-header"
+import Footer from "@/components/footer"
 
-export default function Home() {
-  // const latestNews = getNewsItems(5)
+export default function DaysDaidaiPage() {
   const [showDropdown, setShowDropdown] = useState(false)
   const [showProductsDropdown, setShowProductsDropdown] = useState(false)
   const [showIntegrationDropdown, setShowIntegrationDropdown] = useState(false)
@@ -28,104 +28,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="border-b border-gray-200">
-        <div className="container mx-auto px-6 py-4">
-          <nav className="flex items-center justify-between">
-            <div className="flex items-center">
-              <Image src="/images/daysio-logo.png" alt="DAYSIO" width={150} height={40} className="h-10 w-auto" />
-            </div>
-
-            <div className="hidden md:flex items-center gap-6 text-sm">
-              <a href="#about" className="text-gray-600 hover:text-[#0f172a]">
-                DAYS-Daidai-とは
-              </a>
-              <div
-                className="relative"
-                onMouseEnter={() => setShowDropdown(true)}
-                onMouseLeave={() => setShowDropdown(false)}
-              >
-                <a href="#features" className="text-gray-600 hover:text-[#0f172a] cursor-pointer">
-                  機能・料金
-                </a>
-                {showDropdown && (
-                  <div className="absolute top-full left-0 mt-0 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50 py-2">
-                    <Link
-                      href="/pricing"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0ea5e9] transition-colors"
-                    >
-                      各プランの詳細はこちら
-                    </Link>
-                  </div>
-                )}
-              </div>
-              <div
-                className="relative"
-                onMouseEnter={() => setShowProductsDropdown(true)}
-                onMouseLeave={() => setShowProductsDropdown(false)}
-              >
-                <a href="#products" className="text-gray-600 hover:text-[#0f172a] cursor-pointer">
-                  自社関連製品
-                </a>
-                {showProductsDropdown && (
-                  <div className="absolute top-full left-0 mt-0 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50 py-2">
-                    <Link
-                      href="/products/kenshin-plus"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0ea5e9] transition-colors"
-                    >
-                      KENSHIN Plus®
-                    </Link>
-                    <Link
-                      href="/products/nijiken-tracker"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0ea5e9] transition-colors"
-                    >
-                      NIJIKEN Tracker
-                    </Link>
-                  </div>
-                )}
-              </div>
-              <div
-                className="relative"
-                onMouseEnter={() => setShowIntegrationDropdown(true)}
-                onMouseLeave={() => setShowIntegrationDropdown(false)}
-              >
-                <a href="#integration" className="text-gray-600 hover:text-[#0f172a] cursor-pointer">
-                  他システム連携
-                </a>
-                {showIntegrationDropdown && (
-                  <div className="absolute top-full left-0 mt-0 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50 py-2">
-                    <Link
-                      href="/integrations"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0ea5e9] transition-colors"
-                    >
-                      連携イメージはこちら
-                    </Link>
-                  </div>
-                )}
-              </div>
-              {/* <a href="#faq" className="text-gray-600 hover:text-[#0f172a]">
-                FAQ
-              </a> */}
-              <a href="#multilingual" className="text-gray-600 hover:text-[#0f172a]">
-                多言語
-              </a>
-              {/* <a href="#news" className="text-gray-600 hover:text-[#0f172a]">
-                新着情報
-              </a> */}
-            </div>
-
-            <div className="flex items-center gap-4">
-              <Link href="https://kenshin-cloud.com/mypage/login" target="_blank" rel="noopener noreferrer">
-                <Button variant="ghost" className="text-gray-600">
-                  ログイン
-                </Button>
-              </Link>
-              <Link href="https://www.daysio.co.jp/consultation" target="_blank" rel="noopener noreferrer">
-                <Button className="bg-[#0f172a] hover:bg-[#1e293b] text-white">お問い合わせ</Button>
-              </Link>
-            </div>
-          </nav>
-        </div>
-      </header>
+      <DaysDaidaiHeader />
 
       {/* Hero Section */}
       <section id="about" className="bg-gradient-to-b from-gray-50 to-white py-20 scroll-mt-24">
@@ -644,94 +547,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-50 border-t border-gray-200 py-12">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="mb-4">
-                <Image src="/images/daysio-logo.png" alt="DAYSIO" width={150} height={40} className="h-10 w-auto" />
-              </div>
-              <p className="text-sm text-gray-600">
-                医療機関の健診業務を
-                <br />
-                DX化でカンタン・正確・スマートに
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-bold text-[#0f172a] mb-4">サービス</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>
-                  <Link href="#features" className="hover:text-[#0f172a]">
-                    機能・料金
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#products" className="hover:text-[#0f172a]">
-                    自社関連商品
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#integration" className="hover:text-[#0f172a]">
-                    他システム連携
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#multilingual" className="hover:text-[#0f172a]">
-                    多言語
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-bold text-[#0f172a] mb-4">サポート</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>
-                  <Link href="#faq" className="hover:text-[#0f172a]">
-                    FAQ
-                  </Link>
-                </li>
-                {/* <li>
-                  <Link href="#news" className="hover:text-[#0f172a]">
-                    新着情報
-                  </Link>
-                </li> */}
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-bold text-[#0f172a] mb-4">会社情報</h3>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li>
-                  <Link
-                    href="https://www.daysio.co.jp/#company"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-[#0f172a]"
-                  >
-                    会社概要
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="https://www.daysio.co.jp/privacy-policy"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-[#0f172a]"
-                  >
-                    プライバシーポリシー
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-            <p>&copy; 2025 DAYSIO. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

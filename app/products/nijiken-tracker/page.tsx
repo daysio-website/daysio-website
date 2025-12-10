@@ -2,13 +2,14 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
-import Header from "@/components/header"
+import DaysDaidaiHeader from "@/components/days-daidai-header"
 import Footer from "@/components/footer"
 
 export default function NijikenTrackerPage() {
   return (
     <div className="min-h-screen bg-white">
-      <Header />
+      {/* DaysDaidaiHeader */}
+      <DaysDaidaiHeader />
 
       {/* Breadcrumb */}
       <div className="bg-gray-50 border-b border-gray-200">
