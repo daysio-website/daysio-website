@@ -15,9 +15,9 @@ export function DaysDaidaiHeader() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center">
-          <Link href="https://www.daysio.co.jp/products/days-daidai" target="_blank" rel="noopener noreferrer">
+          <button onClick={() => window.open("/", "_blank")} className="cursor-pointer border-0 bg-transparent p-0">
             <Image src="/images/daysio-logo.png" alt="DAYSIO" width={160} height={50} className="h-10 w-auto" />
-          </Link>
+          </button>
         </div>
 
         <nav className="hidden md:flex items-center gap-8">
