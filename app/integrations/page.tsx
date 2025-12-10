@@ -1,5 +1,5 @@
 import DaysDaidaiHeader from "@/components/days-daidai-header"
-import Footer from "@/components/footer"
+import DaysDaidaiFooter from "@/components/days-daidai-footer"
 
 export default function IntegrationsPage() {
   return (
@@ -33,7 +33,7 @@ export default function IntegrationsPage() {
         </div>
       </section>
 
-      <Footer />
+      <DaysDaidaiFooter />
     </div>
   )
 }

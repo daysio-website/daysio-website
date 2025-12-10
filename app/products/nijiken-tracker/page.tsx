@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card"
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import DaysDaidaiHeader from "@/components/days-daidai-header"
-import Footer from "@/components/footer"
+import DaysDaidaiFooter from "@/components/days-daidai-footer"
 
 export default function NijikenTrackerPage() {
   return (
@@ -123,7 +123,7 @@ export default function NijikenTrackerPage() {
         </div>
       </section>
 
-      <Footer />
+      <DaysDaidaiFooter />
     </div>
   )
 }

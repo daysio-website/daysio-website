@@ -21,22 +21,22 @@ export function DaysDaidaiFooter() {
             <h3 className="font-bold text-[#0f172a] mb-4">サービス</h3>
             <ul className="space-y-2 text-sm text-gray-600">
               <li>
-                <Link href="/products/days-daidai#features" className="hover:text-[#0f172a]">
+                <Link href="/products/days-daidai" className="hover:text-[#0f172a]">
                   機能・料金
                 </Link>
               </li>
               <li>
-                <Link href="/products/days-daidai#products" className="hover:text-[#0f172a]">
+                <Link href="/products/days-daidai" className="hover:text-[#0f172a]">
                   自社関連商品
                 </Link>
               </li>
               <li>
-                <Link href="/products/days-daidai#integration" className="hover:text-[#0f172a]">
+                <Link href="/products/days-daidai" className="hover:text-[#0f172a]">
                   他システム連携
                 </Link>
               </li>
               <li>
-                <Link href="/products/days-daidai#multilingual" className="hover:text-[#0f172a]">
+                <Link href="/products/days-daidai" className="hover:text-[#0f172a]">
                   多言語
                 </Link>
               </li>

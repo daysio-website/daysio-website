@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card"
 import { ArrowLeft, WifiOff, Settings, Globe } from "lucide-react"
 import Link from "next/link"
 import DaysDaidaiHeader from "@/components/days-daidai-header"
-import Footer from "@/components/footer"
+import DaysDaidaiFooter from "@/components/days-daidai-footer"
 
 export default function KenshinPlusPage() {
   return (
@@ -165,7 +165,7 @@ export default function KenshinPlusPage() {
         </div>
       </section>
 
-      <Footer />
+      <DaysDaidaiFooter />
     </div>
   )
 }

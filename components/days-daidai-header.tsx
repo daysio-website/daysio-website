@@ -21,14 +21,14 @@ export function DaysDaidaiHeader() {
         </div>
 
         <nav className="hidden md:flex items-center gap-8">
-          <a
+          <Link
             href="https://www.daysio.co.jp/products/days-daidai#about"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
+            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
           >
             DAYS-Daidai-とは
-          </a>
+          </Link>
 
           <div
             className="relative"

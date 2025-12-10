@@ -19,7 +19,7 @@ import {
   FileCheck,
 } from "lucide-react"
 import DaysDaidaiHeader from "@/components/days-daidai-header"
-import Footer from "@/components/footer"
+import DaysDaidaiFooter from "@/components/days-daidai-footer"
 
 export default function PricingPage() {
   return (
@@ -655,7 +655,7 @@ export default function PricingPage() {
       </section>
 
       {/* Footer */}
-      <Footer />
+      <DaysDaidaiFooter />
     </div>
   )
 }

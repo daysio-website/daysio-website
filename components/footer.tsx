@@ -59,11 +59,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/" className="hover:opacity-100 transition-opacity">
-                  お知らせ
-                </Link>
-              </li>
-              <li>
                 <Link href="/consultation" className="hover:opacity-100 transition-opacity">
                   お問い合わせ
                 </Link>

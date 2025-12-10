@@ -2,8 +2,8 @@
 
 import { ArrowLeft } from "lucide-react"
 import Link from "next/link"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
+import DaysDaidaiHeader from "@/components/days-daidai-header"
+import DaysDaidaiFooter from "@/components/days-daidai-footer"
 
 export default function IntegrationFAQ() {
   const faqs = [
@@ -50,7 +50,7 @@ export default function IntegrationFAQ() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
+      <DaysDaidaiHeader />
 
       <main className="max-w-7xl mx-auto px-6 py-12">
         <Link href="/products/days-daidai#faq" className="inline-flex items-center text-[#0ea5e9] hover:underline mb-8">
@@ -82,7 +82,7 @@ export default function IntegrationFAQ() {
         </div>
       </main>
 
-      <Footer />
+      <DaysDaidaiFooter />
     </div>
   )
 }
