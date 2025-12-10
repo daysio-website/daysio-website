@@ -35,9 +35,7 @@ export function Footer() {
                   DAYS-Daidai
                 </Link>
               </li>
-              <li>
-                <span className="opacity-90 text-white">LP</span>
-              </li>
+              <li className="opacity-90 text-white">LP</li>
             </ul>
           </div>
 
