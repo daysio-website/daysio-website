@@ -1,9 +1,16 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Menu } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { useState } from "react"
 
 export function DaysDaidaiHeader() {
+  const [showDropdown, setShowDropdown] = useState(false)
+  const [showProductsDropdown, setShowProductsDropdown] = useState(false)
+  const [showIntegrationDropdown, setShowIntegrationDropdown] = useState(false)
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
@@ -14,33 +21,92 @@ export function DaysDaidaiHeader() {
         </div>
 
         <nav className="hidden md:flex items-center gap-8">
-          <Link
-            href="/products/days-daidai"
-            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
-          >
+          <a href="#about" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             DAYS-Daidai-とは
-          </Link>
-          <Link href="/pricing" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-            機能・料金
-          </Link>
-          <Link
-            href="/products/days-daidai#related-products"
-            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+          </a>
+
+          <div
+            className="relative"
+            onMouseEnter={() => setShowDropdown(true)}
+            onMouseLeave={() => setShowDropdown(false)}
           >
-            自社関連製品
-          </Link>
-          <Link
-            href="/integrations"
-            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+            <a
+              href="#features"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
+            >
+              機能・料金
+            </a>
+            {showDropdown && (
+              <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50 py-2">
+                <Link
+                  href="/pricing"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0ea5e9] transition-colors"
+                >
+                  各プランの詳細はこちら
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <div
+            className="relative"
+            onMouseEnter={() => setShowProductsDropdown(true)}
+            onMouseLeave={() => setShowProductsDropdown(false)}
           >
-            他システム連携
-          </Link>
-          <Link
-            href="/products/days-daidai#multilingual"
-            className="text-sm font-medium text-foreground hover:text-primary transition-colors"
+            <a
+              href="#products"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
+            >
+              自社関連製品
+            </a>
+            {showProductsDropdown && (
+              <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50 py-2">
+                <Link
+                  href="/products/kenshin-plus"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0ea5e9] transition-colors"
+                >
+                  KenshinPlus
+                </Link>
+                <Link
+                  href="/products/nijiken-tracker"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0ea5e9] transition-colors"
+                >
+                  NIJIKEN Tracker
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <div
+            className="relative"
+            onMouseEnter={() => setShowIntegrationDropdown(true)}
+            onMouseLeave={() => setShowIntegrationDropdown(false)}
           >
+            <a
+              href="#integration"
+              className="text-sm font-medium text-foreground hover:text-primary transition-colors cursor-pointer"
+            >
+              他システム連携
+            </a>
+            {showIntegrationDropdown && (
+              <div className="absolute top-full left-0 mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50 py-2">
+                <Link
+                  href="/integrations"
+                  className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0ea5e9] transition-colors"
+                >
+                  連携イメージはこちら
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <a href="#faq" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
+            FAQ
+          </a>
+
+          <a href="#multilingual" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             多言語
-          </Link>
+          </a>
         </nav>
 
         <div className="flex items-center gap-4">
