@@ -1,23 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import {
-  Check,
-  FileText,
-  Users,
-  Building,
-  Sparkles,
-  FileBarChart,
-  Shield,
-  Headphones,
-  HelpCircle,
-  FileSpreadsheet,
-  Layers,
-  ImageIcon,
-  Download,
-  Upload,
-  JapaneseYen,
-  FileCheck,
-} from "lucide-react"
+import { Check } from "lucide-react"
 import DaysDaidaiHeader from "@/components/days-daidai-header"
 import DaysDaidaiFooter from "@/components/days-daidai-footer"
 
@@ -295,224 +278,12 @@ export default function PricingPage() {
         </div>
       </section>
 
-      {/* Feature Comparison */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-[#0f172a] mb-8 text-center">標準機能比較</h2>
-          <p className="text-center text-gray-600 mb-12">
-            各プランに含まれる主な機能を比較できます。
-            <br />
-            ご利用目的に応じて、最適なプランをお選びください。
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {/* Free Plan Features */}
-            <Card className="p-6 bg-[#f5f0e8] border-none">
-              <h3 className="text-xl font-bold text-[#0f172a] mb-6 text-center">非課金フリープラン</h3>
-
-              <div className="space-y-6">
-                <div className="text-center">
-                  <FileText className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">予約登録</p>
-                </div>
-
-                <div className="text-center">
-                  <Users className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">受診者登録</p>
-                </div>
-
-                <div className="text-center">
-                  <Building className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">団体登録</p>
-                </div>
-
-                <div className="text-center">
-                  <Sparkles className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">コース編集</p>
-                </div>
-
-                <div className="text-center">
-                  <FileBarChart className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">自動判定</p>
-                </div>
-
-                <div className="text-center">
-                  <FileText className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">健康診断結果報告書</p>
-                </div>
-
-                <div className="text-center">
-                  <HelpCircle className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">様式5号</p>
-                </div>
-
-                <div className="text-center">
-                  <ImageIcon className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">DAYS-Daidai-操作ガイドの閲覧</p>
-                </div>
-              </div>
-            </Card>
-
-            {/* Support Plan Features */}
-            <Card className="p-6 bg-[#d9eff9] border-none">
-              <h3 className="text-xl font-bold text-[#0f172a] mb-6 text-center">安心サポートプラン</h3>
-
-              <div className="space-y-6">
-                <div className="text-center">
-                  <FileText className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">予約登録</p>
-                </div>
-
-                <div className="text-center">
-                  <Users className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">受診者登録</p>
-                </div>
-
-                <div className="text-center">
-                  <Building className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">団体登録</p>
-                </div>
-
-                <div className="text-center">
-                  <Sparkles className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">コース編集</p>
-                </div>
-
-                <div className="text-center">
-                  <FileBarChart className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">自動判定</p>
-                </div>
-
-                <div className="text-center">
-                  <FileText className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">健康診断結果報告書</p>
-                </div>
-
-                <div className="text-center">
-                  <HelpCircle className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">様式5号</p>
-                </div>
-
-                <div className="text-center">
-                  <FileSpreadsheet className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">CSVデータ出力</p>
-                </div>
-
-                <div className="text-center">
-                  <Shield className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">契約登録</p>
-                </div>
-
-                <div className="text-center">
-                  <Layers className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">帳票一括処理</p>
-                </div>
-
-                <div className="text-center">
-                  <Headphones className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">サポートセンター</p>
-                </div>
-              </div>
-            </Card>
-
-            {/* Global Plan Features */}
-            <Card className="p-6 bg-[#b8e6e6] border-none">
-              <h3 className="text-xl font-bold text-[#0f172a] mb-6 text-center">グローバルプラン</h3>
-
-              <div className="space-y-6">
-                <div className="text-center">
-                  <FileText className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">予約登録</p>
-                </div>
-
-                <div className="text-center">
-                  <Users className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">受診者登録</p>
-                </div>
-
-                <div className="text-center">
-                  <Building className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">団体登録</p>
-                </div>
-
-                <div className="text-center">
-                  <Sparkles className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">コース編集</p>
-                </div>
-
-                <div className="text-center">
-                  <FileBarChart className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">自動判定</p>
-                </div>
-
-                <div className="text-center">
-                  <ImageIcon className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">画像付き結果報告書</p>
-                </div>
-
-                <div className="text-center">
-                  <FileText className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">健康診断結果報告書</p>
-                </div>
-
-                <div className="text-center">
-                  <HelpCircle className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">様式5号</p>
-                </div>
-
-                <div className="text-center">
-                  <FileSpreadsheet className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">CSVデータ出力</p>
-                </div>
-
-                <div className="text-center">
-                  <Shield className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">契約登録</p>
-                </div>
-
-                <div className="text-center">
-                  <Layers className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">帳票一括処理</p>
-                </div>
-
-                <div className="text-center">
-                  <Headphones className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">サポートセンター</p>
-                </div>
-
-                <div className="text-center">
-                  <Download className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">検診結果INP</p>
-                </div>
-
-                <div className="text-center">
-                  <Upload className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">検診結果EXP</p>
-                </div>
-
-                <div className="text-center">
-                  <JapaneseYen className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">会計</p>
-                  <p className="text-xs text-[#0f172a]">(領収書・請求書)</p>
-                </div>
-
-                <div className="text-center">
-                  <FileCheck className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">特定健康診察</p>
-                  <p className="text-xs text-[#0f172a]">請求XML作成</p>
-                </div>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* Options Pricing Table Section */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-[#0f172a] mb-8 text-center">オプション</h2>
           <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-            安心サポートプラン・グローバルプランでご利用いただける追加オプションです。
+            安心サポートプラン・グローバルプランでご利用いただける追加オプションです。※金額は税込です
           </p>
 
           <div className="max-w-6xl mx-auto">
@@ -653,6 +424,9 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 bg-gray-50">{/* FAQ content here */}</section>
 
       {/* Footer */}
       <DaysDaidaiFooter />
