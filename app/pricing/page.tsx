@@ -93,7 +93,10 @@ export default function PricingPage() {
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-gray-700">様式5号</span>
                   </div>
-                   <span className="text-sm text-gray-700">DAYS-Daidai-操作ガイドの閲覧</span>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">DAYS-Daidai-操作ガイドの閲覧</span>
+                  </div>
                 </div>
 
                 <Button
@@ -146,11 +149,15 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <div className="flex flex-col text-sm text-gray-700">
-                      <span>健康診断結果報告書</span>
-                      <span>特定健診結果通知表</span>
-                      <span>様式5号/様式6号</span>
-                    </div>
+                    <span className="text-sm text-gray-700">健康診断結果報告書</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">特定健診結果通知表</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">様式5号/様式6号</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
@@ -167,7 +174,7 @@ export default function PricingPage() {
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-gray-700">DAYS-Daidai-操作ガイドの閲覧</span>
-                   </div> 
+                  </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
                     <span className="text-sm text-gray-700">サポートセンターへのお問い合わせ</span>
@@ -224,12 +231,19 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <div className="flex flex-col text-sm text-gray-700">
-                      <span>画像付き結果報告書</span>
-                      <span>健康診断結果報告書</span>
-                      <span>特定健診結果通知表</span>
-                      <span>様式5号/様式6号</span>
-                    </div>
+                    <span className="text-sm text-gray-700">画像付き結果報告書</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">健康診断結果報告書</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">特定健診結果通知表</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
+                    <span className="text-sm text-gray-700">様式5号/様式6号</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
@@ -245,7 +259,7 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">DAYS-Daidai-操作ガイドの閲覧</span>                    
+                    <span className="text-sm text-gray-700">DAYS-Daidai-操作ガイドの閲覧</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
@@ -261,15 +275,11 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <div className="flex flex-col text-sm text-gray-700">
-                      <span>会計機能(領収書・請求書の出力)</span>
-                    </div>
+                    <span className="text-sm text-gray-700">会計機能(領収書・請求書の出力)</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <div className="flex flex-col text-sm text-gray-700">
-                      <span>特定健康診査/請求XML作成</span>
-                    </div>
+                    <span className="text-sm text-gray-700">特定健康診査/請求XML作成</span>
                   </div>
                 </div>
 
@@ -334,6 +344,11 @@ export default function PricingPage() {
                 <div className="text-center">
                   <HelpCircle className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
                   <p className="text-sm font-medium text-[#0f172a]">様式5号</p>
+                </div>
+
+                <div className="text-center">
+                  <ImageIcon className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
+                  <p className="text-sm font-medium text-[#0f172a]">DAYS-Daidai-操作ガイドの閲覧</p>
                 </div>
               </div>
             </Card>
