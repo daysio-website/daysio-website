@@ -61,7 +61,7 @@ export default function PricingPage() {
                   <p className="text-sm text-gray-700">
                     非課金フリープランでは、サポートセンターのご利用制限がございます。
                   </p>
-                  <p className="text-sm text-gray-700">ご不明な場合は、DAYS-Daidai-操作ガイドよりご確認頂けます。</p>
+                  <p className="text-sm text-gray-700">ご不明な場合は、様式5号よりご確認頂けます。</p>
                 </div>
 
                 <div className="text-left space-y-2 mb-6">
@@ -87,12 +87,13 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">健康診断結果報告書様式5号</span>
+                    <span className="text-sm text-gray-700">健康診断結果報告書</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">DAYS -Daidai-操作ガイド</span>
+                    <span className="text-sm text-gray-700">様式5号</span>
                   </div>
+                   <span className="text-sm text-gray-700">DAYS-Daidai-操作ガイドの閲覧</span>
                 </div>
 
                 <Button
@@ -145,19 +146,15 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">健康診断結果報告書</span>
+                    <div className="flex flex-col text-sm text-gray-700">
+                      <span>健康診断結果報告書</span>
+                      <span>特定健診結果通知表</span>
+                      <span>様式5号/様式6号</span>
+                    </div>
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">特定健診結果通知表</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">様式5号/様式6号</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">CSVデータ出力</span>
+                    <span className="text-sm text-gray-700">結果データ出力（CSVファイル）</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
@@ -169,11 +166,11 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">DAYS -Daidai-操作ガイド</span>
-                  </div>
+                    <span className="text-sm text-gray-700">DAYS-Daidai-操作ガイドの閲覧</span>
+                   </div> 
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">サポートセンター</span>
+                    <span className="text-sm text-gray-700">サポートセンターへのお問い合わせ</span>
                   </div>
                 </div>
 
@@ -227,23 +224,16 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">画像付き結果報告書</span>
+                    <div className="flex flex-col text-sm text-gray-700">
+                      <span>画像付き結果報告書</span>
+                      <span>健康診断結果報告書</span>
+                      <span>特定健診結果通知表</span>
+                      <span>様式5号/様式6号</span>
+                    </div>
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">健康診断結果報告書</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">特定健診結果通知表</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">様式5号/様式6号</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">CSVデータ出力</span>
+                    <span className="text-sm text-gray-700">結果データ出力（CSVファイル）</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
@@ -255,31 +245,31 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">DAYS -Daidai-操作ガイド</span>
+                    <span className="text-sm text-gray-700">DAYS-Daidai-操作ガイドの閲覧</span>                    
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">サポートセンター</span>
+                    <span className="text-sm text-gray-700">サポートセンターへのお問い合わせ</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">検体結果INP</span>
+                    <span className="text-sm text-gray-700">検体検査結果データインポート機能</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">検体結果EXP</span>
+                    <span className="text-sm text-gray-700">検体検査オーダー機能</span>
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">会計(領収書・請求書)</span>
+                    <div className="flex flex-col text-sm text-gray-700">
+                      <span>会計機能(領収書・請求書の出力)</span>
+                    </div>
                   </div>
                   <div className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">特定健康診査</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-[#0f172a] flex-shrink-0 mt-0.5" />
-                    <span className="text-sm text-gray-700">請求XML作成</span>
+                    <div className="flex flex-col text-sm text-gray-700">
+                      <span>特定健康診査/請求XML作成</span>
+                    </div>
                   </div>
                 </div>
 
@@ -339,12 +329,11 @@ export default function PricingPage() {
                 <div className="text-center">
                   <FileText className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
                   <p className="text-sm font-medium text-[#0f172a]">健康診断結果報告書</p>
-                  <p className="text-xs text-[#0f172a]">様式5号</p>
                 </div>
 
                 <div className="text-center">
                   <HelpCircle className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">DAYS-Daidai-操作ガイド</p>
+                  <p className="text-sm font-medium text-[#0f172a]">様式5号</p>
                 </div>
               </div>
             </Card>
@@ -382,8 +371,11 @@ export default function PricingPage() {
                 <div className="text-center">
                   <FileText className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
                   <p className="text-sm font-medium text-[#0f172a]">健康診断結果報告書</p>
-                  <p className="text-xs text-[#0f172a]">特定健診結果通知表</p>
-                  <p className="text-xs text-[#0f172a]">様式5号/様式6号</p>
+                </div>
+
+                <div className="text-center">
+                  <HelpCircle className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
+                  <p className="text-sm font-medium text-[#0f172a]">様式5号</p>
                 </div>
 
                 <div className="text-center">
@@ -399,11 +391,6 @@ export default function PricingPage() {
                 <div className="text-center">
                   <Layers className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
                   <p className="text-sm font-medium text-[#0f172a]">帳票一括処理</p>
-                </div>
-
-                <div className="text-center">
-                  <HelpCircle className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">DAYS-Daidai-操作ガイド</p>
                 </div>
 
                 <div className="text-center">
@@ -451,8 +438,11 @@ export default function PricingPage() {
                 <div className="text-center">
                   <FileText className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
                   <p className="text-sm font-medium text-[#0f172a]">健康診断結果報告書</p>
-                  <p className="text-xs text-[#0f172a]">特定健診結果通知表</p>
-                  <p className="text-xs text-[#0f172a]">様式5号/様式6号</p>
+                </div>
+
+                <div className="text-center">
+                  <HelpCircle className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
+                  <p className="text-sm font-medium text-[#0f172a]">様式5号</p>
                 </div>
 
                 <div className="text-center">
@@ -468,11 +458,6 @@ export default function PricingPage() {
                 <div className="text-center">
                   <Layers className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
                   <p className="text-sm font-medium text-[#0f172a]">帳票一括処理</p>
-                </div>
-
-                <div className="text-center">
-                  <HelpCircle className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">DAYS-Daidai-操作ガイド</p>
                 </div>
 
                 <div className="text-center">
@@ -498,7 +483,7 @@ export default function PricingPage() {
 
                 <div className="text-center">
                   <FileCheck className="w-10 h-10 mx-auto mb-2 text-[#0f172a]" />
-                  <p className="text-sm font-medium text-[#0f172a]">特定健康診査</p>
+                  <p className="text-sm font-medium text-[#0f172a]">特定健康診察</p>
                   <p className="text-xs text-[#0f172a]">請求XML作成</p>
                 </div>
               </div>
@@ -596,12 +581,12 @@ export default function PricingPage() {
 
                     <div className="border-b border-gray-200 pb-4">
                       <h4 className="font-bold text-[#0f172a] mb-2">予約情報CSV インポート</h4>
-                      <p className="text-sm text-gray-600">月額 ¥3,300 / 初期 ¥110,000</p>
+                      <p className="text-sm text-gray-600">月額 ¥3,300 / 初期 ¥165,000</p>
                     </div>
 
                     <div className="border-b border-gray-200 pb-4">
                       <h4 className="font-bold text-[#0f172a] mb-2">問診結果CSV インポート</h4>
-                      <p className="text-sm text-gray-600">月額 ¥3,300 / 初期 ¥110,000</p>
+                      <p className="text-sm text-gray-600">月額 ¥3,300 / 初期 ¥165,000</p>
                     </div>
 
                     <div className="border-b border-gray-200 pb-4">
