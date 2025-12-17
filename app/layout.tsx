@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   title: "株式会社DAISIO - 健康診断システム",
   description: "医療機関向け次世代健康診断システムソリューション",
   generator: "v0.app",
+  verification: {
+    google: "ssdFuLrw1GeeA_DBkDg0wog06NRR-sYpdLkiTHZvt1w",
+  },
 }
 
 export default function RootLayout({
