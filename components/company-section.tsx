@@ -55,7 +55,7 @@ export function CompanySection() {
                   </div>
                   <div className="grid grid-cols-3 gap-4">
                     <div className="font-medium">資本金</div>
-                    <div className="col-span-2">5,000万円</div>
+                    <div className="col-span-2">1億200万円</div>
                   </div>
                   <div className="grid grid-cols-3 gap-4">
                     <div className="font-medium">事業内容</div>
@@ -68,9 +68,19 @@ export function CompanySection() {
             <Card className="h-full">
               <CardContent className="p-6 h-full flex flex-col">
                 <h3 className="text-xl font-bold mb-4">事業所</h3>
-                <div className="space-y-4 flex-1">
+                <div className="grid md:grid-cols-2 gap-6 flex-1">
                   <div>
                     <div className="font-medium mb-2">本社</div>
+                    <div className="text-muted-foreground">
+                      〒163-1435
+                      <br />
+                      東京都新宿区西新宿3-20-2
+                      <br />
+                      東京オペラシティタワー 35階
+                    </div>
+                  </div>
+                  <div>
+                    <div className="font-medium mb-2">池袋オフィス</div>
                     <div className="text-muted-foreground">
                       〒171-0022
                       <br />
