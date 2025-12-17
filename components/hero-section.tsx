@@ -9,7 +9,6 @@ export function HeroSection() {
   const images = [
     { src: "/004.jpg", alt: "健診結果入力システムのインターフェイス" },
     { src: "/003.jpg", alt: "予約管理システムのインターフェイス" },
-    { src: "/V105.jpg", alt: "検査項目設定システムのインターフェイス" },
     { src: "/103.jpg", alt: "受診者管理システムのインターフェイス" },
   ]
 
@@ -89,10 +88,8 @@ export function HeroSection() {
                             currentImageIndex === 1
                               ? "object-center scale-110"
                               : currentImageIndex === 2
-                                ? "object-left"
-                                : currentImageIndex === 3
-                                  ? "object-center"
-                                  : "object-left"
+                                ? "object-center"
+                                : "object-left"
                           }`}
                         />
 
