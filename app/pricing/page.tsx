@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Check } from "lucide-react"
 import DaysDaidaiHeader from "@/components/days-daidai-header"
@@ -82,12 +81,15 @@ export default function PricingPage() {
                   </div>
                 </div>
 
-                <Button
-                  variant="outline"
-                  className="w-full border-[#0ea5e9] text-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white bg-transparent"
-                >
-                  非課金フリープランを申し込む
-                </Button>
+                {/*
+                  <Button
+                    variant="outline"
+                    className="w-full border-[#0ea5e9] text-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white bg-transparent"
+                  >
+                    非課金フリープランを申し込む
+                  </Button>
+                */}
+                {/* </CHANGE> */}
               </Card>
 
               {/* Support Plan */}
@@ -164,12 +166,15 @@ export default function PricingPage() {
                   </div>
                 </div>
 
-                <Button
-                  variant="outline"
-                  className="w-full border-[#0ea5e9] text-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white bg-transparent"
-                >
-                  安心サポートプランを申し込む
-                </Button>
+                {/*
+                  <Button
+                    variant="outline"
+                    className="w-full border-[#0ea5e9] text-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white bg-transparent"
+                  >
+                    安心サポートプランを申し込む
+                  </Button>
+                */}
+                {/* </CHANGE> */}
               </Card>
 
               {/* Global Plan */}
@@ -266,12 +271,15 @@ export default function PricingPage() {
                   </div>
                 </div>
 
-                <Button
-                  variant="outline"
-                  className="w-full border-[#0ea5e9] text-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white bg-transparent"
-                >
-                  グローバルプランを申し込む
-                </Button>
+                {/*
+                  <Button
+                    variant="outline"
+                    className="w-full border-[#0ea5e9] text-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white bg-transparent"
+                  >
+                    グローバルプランを申し込む
+                  </Button>
+                */}
+                {/* </CHANGE> */}
               </Card>
             </div>
           </div>
