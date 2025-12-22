@@ -1,28 +1,24 @@
-import { LPHeader } from "@/components/lp/header"
-import { HeroSection } from "@/components/lp/hero-section"
-import { ConcernsSection } from "@/components/lp/concerns-section"
-import { FeaturesSection } from "@/components/lp/features-section"
-import { BenefitsSection } from "@/components/lp/benefits-section"
-import { CTASection } from "@/components/lp/cta-section"
-import { LPFooter } from "@/components/lp/footer"
-
 export const metadata = {
-  title: "DAYS-Daidai - クラウド型健診システム",
-  description: "健診業務もう紙はいらない。予約受付から結果判定までワンストップで実施",
+  title: "LP TEST PAGE | DAYS-Daidai",
+  description: "テストページ",
 }
 
 export default function LPPage() {
   return (
-    <div className="min-h-screen pl-4 md:pl-8">
-      <LPHeader />
-      <main>
-        <HeroSection />
-        <ConcernsSection />
-        <FeaturesSection />
-        <BenefitsSection />
-        <CTASection />
-      </main>
-      <LPFooter />
+    <div className="min-h-screen bg-red-500 flex items-center justify-center">
+      <div className="bg-white p-8 rounded-lg shadow-xl max-w-2xl">
+        <h1 className="text-4xl font-bold text-red-600 mb-4">これはLPページです</h1>
+        <p className="text-xl mb-4">URLパス: /lp</p>
+        <p className="text-lg mb-4">このページが表示されていれば、LPルーティングは正しく動作しています。</p>
+        <div className="bg-amber-100 p-4 rounded border-2 border-amber-500">
+          <p className="font-semibold">もしメインサイトが表示されている場合:</p>
+          <ul className="list-disc ml-6 mt-2">
+            <li>ブラウザのキャッシュをクリアしてください</li>
+            <li>ハードリロード（Ctrl+Shift+R / Cmd+Shift+R）を試してください</li>
+            <li>パブリッシュ後の本番環境で確認してください</li>
+          </ul>
+        </div>
+      </div>
     </div>
   )
 }

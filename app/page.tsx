@@ -1,23 +1,27 @@
-import { LPHeader } from "@/components/lp/header"
-import { HeroSection } from "@/components/lp/hero-section"
-import { ConcernsSection } from "@/components/lp/concerns-section"
-import { BenefitsSection } from "@/components/lp/benefits-section"
-import { FeaturesSection } from "@/components/lp/features-section"
-import { CTASection } from "@/components/lp/cta-section"
-import { LPFooter } from "@/components/lp/footer"
+import { Header } from "@/components/header"
+import { HeroSection } from "@/components/hero-section"
+import { ServicesSection } from "@/components/services-section"
+import { FeaturesSection } from "@/components/features-section"
+import { TestimonialsSection } from "@/components/testimonials-section"
+import { CompanySection } from "@/components/company-section"
+import { ContactSection } from "@/components/contact-section"
+import { NewsSection } from "@/components/news-section"
+import { Footer } from "@/components/footer"
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
-      <LPHeader />
+      <Header />
       <main>
         <HeroSection />
-        <ConcernsSection />
-        <BenefitsSection />
+        <ServicesSection />
         <FeaturesSection />
-        <CTASection />
+        <TestimonialsSection />
+        <CompanySection />
+        <ContactSection />
+        <NewsSection />
       </main>
-      <LPFooter />
+      <Footer />
     </div>
   )
 }

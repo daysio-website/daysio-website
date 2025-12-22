@@ -36,12 +36,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/lp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:opacity-100 transition-opacity text-white"
-                >
+                <Link href="/lp" className="hover:opacity-100 transition-opacity text-white">
                   LP
                 </Link>
               </li>
@@ -73,12 +68,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/privacy-policy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:opacity-100 transition-opacity"
-                >
+                <Link href="/privacy-policy" className="hover:opacity-100 transition-opacity">
                   プライバシーポリシー
                 </Link>
               </li>
