@@ -31,14 +31,19 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/products/days-daidai" className="hover:opacity-100 transition-opacity text-white">
+                <a href="/products/days-daidai" className="hover:opacity-100 transition-opacity text-white">
                   DAYS-Daidai
-                </Link>
+                </a>
               </li>
               <li>
-                <Link href="/lp" className="hover:opacity-100 transition-opacity text-white">
+                <a
+                  href="/lp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-100 transition-opacity text-white"
+                >
                   LP
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

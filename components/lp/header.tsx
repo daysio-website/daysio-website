@@ -2,15 +2,10 @@
 import { Button } from "@/components/ui/button"
 
 export function LPHeader() {
-  console.log("[v0] LPHeader component rendering")
-
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between max-w-5xl mx-auto">
-        <div className="flex items-center gap-2">
-          <span className="text-2xl font-bold text-foreground">DAYS -Daidai-</span>
-          <span className="text-xs bg-red-500 text-white px-2 py-1 rounded">LP</span>
-        </div>
+        <span className="text-2xl font-bold text-foreground">DAYS -Daidai-</span>
         <nav className="hidden md:flex items-center gap-6">
           <a
             href="#features"
