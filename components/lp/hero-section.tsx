@@ -28,7 +28,6 @@ export function HeroSection() {
     { src: "/images/logo-symbol.svg", alt: "ロゴシンボル" },
     { src: "/images/f-logo.png", alt: "両国きたむら整形外科" },
     { src: "/images/logo-takenoko.png", alt: "タケノコ診療所グループ" },
-    { src: "/images/footerlogo.png", alt: "ヤンゴン日本人会" },
   ]
 
   return (
