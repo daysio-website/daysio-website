@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "tw-animate-css";
+/* tw-animate-cssのインポートを削除してエラーを解消 */
 
 @custom-variant dark (&:is(.dark *));
 
@@ -19,7 +19,7 @@
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.985 0 0);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
@@ -55,7 +55,7 @@
   --accent: oklch(0.269 0 0);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.985 0 0);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
   --border: oklch(0.269 0 0);
   --input: oklch(0.269 0 0);
   --ring: oklch(0.439 0 0);
@@ -74,8 +74,7 @@
   --sidebar-ring: oklch(0.439 0 0);
 }
 
-/* @themeブロックでvar()参照を使わず、直接値を定義してエラーを修正 */
-@theme {
+@theme inline {
   --color-background: oklch(1 0 0);
   --color-foreground: oklch(0.145 0 0);
   --color-card: oklch(1 0 0);
@@ -91,7 +90,7 @@
   --color-accent: oklch(0.97 0 0);
   --color-accent-foreground: oklch(0.205 0 0);
   --color-destructive: oklch(0.577 0.245 27.325);
-  --color-destructive-foreground: oklch(0.985 0 0);
+  --color-destructive-foreground: oklch(0.577 0.245 27.325);
   --color-border: oklch(0.922 0 0);
   --color-input: oklch(0.922 0 0);
   --color-ring: oklch(0.708 0 0);
@@ -117,9 +116,6 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-  }
-  html {
-    scroll-behavior: smooth;
   }
   body {
     @apply bg-background text-foreground;

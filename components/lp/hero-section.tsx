@@ -37,9 +37,15 @@ export function HeroSection() {
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12 items-center">
           {/* 左側: テキストコンテンツ */}
           <div className="flex flex-col gap-6 text-center lg:text-left items-center lg:items-start">
-            <div className="flex flex-col gap-2">
-              <p className="text-lg text-black">クラウド型健診システム</p>
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
+            <div className="flex flex-col gap-2 w-full">
+              <div className="flex justify-center lg:justify-start w-full">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-300 via-amber-300 to-orange-300 px-6 py-3 rounded-full shadow-lg">
+                  <span className="text-2xl">✨</span>
+                  <p className="text-2xl font-bold text-white">クラウド型健診システム</p>
+                  <span className="text-2xl">✨</span>
+                </div>
+              </div>
+              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mt-4">
                 <span className="text-primary">健診業務</span>
                 <br />
                 <span className="text-black">もう紙はいらない</span>
@@ -55,7 +61,11 @@ export function HeroSection() {
 
             {/* CTAボタン */}
             <div className="flex flex-col sm:flex-row gap-4 mt-4">
-              <Button size="lg" className="text-base px-8 py-6 rounded-md justify-center" asChild>
+              <Button
+                size="lg"
+                className="text-base px-8 py-6 rounded-md justify-center bg-[#1e3a5f] hover:bg-[#2c4f7c] text-white"
+                asChild
+              >
                 <a href="https://www.daysio.co.jp/consultation" target="_blank" rel="noopener noreferrer">
                   無料相談はこちら
                 </a>
@@ -96,7 +106,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="bg-primary text-white py-4 mt-12 sm:mt-0">
+      <div className="bg-[#1e3a5f] text-white py-4 mt-12 sm:mt-0">
         <div className="container max-w-5xl mx-auto">
           <p className="text-center text-base sm:text-lg font-bold">
             DAYS -Daidai- は、国内外550以上の医療機関・健診施設で導入されています

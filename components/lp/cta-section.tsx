@@ -194,7 +194,12 @@ export function CTASection() {
                     disabled={isSubmitting}
                   />
                 </div>
-                <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full bg-[#1e3a5f] hover:bg-[#2c4f7c] text-white"
+                  disabled={isSubmitting}
+                >
                   {isSubmitting ? "送信中..." : "送信する"}
                 </Button>
               </form>

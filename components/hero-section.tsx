@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, RefreshCcw, Hospital, DollarSign, ChevronLeft, ChevronRight } from "lucide-react"
 import { useState } from "react"
 
-export function HeroSection() {
+export default function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const images = [
     { src: "/004.jpg", alt: "健診結果入力システムのインターフェイス" },

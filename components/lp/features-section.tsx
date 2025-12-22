@@ -52,7 +52,7 @@ export function FeaturesSection() {
             <div className="bg-gray-100 border-r border-border p-4 text-center">
               <span className="text-sm font-bold text-gray-700">Before</span>
             </div>
-            <div className="bg-primary p-4 text-center">
+            <div className="bg-[#1e3a5f] p-4 text-center">
               <span className="text-sm font-bold text-white">After</span>
             </div>
           </div>
@@ -70,8 +70,8 @@ export function FeaturesSection() {
               </div>
 
               {/* After Column */}
-              <div className="bg-primary/5 p-6">
-                <h3 className="text-base font-bold text-primary mb-2">{item.solution}</h3>
+              <div className="bg-gray-50 p-6">
+                <h3 className="text-base font-bold text-[#1e3a5f] mb-2">{item.solution}</h3>
                 <p className="text-sm text-foreground/70">{item.solutionDetail}</p>
               </div>
             </div>

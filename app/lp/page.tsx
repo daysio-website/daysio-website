@@ -10,6 +10,9 @@ export const metadata = {
   title: "DAYS-Daidai | 健康診断総合システム",
   description:
     "医療機関の健康診断業務を効率化する、次世代の総合管理システム。予約管理から結果報告まで、全ての業務をシームレスに統合します。",
+  verification: {
+    google: "ssdFuLrw1GeeA_DBkDg0wog06NRR-sYpdLkiTHZvt1w",
+  },
 }
 
 export default function LPPage() {

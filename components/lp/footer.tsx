@@ -1,9 +1,17 @@
-export function LPFooter() {
+export function Footer() {
   return (
     <footer className="border-t border-border/40 bg-muted/30">
       <div className="container py-12 max-w-7xl mx-auto">
         <div className="grid gap-8 sm:grid-cols-2">
           <div className="flex flex-col gap-4 items-center text-center">
+            <a
+              href="https://www.daysio.co.jp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            >
+              <img src="/daysio-logo.png" alt="DAYSIO" className="h-8 w-auto" />
+            </a>
             <div className="flex items-center gap-2">
               <span className="text-lg font-bold text-foreground">DAYS -Daidai-</span>
             </div>
@@ -37,3 +45,5 @@ export function LPFooter() {
     </footer>
   )
 }
+
+export { Footer as LPFooter }

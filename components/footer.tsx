@@ -36,14 +36,9 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="/lp"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:opacity-100 transition-opacity text-white"
-                >
+                <Link href="/lp" className="hover:opacity-100 transition-opacity">
                   LP
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

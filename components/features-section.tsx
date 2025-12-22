@@ -13,7 +13,7 @@ const features = [
   "作業時間を最大85％削減",
 ]
 
-export function FeaturesSection() {
+export default function FeaturesSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const images = [
     { src: "/health-report.jpg", alt: "健康診断結果報告書のインターフェイス" },
