@@ -35,7 +35,16 @@ export function Footer() {
                   DAYS-Daidai
                 </Link>
               </li>
-              <li className="opacity-90 text-white">LP</li>
+              <li>
+                <Link
+                  href="/lp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:opacity-100 transition-opacity text-white"
+                >
+                  LP
+                </Link>
+              </li>
             </ul>
           </div>
 

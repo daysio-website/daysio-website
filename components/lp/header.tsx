@@ -1,0 +1,40 @@
+import { Button } from "@/components/ui/button"
+
+export function LPHeader() {
+  return (
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-16 items-center justify-between max-w-5xl mx-auto">
+        <div className="flex items-center gap-2">
+          <span className="text-2xl font-bold text-foreground">DAYS -Daidai-</span>
+        </div>
+        <nav className="hidden md:flex items-center gap-6">
+          <a
+            href="#features"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            {"活用シーン"}
+          </a>
+          <a
+            href="#benefits"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            {"選ばれる理由"}
+          </a>
+          <a
+            href="#contact"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            お問い合わせ
+          </a>
+        </nav>
+        <div className="flex items-center gap-4">
+          <Button asChild className="px-8 min-w-max">
+            <a href="https://www.daysio.co.jp/consultation" target="_blank" rel="noopener noreferrer">
+              無料相談
+            </a>
+          </Button>
+        </div>
+      </div>
+    </header>
+  )
+}
