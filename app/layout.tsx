@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
+import Script from "next/script"
 import "./globals.css"
 
 const geistSans = localFont({
@@ -31,6 +32,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className="scroll-smooth">
+      <head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-780899147" strategy="afterInteractive" />
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-780899147');
+          `}
+        </Script>
+      </head>
       <body className={`font-sans ${geistSans.variable} ${geistMono.variable}`}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />

@@ -35,6 +35,12 @@ export default function ContactSection() {
       window.open(mailtoLink, "_blank")
       setSubmitStatus("success")
 
+      if (typeof window !== "undefined" && (window as any).gtag) {
+        ;(window as any).gtag("event", "conversion", {
+          send_to: "AW-780899147/qzU8CLaa5tYbEMumrvQC",
+        })
+      }
+
       // フォームをリセット
       setFormData({
         name: "",
