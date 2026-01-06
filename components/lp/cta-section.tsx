@@ -47,8 +47,7 @@ export function CTASection() {
     const subject = encodeURIComponent("【DAYSIO】お問い合わせ")
     const body = encodeURIComponent(emailBody)
 
-    // mailtoリンクを作成
-    const mailtoLink = `mailto:info@daysio.co.jp?subject=${subject}&body=${body}`
+    const mailtoLink = `mailto:ec-support@kenshin-cloud.com?subject=${subject}&body=${body}`
 
     // メールクライアントを開く
     window.location.href = mailtoLink
@@ -231,7 +230,7 @@ export function CTASection() {
           <DialogHeader>
             <DialogTitle className="text-2xl">お問い合わせ内容の確認</DialogTitle>
             <DialogDescription>
-              以下の内容で受け付けました。info@daysio.co.jp へメールをお送りください。
+              以下の内容で受け付けました。ec-support@kenshin-cloud.com へメールをお送りください。
             </DialogDescription>
           </DialogHeader>
           <div className="flex flex-col gap-4 py-4">
@@ -242,13 +241,13 @@ export function CTASection() {
                   variant="outline"
                   size="sm"
                   onClick={() => {
-                    navigator.clipboard.writeText("info@daysio.co.jp")
+                    navigator.clipboard.writeText("ec-support@kenshin-cloud.com")
                   }}
                 >
                   コピー
                 </Button>
               </div>
-              <p className="text-lg font-mono">info@daysio.co.jp</p>
+              <p className="text-lg font-mono">ec-support@kenshin-cloud.com</p>
             </div>
             <div className="bg-muted p-4 rounded-lg space-y-3">
               <div className="flex items-center justify-between">

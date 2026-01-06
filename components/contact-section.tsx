@@ -30,7 +30,7 @@ export default function ContactSection() {
     setSubmitStatus("idle")
 
     try {
-      const mailtoLink = `mailto:info@daysio.co.jp?subject=お問い合わせ_DAYSIO_info&body=お名前: ${formData.name}%0D%0A施設名: ${formData.facility}%0D%0Aメールアドレス: ${formData.email}%0D%0A電話番号: ${formData.phone}%0D%0A%0D%0Aお問い合わせ内容:%0D%0A${formData.message}`
+      const mailtoLink = `mailto:ec-support@kenshin-cloud.com?subject=お問い合わせ_DAYSIO_info&body=お名前: ${formData.name}%0D%0A施設名: ${formData.facility}%0D%0Aメールアドレス: ${formData.email}%0D%0A電話番号: ${formData.phone}%0D%0A%0D%0Aお問い合わせ内容:%0D%0A${formData.message}`
 
       window.open(mailtoLink, "_blank")
       setSubmitStatus("success")

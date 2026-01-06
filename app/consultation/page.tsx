@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Send } from 'lucide-react'
+import { Send } from "lucide-react"
 
 export default function ConsultationPage() {
   const [formData, setFormData] = useState({
@@ -56,8 +56,7 @@ ${formData.interests.map((interest) => `・${interest}`).join("\n")}
 ${formData.message || "なし"}
     `.trim()
 
-    // メールアプリを開く
-    const mailtoLink = `mailto:sales@daysio.co.jp?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+    const mailtoLink = `mailto:ec-support@kenshin-cloud.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
     window.open(mailtoLink)
 
     // フォームをリセット
