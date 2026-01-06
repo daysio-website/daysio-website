@@ -48,20 +48,11 @@ export function Footer() {
             <ul className="space-y-2 text-sm opacity-90">
               <li>
                 <a
-                  href="#features"
-                  onClick={(e) => handleScrollToSection(e, "features")}
-                  className="hover:opacity-100 transition-opacity cursor-pointer"
-                >
-                  機能・料金
-                </a>
-              </li>
-              <li>
-                <a
                   href="#services"
                   onClick={(e) => handleScrollToSection(e, "services")}
                   className="hover:opacity-100 transition-opacity cursor-pointer"
                 >
-                  自社健康商品
+                  ソリューション
                 </a>
               </li>
               <li>
@@ -70,17 +61,13 @@ export function Footer() {
                   onClick={(e) => handleScrollToSection(e, "features")}
                   className="hover:opacity-100 transition-opacity cursor-pointer"
                 >
-                  他システム連携
+                  機能
                 </a>
               </li>
               <li>
-                <a
-                  href="#features"
-                  onClick={(e) => handleScrollToSection(e, "features")}
-                  className="hover:opacity-100 transition-opacity cursor-pointer"
-                >
-                  多言語
-                </a>
+                <Link href="/products/days-daidai" className="hover:opacity-100 transition-opacity">
+                  DAYS-Daidai
+                </Link>
               </li>
             </ul>
           </div>

@@ -14,7 +14,7 @@ export function Header() {
 
         <nav className="hidden md:flex items-center gap-8">
           <a href="#services" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
-            サービス
+            ソリューション
           </a>
           <a href="#features" className="text-sm font-medium text-foreground hover:text-primary transition-colors">
             機能
