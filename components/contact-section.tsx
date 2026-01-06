@@ -38,6 +38,7 @@ export default function ContactSection() {
       if (typeof window !== "undefined" && (window as any).gtag) {
         ;(window as any).gtag("event", "conversion", {
           send_to: "AW-780899147/qzU8CLaa5tYbEMumrvQC",
+          email: formData.email, // 拡張コンバージョン用にメールアドレスをハッシュ化して送信
         })
       }
 

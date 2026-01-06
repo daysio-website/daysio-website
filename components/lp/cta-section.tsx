@@ -10,6 +10,15 @@ import { Textarea } from "@/components/ui/textarea"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { useState } from "react"
 
+async function hashEmail(email: string): Promise<string> {
+  const encoder = new TextEncoder()
+  const data = encoder.encode(email.toLowerCase().trim())
+  const hashBuffer = await crypto.subtle.digest("SHA-256", data)
+  const hashArray = Array.from(new Uint8Array(hashBuffer))
+  const hashHex = hashArray.map((b) => b.toString(16).padStart(2, "0")).join("")
+  return hashHex
+}
+
 export function CTASection() {
   const [formData, setFormData] = useState({
     name: "",
@@ -45,8 +54,11 @@ export function CTASection() {
     window.location.href = mailtoLink
 
     if (typeof window !== "undefined" && (window as any).gtag) {
-      ;(window as any).gtag("event", "conversion", {
-        send_to: "AW-780899147/qzU8CLaa5tYbEMumrvQC",
+      hashEmail(formData.email).then((hashedEmail) => {
+        ;(window as any).gtag("event", "conversion", {
+          send_to: "AW-780899147/qzU8CLaa5tYbEMumrvQC",
+          email: hashedEmail,
+        })
       })
     }
 
