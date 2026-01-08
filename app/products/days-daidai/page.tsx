@@ -14,6 +14,11 @@ export default function DaysDaidaiPage() {
   const [showIntegrationDropdown, setShowIntegrationDropdown] = useState(false)
 
   useEffect(() => {
+    const canonical = document.createElement("link")
+    canonical.rel = "canonical"
+    canonical.href = "https://www.daysio.co.jp/products/days-daidai"
+    document.head.appendChild(canonical)
+
     const hash = window.location.hash
     if (hash) {
       const element = document.querySelector(hash)
@@ -22,6 +27,10 @@ export default function DaysDaidaiPage() {
           element.scrollIntoView({ behavior: "smooth", block: "start" })
         }, 100)
       }
+    }
+
+    return () => {
+      document.head.removeChild(canonical)
     }
   }, [])
 
@@ -395,7 +404,7 @@ export default function DaysDaidaiPage() {
                   { name: "大塚製薬株式会社", vals: ["", "", "", "", "", "", "", "", "〇", "", "", ""] },
                   {
                     name: "キヤノンメディカルシステムズ株式会社",
-                    vals: ["", "", "", "", "", "", "", "", "", "", "", "〇"],
+                    vals: ["", "", "", "", "", "", "", "", "〇", "", "", "〇"],
                   },
                   { name: "株式会社グッドサイクルシステム", vals: ["", "", "", "", "", "", "", "", "〇", "", "", ""] },
                   { name: "株式会社ケアレックス", vals: ["", "", "", "", "", "", "〇", "", "", "", "", ""] },

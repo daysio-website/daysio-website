@@ -3,6 +3,14 @@ import { getNewsItems } from "@/lib/news-data"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 
+export const metadata = {
+  title: "新着情報 | DAYSIO",
+  description: "DAYS-Daidaiの最新情報をお知らせします",
+  alternates: {
+    canonical: "https://www.daysio.co.jp/news",
+  },
+}
+
 export default function NewsPage() {
   const allNews = getNewsItems()
 

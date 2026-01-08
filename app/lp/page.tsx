@@ -13,6 +13,9 @@ export const metadata = {
   verification: {
     google: "ssdFuLrw1GeeA_DBkDg0wog06NRR-sYpdLkiTHZvt1w",
   },
+  alternates: {
+    canonical: "https://www.daysio.co.jp/lp",
+  },
 }
 
 export default function LPPage() {
