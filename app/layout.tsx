@@ -34,6 +34,7 @@ export default function RootLayout({
     <html lang="ja" className="scroll-smooth">
       <head>
         <Script async src="//kitchen.juicer.cc/?color=7hddEYDcZI0=" strategy="beforeInteractive" />
+
         <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-780899147" strategy="afterInteractive" />
         <Script id="google-ads" strategy="afterInteractive">
           {`
