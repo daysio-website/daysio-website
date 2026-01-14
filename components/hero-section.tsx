@@ -82,7 +82,7 @@ export default function HeroSection() {
           </div>
 
           <div className="lg:col-span-2 relative max-w-2xl mx-auto w-full">
-            <div className="border border-cyan-200 bg-cyan-50 rounded-2xl p-4 shadow-lg">
+            <div className="border border-sky-300 bg-sky-100 rounded-2xl p-4 shadow-lg">
               <div className="relative aspect-video bg-white rounded-lg overflow-hidden">
                 <img
                   src={images[currentImageIndex].src || "/placeholder.svg"}
