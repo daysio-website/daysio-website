@@ -88,18 +88,12 @@ export default function HeroSection() {
                   {/* Tablet bezel */}
                   <div className="bg-black rounded-xl p-2">
                     {/* Screen */}
-                    <div className="bg-white rounded-lg overflow-hidden shadow-inner aspect-square relative">
+                    <div className="bg-white rounded-lg overflow-hidden shadow-inner aspect-video relative">
                       <div className="relative w-full h-full">
                         <img
                           src={images[currentImageIndex].src || "/placeholder.svg"}
                           alt={images[currentImageIndex].alt}
-                          className={`w-full h-full object-cover transition-opacity duration-300 ${
-                            currentImageIndex === 1
-                              ? "object-center scale-110"
-                              : currentImageIndex === 2
-                                ? "object-center"
-                                : "object-left"
-                          }`}
+                          className="w-full h-full object-contain transition-opacity duration-300"
                         />
 
                         {/* Navigation buttons */}

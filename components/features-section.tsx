@@ -88,18 +88,12 @@ export default function FeaturesSection() {
                   {/* Tablet bezel */}
                   <div className="bg-black rounded-xl p-2">
                     {/* Screen */}
-                    <div className="bg-white rounded-lg overflow-hidden shadow-inner aspect-square relative">
+                    <div className="bg-white rounded-lg overflow-hidden shadow-inner aspect-video relative">
                       <div className="relative w-full h-full">
                         <img
                           src={images[currentImageIndex].src || "/placeholder.svg"}
                           alt={images[currentImageIndex].alt}
-                          className={`w-full h-full transition-opacity duration-300 ${
-                            currentImageIndex === 1
-                              ? "object-cover object-top"
-                              : currentImageIndex === 2
-                                ? "object-cover object-top scale-105" // 3枚目画像を少し拡大し、上部を表示して下部の署名を隠す
-                                : "object-cover object-center scale-110"
-                          }`}
+                          className="w-full h-full object-contain"
                         />
 
                         {/* Navigation buttons */}

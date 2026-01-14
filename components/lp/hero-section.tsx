@@ -8,12 +8,12 @@ export function HeroSection() {
 
   const images = [
     {
-      src: "/images/004-20-281-29.png",
-      alt: "健診結果入力画面",
+      src: "/images/e3-82-b9-e3-82-af-e3-83-aa-e3-83-bc-e3-83-b3-e3-82-b7-e3-83-a7-e3-83-83-e3-83-88-202026-01-14-20102924.png",
+      alt: "検査結果入力画面",
     },
     {
-      src: "/images/003-20-281-29.png",
-      alt: "健診予約カレンダー画面",
+      src: "/images/e3-82-b9-e3-82-af-e3-83-aa-e3-83-bc-e3-83-b3-e3-82-b7-e3-83-a7-e3-83-83-e3-83-88-202026-01-14-20103213.png",
+      alt: "カレンダー・予約管理画面",
     },
   ]
 
@@ -83,11 +83,13 @@ export function HeroSection() {
                 </span>
                 <span className="text-xs font-medium">以上！</span>
               </div>
-              <img
-                src={images[currentImageIndex].src || "/placeholder.svg"}
-                alt={images[currentImageIndex].alt}
-                className="rounded-xl shadow-2xl max-w-md w-full"
-              />
+              <div className="border border-gray-200 rounded-xl p-2 bg-gray-50">
+                <img
+                  src={images[currentImageIndex].src || "/placeholder.svg"}
+                  alt={images[currentImageIndex].alt}
+                  className="rounded-lg shadow-2xl max-w-md w-full"
+                />
+              </div>
               <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10 mb-8 sm:mb-0">
                 {images.map((_, index) => (
                   <button
