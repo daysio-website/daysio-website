@@ -81,50 +81,40 @@ export default function FeaturesSection() {
             </div>
           </div>
 
-          <div className="lg:col-span-2 relative">
-            <div className="bg-blue-100 rounded-3xl p-4 shadow-lg max-w-md mx-auto">
-              <div className="bg-gray-200 rounded-2xl p-4">
-                <div className="relative bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl p-2 shadow-2xl transform scale-90">
-                  {/* Tablet bezel */}
-                  <div className="bg-black rounded-xl p-2">
-                    {/* Screen */}
-                    <div className="bg-white rounded-lg overflow-hidden shadow-inner aspect-video relative">
-                      <div className="relative w-full h-full">
-                        <img
-                          src={images[currentImageIndex].src || "/placeholder.svg"}
-                          alt={images[currentImageIndex].alt}
-                          className="w-full h-full object-contain"
-                        />
+          <div className="lg:col-span-2 relative max-w-2xl mx-auto w-full">
+            <div className="border border-cyan-200 bg-cyan-50 rounded-2xl p-4 shadow-lg">
+              <div className="relative aspect-video bg-white rounded-lg overflow-hidden">
+                <img
+                  src={images[currentImageIndex].src || "/placeholder.svg"}
+                  alt={images[currentImageIndex].alt}
+                  className="w-full h-full object-contain"
+                />
 
-                        {/* Navigation buttons */}
-                        <button
-                          onClick={prevImage}
-                          className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 transition-colors"
-                        >
-                          <ChevronLeft className="h-4 w-4" />
-                        </button>
-                        <button
-                          onClick={nextImage}
-                          className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 transition-colors"
-                        >
-                          <ChevronRight className="h-4 w-4" />
-                        </button>
+                {/* Navigation buttons */}
+                <button
+                  onClick={prevImage}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 transition-colors"
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                </button>
+                <button
+                  onClick={nextImage}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-1 transition-colors"
+                >
+                  <ChevronRight className="h-4 w-4" />
+                </button>
 
-                        {/* Dots indicator */}
-                        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
-                          {images.map((_, index) => (
-                            <button
-                              key={index}
-                              onClick={() => setCurrentImageIndex(index)}
-                              className={`w-2 h-2 rounded-full transition-colors ${
-                                index === currentImageIndex ? "bg-primary" : "bg-white/50"
-                              }`}
-                            />
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                {/* Dots indicator */}
+                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+                  {images.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`w-2 h-2 rounded-full transition-colors ${
+                        index === currentImageIndex ? "bg-primary" : "bg-white/50"
+                      }`}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
