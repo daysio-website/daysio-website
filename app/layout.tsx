@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className="scroll-smooth">
-      <head>
+      <body className={`font-sans ${geistSans.variable} ${geistMono.variable}`}>
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -42,6 +42,15 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-MNLWPRX5');
           `}
         </Script>
+
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MNLWPRX5"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
 
         <Script async src="//kitchen.juicer.cc/?color=7hddEYDcZI0=" strategy="beforeInteractive" />
 
@@ -56,16 +65,7 @@ export default function RootLayout({
             });
           `}
         </Script>
-      </head>
-      <body className={`font-sans ${geistSans.variable} ${geistMono.variable}`}>
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-MNLWPRX5"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
+
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>
