@@ -16,10 +16,18 @@ const features = [
 export default function FeaturesSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const images = [
-    { src: "/health-report.jpg", alt: "健康診断結果報告書のインターフェイス" },
-    { src: "/medical-images.jpg", alt: "医療画像一覧システムのインターフェイス" },
-    { src: "/exam-results.jpg", alt: "検査結果一覧システムのインターフェイス" },
-    { src: "/detailed-exam-results.jpg", alt: "詳細検査結果システムのインターフェイス" },
+    {
+      src: "/images/file-export-management.png",
+      alt: "ファイル出力情報管理画面 - 健診結果CSVのエクスポート設定",
+    },
+    {
+      src: "/images/data-import.png",
+      alt: "データインポート画面 - 検査結果、受診者、予約受付のインポート機能",
+    },
+    {
+      src: "/images/data-export.png",
+      alt: "データエクスポート画面 - 特定健診CSV、協会けんぽCSV、オーダー連携CSVのエクスポート",
+    },
   ]
 
   const nextImage = () => {
@@ -88,8 +96,8 @@ export default function FeaturesSection() {
                           className={`w-full h-full transition-opacity duration-300 ${
                             currentImageIndex === 1
                               ? "object-cover object-top"
-                              : currentImageIndex === 3
-                                ? "object-cover object-top scale-105" // 4枚目画像を少し拡大し、上部を表示して下部の署名を隠す
+                              : currentImageIndex === 2
+                                ? "object-cover object-top scale-105" // 3枚目画像を少し拡大し、上部を表示して下部の署名を隠す
                                 : "object-cover object-center scale-110"
                           }`}
                         />

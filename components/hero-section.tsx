@@ -7,9 +7,18 @@ import { useState } from "react"
 export default function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const images = [
-    { src: "/004.jpg", alt: "健診結果入力システムのインターフェイス" },
-    { src: "/003.jpg", alt: "予約管理システムのインターフェイス" },
-    { src: "/103.jpg", alt: "受診者管理システムのインターフェイス" },
+    {
+      src: "/images/e3-82-b9-e3-82-af-e3-83-aa-e3-83-bc-e3-83-b3-e3-82-b7-e3-83-a7-e3-83-83-e3-83-88-202026-01-14-20102924.png",
+      alt: "検査結果入力システムのインターフェイス",
+    },
+    {
+      src: "/images/e3-82-b9-e3-82-af-e3-83-aa-e3-83-bc-e3-83-b3-e3-82-b7-e3-83-a7-e3-83-83-e3-83-88-202026-01-14-20103213.png",
+      alt: "カレンダー・予約管理システムのインターフェイス",
+    },
+    {
+      src: "/images/e3-82-b9-e3-82-af-e3-83-aa-e3-83-bc-e3-83-b3-e3-82-b7-e3-83-a7-e3-83-83-e3-83-88-202026-01-14-20103126.png",
+      alt: "検査コードマッピング管理システムのインターフェイス",
+    },
   ]
 
   const nextImage = () => {
