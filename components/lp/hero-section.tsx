@@ -90,6 +90,9 @@ export function HeroSection() {
                   className="rounded-lg shadow-2xl max-w-md w-full"
                 />
               </div>
+              <p className="text-center text-sm text-muted-foreground mt-3">
+                Daidaiの画面がよりスマートに進化します。(2026年春 リリース予定)
+              </p>
               <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10 mb-8 sm:mb-0">
                 {images.map((_, index) => (
                   <button

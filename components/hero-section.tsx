@@ -118,6 +118,9 @@ export default function HeroSection() {
                 </div>
               </div>
             </div>
+            <p className="text-center text-sm text-muted-foreground mt-3">
+              Daidaiの画面がよりスマートに進化します。(2026年春 リリース予定)
+            </p>
           </div>
         </div>
       </div>
