@@ -192,12 +192,12 @@ export default function PricingPage() {
                 </div>
 
                 <div className="text-left mb-6 space-y-2">
-                  <p className="text-sm text-gray-700">Q&Aやマニュアルに加えて電話やメールによるサポート付き。</p>
+                  <p className="text-sm text-gray-700">Q&Aやマニュアルのご提供に加え、電話・メールによるサポートをご利用いただけます。</p>
                   <p className="text-sm text-gray-700">
-                    ご多忙な医療機関様でも使いやすい直感的な操作性で、健診業務をバックアップ。
+                    多忙な医療機関様でも使いやすい直感的で分かりやすい操作性により、健診業務をサポートいたします。
                   </p>
                   <p className="text-sm text-gray-700">
-                    英語等多言語対応など、安心サポートプランより適応可能なオプションを増廣く、お選びいただけます。
+                    さらに、英語をはじめとした多言語対応など、「安心サポートプラン」でご利用可能なオプションを幅広くお選びいただけます。
                   </p>
                 </div>
 
