@@ -108,12 +108,12 @@ export default function PricingPage() {
 
                 <div className="text-left mb-6 space-y-2">
                   <p className="text-sm text-gray-700">
-                    Q&Aやマニュアルに加えて電話やメールによるサポートがついています。
+                    Q&Aやマニュアルのご提供に加え、電話・メールによるサポートをご利用いただけます。
                   </p>
                   <p className="text-sm text-gray-700">
-                    ご多忙な医療機関様でも使いやすい直感的な操作性で、健診業務をバックアップ。
+                    多忙な医療機関様でも使いやすい直感的で分かりやすい操作性により、健診業務をサポートいたします。
                   </p>
-                  <p className="text-sm text-gray-700">さらに、各種オプションをご用意しております。</p>
+                  <p className="text-sm text-gray-700">また、運用に応じてご利用いただける各種オプションもご用意しております。</p>
                 </div>
 
                 <div className="text-left space-y-2 mb-6">
