@@ -40,11 +40,9 @@ export default function GuideFAQ() {
             <p className="text-gray-700 mb-3">
               購入申込の手続はご使用いただくサービス、カスタマイズの内容により、2週間ほどかかる場合があります。
             </p>
-            <p className="text-gray-700 mb-3">
-              手続が完了した時点でスタートキットをお送りします。スタートキットを設定の上、スマート健診クラウド
-              DAYS-Daidai-のご利用ご使用を開始してください。
+            <p className="text-gray-700">
+              お手続き完了後、Daidaiスタートアップキットをダウンロードいただけます。Daidaiスタートアップキットの内容に沿って設定を行い、スマート健診クラウド「DAYS-Daidai-」のご利用を開始してください。
             </p>
-            <p className="text-gray-700">スタートキットは初回購入時のみお送りさせていただきます。</p>
           </div>
 
           <div className="bg-white rounded-lg shadow-sm p-6 border border-gray-200">
