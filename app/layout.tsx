@@ -17,8 +17,8 @@ const geistMono = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "株式会社DAISIO - 健康診断システム",
-  description: "医療機関向け次世代健康診断システムソリューション",
+  title: "クラウド健診システムならDAYSIO（デイシオ）｜医療機関のDXを支援",
+  description:"クラウド型健診システムで医療機関の業務をDX化。健康診断の予約から管理までをデジタル化し、スマートに効率化します。次世代システム「DAYS-Daidai」で正確な管理を実現。",
   generator: "v0.app",
   verification: {
     google: "ssdFuLrw1GeeA_DBkDg0wog06NRR-sYpdLkiTHZvt1w",
