@@ -22,6 +22,8 @@ export default function ConsultationPage() {
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+  const [errorMessage, setErrorMessage] = useState("")
 
   const handleCheckboxChange = (value: string, checked: boolean) => {
     if (checked) {
@@ -37,39 +39,40 @@ export default function ConsultationPage() {
     }
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitStatus("idle")
+    setErrorMessage("")
 
-    // フォームデータを整理
-    const subject = `導入検討_DAYSIO_${formData.interests.join("・")}`
-    const body = `
-氏名: ${formData.name}
-会社名(施設名): ${formData.company}
-メールアドレス: ${formData.email}
-電話番号: ${formData.phone}
+    try {
+      const response = await fetch("/api/consultation", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
 
-ご希望の内容:
-${formData.interests.map((interest) => `・${interest}`).join("\n")}
+      const result = await response.json()
 
-自由記入欄:
-${formData.message || "なし"}
-    `.trim()
+      if (!response.ok) {
+        throw new Error(result.error || "送信に失敗しました。")
+      }
 
-    const mailtoLink = `mailto:ec-support@kenshin-cloud.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-    window.open(mailtoLink)
-
-    // フォームをリセット
-    setFormData({
-      name: "",
-      company: "",
-      email: "",
-      phone: "",
-      interests: [],
-      message: "",
-    })
-
-    setIsSubmitting(false)
+      setSubmitStatus("success")
+      setFormData({
+        name: "",
+        company: "",
+        email: "",
+        phone: "",
+        interests: [],
+        message: "",
+      })
+    } catch (error) {
+      setSubmitStatus("error")
+      setErrorMessage(error instanceof Error ? error.message : "送信中にエラーが発生しました。")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -180,6 +183,18 @@ ${formData.message || "なし"}
                     className="bg-white border-gray-300"
                   />
                 </div>
+
+                {submitStatus === "success" && (
+                  <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm">
+                    送信が完了しました。担当者より折り返しご連絡いたします。
+                  </div>
+                )}
+
+                {submitStatus === "error" && (
+                  <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-800 text-sm">
+                    {errorMessage}
+                  </div>
+                )}
 
                 <Button
                   type="submit"
