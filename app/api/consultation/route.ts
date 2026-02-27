@@ -40,7 +40,7 @@ ${message || "なし"}
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "DAYSIO お問い合わせ <onboarding@resend.dev>",
+        from: "DAYSIO お問い合わせ <info@daysio.co.jp>",
         to: ["ec-support@kenshin-cloud.com"],
         reply_to: email,
         subject: subject,
