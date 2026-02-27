@@ -24,6 +24,7 @@ export default function ConsultationPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
   const [errorMessage, setErrorMessage] = useState("")
+  const [agreedToPrivacy, setAgreedToPrivacy] = useState(false)
 
   const handleCheckboxChange = (value: string, checked: boolean) => {
     if (checked) {
@@ -196,11 +197,33 @@ export default function ConsultationPage() {
                   </div>
                 )}
 
+                <div className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg border">
+                  <Checkbox
+                    id="privacy-policy"
+                    checked={agreedToPrivacy}
+                    onCheckedChange={(checked) => setAgreedToPrivacy(checked as boolean)}
+                    className="border-2 border-gray-400 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+                  />
+                  <Label htmlFor="privacy-policy" className="text-sm font-normal cursor-pointer flex-1">
+                    <a href="/privacy-policy" target="_blank" className="text-primary underline hover:text-primary/80">
+                      プライバシーポリシー
+                    </a>
+                    に同意して送信する <span className="text-red-500">*</span>
+                  </Label>
+                </div>
+
                 <Button
                   type="submit"
                   className="w-full"
                   size="lg"
-                  disabled={isSubmitting || !formData.name || !formData.company || !formData.email || !formData.phone}
+                  disabled={
+                    isSubmitting ||
+                    !formData.name ||
+                    !formData.company ||
+                    !formData.email ||
+                    !formData.phone ||
+                    !agreedToPrivacy
+                  }
                 >
                   <Send className="h-4 w-4 mr-2" />
                   {isSubmitting ? "送信中..." : "送信する"}
