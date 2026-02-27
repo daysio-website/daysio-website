@@ -18,6 +18,7 @@ export default function ContactSection() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+  const [errorMessage, setErrorMessage] = useState<string>("")
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -28,11 +29,23 @@ export default function ContactSection() {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus("idle")
+    setErrorMessage("")
 
     try {
-      const mailtoLink = `mailto:ec-support@kenshin-cloud.com?subject=お問い合わせ_DAYSIO_info&body=お名前: ${formData.name}%0D%0A施設名: ${formData.facility}%0D%0Aメールアドレス: ${formData.email}%0D%0A電話番号: ${formData.phone}%0D%0A%0D%0Aお問い合わせ内容:%0D%0A${formData.message}`
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
 
-      window.open(mailtoLink, "_blank")
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || "送信に失敗しました。")
+      }
+
       setSubmitStatus("success")
 
       if (typeof window !== "undefined" && (window as any).gtag) {
@@ -52,6 +65,7 @@ export default function ContactSection() {
       })
     } catch (error) {
       setSubmitStatus("error")
+      setErrorMessage(error instanceof Error ? error.message : "送信に失敗しました。")
     } finally {
       setIsSubmitting(false)
     }
@@ -120,10 +134,10 @@ export default function ContactSection() {
                 />
 
                 {submitStatus === "success" && (
-                  <div className="text-green-600 text-sm">メールアプリが開きます。送信を完了してください。</div>
+                  <div className="text-green-600 text-sm">送信が完了しました。お問い合わせありがとうございます。</div>
                 )}
                 {submitStatus === "error" && (
-                  <div className="text-red-600 text-sm">送信に失敗しました。もう一度お試しください。</div>
+                  <div className="text-red-600 text-sm">{errorMessage || "送信に失敗しました。もう一度お試しください。"}</div>
                 )}
 
                 <Button type="submit" className="w-full bg-slate-800 hover:bg-slate-700" disabled={isSubmitting}>
