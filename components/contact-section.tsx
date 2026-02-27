@@ -4,7 +4,9 @@ import type React from "react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Checkbox } from "@/components/ui/checkbox"
 import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { useState } from "react"
 
@@ -19,6 +21,7 @@ export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
   const [errorMessage, setErrorMessage] = useState<string>("")
+  const [agreedToPrivacy, setAgreedToPrivacy] = useState(false)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -140,7 +143,22 @@ export default function ContactSection() {
                   <div className="text-red-600 text-sm">{errorMessage || "送信に失敗しました。もう一度お試しください。"}</div>
                 )}
 
-                <Button type="submit" className="w-full bg-slate-800 hover:bg-slate-700" disabled={isSubmitting}>
+                <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg border">
+                  <Checkbox
+                    id="privacy-policy-contact"
+                    checked={agreedToPrivacy}
+                    onCheckedChange={(checked) => setAgreedToPrivacy(checked as boolean)}
+                    className="border-2 border-gray-400 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+                  />
+                  <Label htmlFor="privacy-policy-contact" className="text-sm font-normal cursor-pointer flex-1">
+                    <a href="/privacy-policy" target="_blank" className="text-primary underline hover:text-primary/80">
+                      プライバシーポリシー
+                    </a>
+                    に同意して送信する <span className="text-red-500">*</span>
+                  </Label>
+                </div>
+
+                <Button type="submit" className="w-full bg-slate-800 hover:bg-slate-700" disabled={isSubmitting || !agreedToPrivacy}>
                   {isSubmitting ? "送信中..." : "送信する"}
                 </Button>
               </form>
