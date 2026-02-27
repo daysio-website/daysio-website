@@ -4,10 +4,10 @@ import type React from "react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { Checkbox } from "@/components/ui/checkbox"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { useState } from "react"
 
 async function hashEmail(email: string): Promise<string> {
@@ -28,42 +28,49 @@ export function CTASection() {
     message: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [showSuccessModal, setShowSuccessModal] = useState(false)
-  const [copied, setCopied] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+  const [errorMessage, setErrorMessage] = useState<string>("")
+  const [agreedToPrivacy, setAgreedToPrivacy] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitStatus("idle")
+    setErrorMessage("")
 
-    // メール本文を作成
-    const emailBody =
-      `【お名前】\n${formData.name}\n\n` +
-      `【施設名・組織名】\n${formData.organization}\n\n` +
-      `【メールアドレス】\n${formData.email}\n\n` +
-      `【電話番号】\n${formData.phone || "未入力"}\n\n` +
-      `【お問い合わせ内容】\n${formData.message || "未入力"}`
-
-    // 件名とメール本文をURLエンコード
-    const subject = encodeURIComponent("【DAYSIO】お問い合わせ")
-    const body = encodeURIComponent(emailBody)
-
-    const mailtoLink = `mailto:ec-support@kenshin-cloud.com?subject=${subject}&body=${body}`
-
-    // メールクライアントを開く
-    window.location.href = mailtoLink
-
-    if (typeof window !== "undefined" && (window as any).gtag) {
-      hashEmail(formData.email).then((hashedEmail) => {
-        ;(window as any).gtag("event", "conversion", {
-          send_to: "AW-780899147/qzU8CLaa5tYbEMumrvQC",
-          email: hashedEmail,
-        })
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          facility: formData.organization,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        }),
       })
-    }
 
-    // フォームをリセット
-    setTimeout(() => {
-      setIsSubmitting(false)
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(data.error || "送信に失敗しました。")
+      }
+
+      setSubmitStatus("success")
+
+      if (typeof window !== "undefined" && (window as any).gtag) {
+        hashEmail(formData.email).then((hashedEmail) => {
+          ;(window as any).gtag("event", "conversion", {
+            send_to: "AW-780899147/qzU8CLaa5tYbEMumrvQC",
+            email: hashedEmail,
+          })
+        })
+      }
+
+      // フォームをリセット
       setFormData({
         name: "",
         email: "",
@@ -71,35 +78,13 @@ export function CTASection() {
         phone: "",
         message: "",
       })
-    }, 1000)
-  }
-
-  const handleCopy = async () => {
-    const emailContent =
-      `【お名前】\n${formData.name}\n\n` +
-      `【施設名・組織名】\n${formData.organization}\n\n` +
-      `【メールアドレス】\n${formData.email}\n\n` +
-      `【電話番号】\n${formData.phone || "未入力"}\n\n` +
-      `【お問い合わせ内容】\n${formData.message || "未入力"}`
-
-    try {
-      await navigator.clipboard.writeText(emailContent)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
-    } catch (err) {
-      console.error("Failed to copy:", err)
+      setAgreedToPrivacy(false)
+    } catch (error) {
+      setSubmitStatus("error")
+      setErrorMessage(error instanceof Error ? error.message : "送信に失敗しました。")
+    } finally {
+      setIsSubmitting(false)
     }
-  }
-
-  const handleCloseModal = () => {
-    setShowSuccessModal(false)
-    setFormData({
-      name: "",
-      email: "",
-      organization: "",
-      phone: "",
-      message: "",
-    })
   }
 
   return (
@@ -211,11 +196,34 @@ export function CTASection() {
                     disabled={isSubmitting}
                   />
                 </div>
+
+                {submitStatus === "success" && (
+                  <div className="text-green-600 text-sm">送信が完了しました。お問い合わせありがとうございます。</div>
+                )}
+                {submitStatus === "error" && (
+                  <div className="text-red-600 text-sm">{errorMessage || "送信に失敗しました。もう一度お試しください。"}</div>
+                )}
+
+                <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg border">
+                  <Checkbox
+                    id="privacy-policy-lp"
+                    checked={agreedToPrivacy}
+                    onCheckedChange={(checked) => setAgreedToPrivacy(checked as boolean)}
+                    className="border-2 border-gray-400 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+                  />
+                  <Label htmlFor="privacy-policy-lp" className="text-sm font-normal cursor-pointer flex-1">
+                    <a href="/privacy-policy" target="_blank" className="text-primary underline hover:text-primary/80">
+                      プライバシーポリシー
+                    </a>
+                    に同意して送信する <span className="text-red-500">*</span>
+                  </Label>
+                </div>
+
                 <Button
                   type="submit"
                   size="lg"
                   className="w-full bg-[#1e3a5f] hover:bg-[#2c4f7c] text-white"
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || !agreedToPrivacy}
                 >
                   {isSubmitting ? "送信中..." : "送信する"}
                 </Button>
@@ -224,69 +232,6 @@ export function CTASection() {
           </Card>
         </div>
       </div>
-
-      <Dialog open={showSuccessModal} onOpenChange={setShowSuccessModal}>
-        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle className="text-2xl">お問い合わせ内容の確認</DialogTitle>
-            <DialogDescription>
-              以下の内容で受け付けました。ec-support@kenshin-cloud.com へメールをお送りください。
-            </DialogDescription>
-          </DialogHeader>
-          <div className="flex flex-col gap-4 py-4">
-            <div className="bg-muted p-4 rounded-lg">
-              <div className="flex items-center justify-between mb-2">
-                <p className="text-sm font-semibold text-muted-foreground">送信先</p>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => {
-                    navigator.clipboard.writeText("ec-support@kenshin-cloud.com")
-                  }}
-                >
-                  コピー
-                </Button>
-              </div>
-              <p className="text-lg font-mono">ec-support@kenshin-cloud.com</p>
-            </div>
-            <div className="bg-muted p-4 rounded-lg space-y-3">
-              <div className="flex items-center justify-between">
-                <p className="text-sm font-semibold text-muted-foreground">メール本文</p>
-                <Button variant="outline" size="sm" onClick={handleCopy}>
-                  {copied ? "コピー済み ✓" : "コピー"}
-                </Button>
-              </div>
-              <div className="text-sm space-y-2 whitespace-pre-wrap font-mono bg-background p-3 rounded border">
-                <p>
-                  <strong>【お名前】</strong>
-                </p>
-                <p>{formData.name}</p>
-                <p className="pt-2">
-                  <strong>【施設名・組織名】</strong>
-                </p>
-                <p>{formData.organization}</p>
-                <p className="pt-2">
-                  <strong>【メールアドレス】</strong>
-                </p>
-                <p>{formData.email}</p>
-                <p className="pt-2">
-                  <strong>【電話番号】</strong>
-                </p>
-                <p>{formData.phone || "未入力"}</p>
-                <p className="pt-2">
-                  <strong>【お問い合わせ内容】</strong>
-                </p>
-                <p>{formData.message || "未入力"}</p>
-              </div>
-            </div>
-            <div className="flex gap-3">
-              <Button className="flex-1" onClick={handleCloseModal}>
-                閉じる
-              </Button>
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
     </section>
   )
 }
