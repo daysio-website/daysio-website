@@ -53,7 +53,7 @@ export default function RootLayout({
           />
         </noscript>
 
-        <Script src="//kitchen.juicer.cc/?color=7hddEYDcZI0=" strategy="afterInteractive" />
+        <Script src="https://kitchen.juicer.cc/?color=7hddEYDcZI0=" strategy="afterInteractive" />
 
         <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-780899147" strategy="afterInteractive" />
         <Script id="google-ads" strategy="afterInteractive">
