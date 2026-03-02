@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import localFont from "next/font/local"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
-import Script from "next/script"
+import { ExternalScripts } from "@/components/external-scripts"
 import "./globals.css"
 
 const geistSans = localFont({
@@ -33,20 +33,6 @@ export default function RootLayout({
   return (
     <html lang="ja" className="scroll-smooth">
       <body className={`font-sans ${geistSans.variable} ${geistMono.variable}`}>
-        <Script id="google-tag-manager" strategy="afterInteractive">
-          {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            j.onload = function() {
-              console.log('[v0] GTM loaded successfully on:', window.location.pathname);
-            };
-            f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-MNLWPRX5');
-          `}
-        </Script>
-
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MNLWPRX5"
@@ -56,20 +42,7 @@ export default function RootLayout({
           />
         </noscript>
 
-        <Script async src="//kitchen.juicer.cc/?color=7hddEYDcZI0=" strategy="beforeInteractive" />
-
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-780899147" strategy="afterInteractive" />
-        <Script id="google-ads" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-780899147', {
-              'allow_enhanced_conversions': true
-            });
-          `}
-        </Script>
-
+        <ExternalScripts />
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>
