@@ -39,9 +39,6 @@ export default function RootLayout({
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            j.onload = function() {
-              console.log('[v0] GTM loaded successfully on:', window.location.pathname);
-            };
             f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-MNLWPRX5');
           `}
@@ -56,7 +53,7 @@ export default function RootLayout({
           />
         </noscript>
 
-        <Script async src="//kitchen.juicer.cc/?color=7hddEYDcZI0=" strategy="beforeInteractive" />
+        <Script src="//kitchen.juicer.cc/?color=7hddEYDcZI0=" strategy="afterInteractive" />
 
         <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-780899147" strategy="afterInteractive" />
         <Script id="google-ads" strategy="afterInteractive">
