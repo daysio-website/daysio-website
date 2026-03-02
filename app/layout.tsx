@@ -35,12 +35,15 @@ export default function RootLayout({
       <body className={`font-sans ${geistSans.variable} ${geistMono.variable}`}>
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-MNLWPRX5');
+            try {
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+              j.onerror=function(){};
+              f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-MNLWPRX5');
+            } catch(e) {}
           `}
         </Script>
 
@@ -53,17 +56,27 @@ export default function RootLayout({
           />
         </noscript>
 
-        <Script src="https://kitchen.juicer.cc/?color=7hddEYDcZI0=" strategy="afterInteractive" />
+        <Script
+          src="https://kitchen.juicer.cc/?color=7hddEYDcZI0="
+          strategy="lazyOnload"
+          onError={() => {}}
+        />
 
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-780899147" strategy="afterInteractive" />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-780899147"
+          strategy="afterInteractive"
+          onError={() => {}}
+        />
         <Script id="google-ads" strategy="afterInteractive">
           {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-780899147', {
-              'allow_enhanced_conversions': true
-            });
+            try {
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-780899147', {
+                'allow_enhanced_conversions': true
+              });
+            } catch(e) {}
           `}
         </Script>
 
