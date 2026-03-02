@@ -1,58 +1,51 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import Script from "next/script"
 
 export function ExternalScripts() {
+  const [isProduction, setIsProduction] = useState(false)
+
   useEffect(() => {
-    // Suppress cross-origin Script error. in preview environments
-    const handler = (e: ErrorEvent) => {
-      if (e.message === "Script error.") {
-        e.stopImmediatePropagation()
-        e.preventDefault()
-      }
+    // Only load external scripts on the production domain, not in v0 preview
+    const hostname = window.location.hostname
+    if (hostname === "daysio.co.jp" || hostname === "www.daysio.co.jp" || hostname.endsWith(".vercel.app")) {
+      setIsProduction(true)
     }
-    window.addEventListener("error", handler, true)
-    return () => window.removeEventListener("error", handler, true)
   }, [])
+
+  if (!isProduction) return null
 
   return (
     <>
       <Script id="google-tag-manager" strategy="afterInteractive">
         {`
-          try {
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            j.onerror=function(){};
-            f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','GTM-MNLWPRX5');
-          } catch(e) {}
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+          f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-MNLWPRX5');
         `}
       </Script>
 
       <Script
         src="https://kitchen.juicer.cc/?color=7hddEYDcZI0="
         strategy="lazyOnload"
-        onError={() => {}}
       />
 
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=AW-780899147"
         strategy="afterInteractive"
-        onError={() => {}}
       />
       <Script id="google-ads" strategy="afterInteractive">
         {`
-          try {
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'AW-780899147', {
-              'allow_enhanced_conversions': true
-            });
-          } catch(e) {}
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-780899147', {
+            'allow_enhanced_conversions': true
+          });
         `}
       </Script>
     </>
