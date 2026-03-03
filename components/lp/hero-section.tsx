@@ -40,16 +40,20 @@ export function HeroSection() {
               <div className="flex justify-center lg:justify-start w-full">
                 <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-300 via-amber-300 to-orange-300 px-6 py-3 rounded-full shadow-lg">
                   <span className="text-2xl">✨</span>
-                  <p className="text-2xl font-bold text-white">クラウド型健診システム</p>
+                  <p className="text-2xl font-bold text-white">医療機関向けクラウド型健診システム</p>
                   <span className="text-2xl">✨</span>
                 </div>
               </div>
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mt-4">
-                <span className="text-primary">健診業務</span>
+              <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl mt-4 leading-tight">
+                <span className="text-primary">電カル連携</span>
+                <span className="text-black">×</span>
+                <span className="text-primary">ワンクリック判定</span>
+                <span className="text-black">で</span>
                 <br />
-                <span className="text-black">もう紙はいらない</span>
+                <span className="text-black">健診業務を効率的に！</span>
               </h1>
-              <p className="text-xl mt-4 leading-relaxed text-black">予約受付から結果判定までワンストップで実施</p>
+              <p className="text-lg mt-4 leading-relaxed text-black">判定コメントも自動入力で報告書作成も楽々！</p>
+              <p className="text-2xl sm:text-3xl font-extrabold mt-2 text-primary">作業時間最大85%削減！！！</p>
               <p className="mt-2 text-lg sm:text-xl font-bold">
                 <span className="relative inline-block">
                   <span className="relative z-10 text-primary">多言語対応で海外進出支援！</span>
