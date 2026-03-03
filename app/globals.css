@@ -1,5 +1,25 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:is(.dark *));
+
+@keyframes enter {
+  from {
+    opacity: var(--tw-enter-opacity, 1);
+    transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0)
+      scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1))
+      rotate(var(--tw-enter-rotate, 0));
+  }
+}
+
+@keyframes exit {
+  to {
+    opacity: var(--tw-exit-opacity, 1);
+    transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0)
+      scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1))
+      rotate(var(--tw-exit-rotate, 0));
+  }
+}
+
 @utility animate-in {
   animation-name: enter;
   animation-duration: 150ms;
@@ -20,81 +40,86 @@
   --tw-exit-translate-y: initial;
 }
 
-@utility fade-in-* {
-  --tw-enter-opacity: calc(var(--utility-value) / 100);
+@utility fade-in-0 {
+  --tw-enter-opacity: 0;
+}
+@utility fade-in {
+  --tw-enter-opacity: 0;
+}
+@utility fade-in-80 {
+  --tw-enter-opacity: 0.8;
+}
+@utility fade-out-0 {
+  --tw-exit-opacity: 0;
+}
+@utility fade-out {
+  --tw-exit-opacity: 0;
+}
+@utility fade-out-80 {
+  --tw-exit-opacity: 0.8;
 }
 
-@utility fade-out-* {
-  --tw-exit-opacity: calc(var(--utility-value) / 100);
+@utility zoom-in-90 {
+  --tw-enter-scale: 0.9;
+}
+@utility zoom-in-95 {
+  --tw-enter-scale: 0.95;
+}
+@utility zoom-out-95 {
+  --tw-exit-scale: 0.95;
 }
 
-@utility zoom-in-* {
-  --tw-enter-scale: calc(var(--utility-value) / 100);
+@utility slide-in-from-top-2 {
+  --tw-enter-translate-y: -0.5rem;
+}
+@utility slide-in-from-bottom-2 {
+  --tw-enter-translate-y: 0.5rem;
+}
+@utility slide-in-from-left-2 {
+  --tw-enter-translate-y: 0;
+  --tw-enter-translate-x: -0.5rem;
+}
+@utility slide-in-from-right-2 {
+  --tw-enter-translate-y: 0;
+  --tw-enter-translate-x: 0.5rem;
+}
+@utility slide-in-from-top {
+  --tw-enter-translate-y: -100%;
+}
+@utility slide-in-from-bottom {
+  --tw-enter-translate-y: 100%;
+}
+@utility slide-in-from-left {
+  --tw-enter-translate-x: -100%;
+}
+@utility slide-in-from-right {
+  --tw-enter-translate-x: 100%;
+}
+@utility slide-in-from-left-52 {
+  --tw-enter-translate-x: -13rem;
+}
+@utility slide-in-from-right-52 {
+  --tw-enter-translate-x: 13rem;
 }
 
-@utility zoom-out-* {
-  --tw-exit-scale: calc(var(--utility-value) / 100);
+@utility slide-out-to-top {
+  --tw-exit-translate-y: -100%;
 }
-
-@utility spin-in-* {
-  --tw-enter-rotate: calc(var(--utility-value) * 1deg);
+@utility slide-out-to-bottom {
+  --tw-exit-translate-y: 100%;
 }
-
-@utility spin-out-* {
-  --tw-exit-rotate: calc(var(--utility-value) * 1deg);
+@utility slide-out-to-left {
+  --tw-exit-translate-x: -100%;
 }
-
-@utility slide-in-from-top-* {
-  --tw-enter-translate-y: calc(var(--utility-value) * -1);
+@utility slide-out-to-right {
+  --tw-exit-translate-x: 100%;
 }
-
-@utility slide-in-from-bottom-* {
-  --tw-enter-translate-y: var(--utility-value);
+@utility slide-out-to-left-52 {
+  --tw-exit-translate-x: -13rem;
 }
-
-@utility slide-in-from-left-* {
-  --tw-enter-translate-x: calc(var(--utility-value) * -1);
+@utility slide-out-to-right-52 {
+  --tw-exit-translate-x: 13rem;
 }
-
-@utility slide-in-from-right-* {
-  --tw-enter-translate-x: var(--utility-value);
-}
-
-@utility slide-out-to-top-* {
-  --tw-exit-translate-y: calc(var(--utility-value) * -1);
-}
-
-@utility slide-out-to-bottom-* {
-  --tw-exit-translate-y: var(--utility-value);
-}
-
-@utility slide-out-to-left-* {
-  --tw-exit-translate-x: calc(var(--utility-value) * -1);
-}
-
-@utility slide-out-to-right-* {
-  --tw-exit-translate-x: var(--utility-value);
-}
-
-@keyframes enter {
-  from {
-    opacity: var(--tw-enter-opacity, 1);
-    transform: translate3d(var(--tw-enter-translate-x, 0), var(--tw-enter-translate-y, 0), 0)
-      scale3d(var(--tw-enter-scale, 1), var(--tw-enter-scale, 1), var(--tw-enter-scale, 1))
-      rotate(var(--tw-enter-rotate, 0));
-  }
-}
-
-@keyframes exit {
-  to {
-    opacity: var(--tw-exit-opacity, 1);
-    transform: translate3d(var(--tw-exit-translate-x, 0), var(--tw-exit-translate-y, 0), 0)
-      scale3d(var(--tw-exit-scale, 1), var(--tw-exit-scale, 1), var(--tw-exit-scale, 1))
-      rotate(var(--tw-exit-rotate, 0));
-  }
-}
-
-@custom-variant dark (&:is(.dark *));
 
 :root {
   --background: oklch(1 0 0);
