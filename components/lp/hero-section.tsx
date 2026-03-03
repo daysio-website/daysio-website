@@ -20,13 +20,13 @@ export function HeroSection() {
   const logos = [
     { src: "/images/narita-hospital-logo.png", alt: "国際医療福祉大学 成田病院" },
     { src: "/images/fujita-hospital-logo.png", alt: "藤田医科大学病院" },
+    { src: "/images/f-logo.png", alt: "両国きたむら整形外科" },
     { src: "/images/orange-logo.png", alt: "企業ロゴ" },
     { src: "/images/202003191017257653.png", alt: "三恵クリニック" },
     { src: "/images/logo-cr-135.png", alt: "CHO RAY HOSPITAL" },
     { src: "/images/2.svg", alt: "サッポロ" },
     { src: "/images/logo.png", alt: "アクラス中央病院" },
     { src: "/images/logo-symbol.svg", alt: "ロゴシンボル" },
-    { src: "/images/f-logo.png", alt: "両国きたむら整形外科" },
     { src: "/images/logo-takenoko.png", alt: "タケノコ診療所グループ" },
   ]
 
@@ -40,22 +40,24 @@ export function HeroSection() {
               <div className="flex justify-center lg:justify-start w-full">
                 <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-300 via-amber-300 to-orange-300 px-6 py-3 rounded-full shadow-lg">
                   <span className="text-2xl">✨</span>
-                  <p className="text-2xl font-bold text-white">クラウド型健診システム</p>
+                  <p className="text-2xl font-bold text-white">医療機関向けクラウド型健診システム</p>
                   <span className="text-2xl">✨</span>
                 </div>
               </div>
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl mt-4">
-                <span className="text-primary">健診業務</span>
-                <br />
-                <span className="text-black">もう紙はいらない</span>
+              <h1 className="font-bold tracking-tight mt-4 leading-tight text-[#1e3a5f]">
+                <span className="block whitespace-nowrap text-2xl sm:text-3xl lg:text-4xl">{'電カル連携×ワンクリック判定で'}</span>
+                <span className="block text-2xl sm:text-3xl lg:text-4xl">{'健診業務を効率的に！'}</span>
               </h1>
-              <p className="text-xl mt-4 leading-relaxed text-black">予約受付から結果判定までワンストップで実施</p>
-              <p className="mt-2 text-lg sm:text-xl font-bold">
-                <span className="relative inline-block">
-                  <span className="relative z-10 text-primary">多言語対応で海外進出支援！</span>
-                  <span className="absolute bottom-0 left-0 w-full h-3 bg-amber-300 -z-0"></span>
-                </span>
-              </p>
+              <div className="mt-4 flex flex-col gap-1">
+                <p className="text-lg leading-relaxed text-gray-800">{'判定コメントも自動入力で報告書作成も楽々！'}</p>
+                <p className="text-lg leading-relaxed text-gray-800">{'→作業時間最大85%削減！！！'}</p>
+                <p className="text-lg font-bold text-[#1e3a5f] mt-1">
+                  <span className="relative inline-block">
+                    <span className="relative z-10">{'月額9,800円からご利用可能！'}</span>
+                    <span className="absolute bottom-0 left-0 w-full h-3 bg-amber-300 -z-0"></span>
+                  </span>
+                </p>
+              </div>
             </div>
 
             {/* CTAボタン */}
