@@ -20,13 +20,13 @@ export function HeroSection() {
   const logos = [
     { src: "/images/narita-hospital-logo.png", alt: "国際医療福祉大学 成田病院" },
     { src: "/images/fujita-hospital-logo.png", alt: "藤田医科大学病院" },
+    { src: "/images/f-logo.png", alt: "両国きたむら整形外科" },
     { src: "/images/orange-logo.png", alt: "企業ロゴ" },
     { src: "/images/202003191017257653.png", alt: "三恵クリニック" },
     { src: "/images/logo-cr-135.png", alt: "CHO RAY HOSPITAL" },
     { src: "/images/2.svg", alt: "サッポロ" },
     { src: "/images/logo.png", alt: "アクラス中央病院" },
     { src: "/images/logo-symbol.svg", alt: "ロゴシンボル" },
-    { src: "/images/f-logo.png", alt: "両国きたむら整形外科" },
     { src: "/images/logo-takenoko.png", alt: "タケノコ診療所グループ" },
   ]
 
