@@ -44,22 +44,21 @@ export function HeroSection() {
                   <span className="text-2xl">✨</span>
                 </div>
               </div>
-              <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl mt-4 leading-tight">
-                <span className="text-primary">電カル連携</span>
-                <span className="text-black">×</span>
-                <span className="text-primary">ワンクリック判定</span>
-                <span className="text-black">で</span>
+              <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl mt-4 leading-tight text-[#1e3a5f]">
+                {'電カル連携×ワンクリック判定で'}
                 <br />
-                <span className="text-black">健診業務を効率的に！</span>
+                {'健診業務を効率的に！'}
               </h1>
-              <p className="text-lg mt-4 leading-relaxed text-black">判定コメントも自動入力で報告書作成も楽々！</p>
-              <p className="text-2xl sm:text-3xl font-extrabold mt-2 text-primary">作業時間最大85%削減！！！</p>
-              <p className="mt-2 text-lg sm:text-xl font-bold">
-                <span className="relative inline-block">
-                  <span className="relative z-10 text-primary">多言語対応で海外進出支援！</span>
-                  <span className="absolute bottom-0 left-0 w-full h-3 bg-amber-300 -z-0"></span>
-                </span>
-              </p>
+              <div className="mt-4 flex flex-col gap-1">
+                <p className="text-lg leading-relaxed text-gray-800">{'判定コメントも自動入力で報告書作成も楽々！'}</p>
+                <p className="text-lg leading-relaxed text-gray-800">{'→作業時間最大85%削減！！！'}</p>
+                <p className="text-lg font-bold text-[#1e3a5f] mt-1">
+                  <span className="relative inline-block">
+                    <span className="relative z-10">{'月額9,800円からご利用可能！'}</span>
+                    <span className="absolute bottom-0 left-0 w-full h-3 bg-amber-300 -z-0"></span>
+                  </span>
+                </p>
+              </div>
             </div>
 
             {/* CTAボタン */}
