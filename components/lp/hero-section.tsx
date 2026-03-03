@@ -44,10 +44,9 @@ export function HeroSection() {
                   <span className="text-2xl">✨</span>
                 </div>
               </div>
-              <h1 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl mt-4 leading-tight text-[#1e3a5f]">
-                {'電カル連携×ワンクリック判定で'}
-                <br />
-                {'健診業務を効率的に！'}
+              <h1 className="font-bold tracking-tight mt-4 leading-tight text-[#1e3a5f]">
+                <span className="block whitespace-nowrap text-2xl sm:text-3xl lg:text-4xl">{'電カル連携×ワンクリック判定で'}</span>
+                <span className="block text-2xl sm:text-3xl lg:text-4xl">{'健診業務を効率的に！'}</span>
               </h1>
               <div className="mt-4 flex flex-col gap-1">
                 <p className="text-lg leading-relaxed text-gray-800">{'判定コメントも自動入力で報告書作成も楽々！'}</p>
