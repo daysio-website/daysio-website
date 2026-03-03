@@ -38,10 +38,10 @@ export function HeroSection() {
           <div className="flex flex-col gap-6 text-center lg:text-left items-center lg:items-start">
             <div className="flex flex-col gap-2 w-full">
               <div className="flex justify-center lg:justify-start w-full">
-                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-300 via-amber-300 to-orange-300 px-6 py-3 rounded-full shadow-lg">
-                  <span className="text-2xl">✨</span>
-                  <p className="text-2xl font-bold text-white">医療機関向けクラウド型健診システム</p>
-                  <span className="text-2xl">✨</span>
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-300 via-amber-300 to-orange-300 px-4 sm:px-6 py-3 rounded-full shadow-lg whitespace-nowrap">
+                  <span className="text-xl sm:text-2xl">✨</span>
+                  <p className="text-lg sm:text-2xl font-bold text-white">医療機関向けクラウド型健診システム</p>
+                  <span className="text-xl sm:text-2xl">✨</span>
                 </div>
               </div>
               <h1 className="font-bold tracking-tight mt-4 leading-tight text-[#1e3a5f]">
