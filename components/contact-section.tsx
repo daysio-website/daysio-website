@@ -4,9 +4,7 @@ import type React from "react"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Checkbox } from "@/components/ui/checkbox"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { useState } from "react"
 
@@ -20,8 +18,6 @@ export default function ContactSection() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
-  const [errorMessage, setErrorMessage] = useState<string>("")
-  const [agreedToPrivacy, setAgreedToPrivacy] = useState(false)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -32,23 +28,11 @@ export default function ContactSection() {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus("idle")
-    setErrorMessage("")
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      })
+      const mailtoLink = `mailto:ec-support@kenshin-cloud.com?subject=お問い合わせ_DAYSIO_info&body=お名前: ${formData.name}%0D%0A施設名: ${formData.facility}%0D%0Aメールアドレス: ${formData.email}%0D%0A電話番号: ${formData.phone}%0D%0A%0D%0Aお問い合わせ内容:%0D%0A${formData.message}`
 
-      const data = await response.json()
-
-      if (!response.ok) {
-        throw new Error(data.error || "送信に失敗しました。")
-      }
-
+      window.open(mailtoLink, "_blank")
       setSubmitStatus("success")
 
       if (typeof window !== "undefined" && (window as any).gtag) {
@@ -68,7 +52,6 @@ export default function ContactSection() {
       })
     } catch (error) {
       setSubmitStatus("error")
-      setErrorMessage(error instanceof Error ? error.message : "送信に失敗しました。")
     } finally {
       setIsSubmitting(false)
     }
@@ -137,28 +120,13 @@ export default function ContactSection() {
                 />
 
                 {submitStatus === "success" && (
-                  <div className="text-green-600 text-sm">送信が完了しました。お問い合わせありがとうございます。</div>
+                  <div className="text-green-600 text-sm">メールアプリが開きます。送信を完了してください。</div>
                 )}
                 {submitStatus === "error" && (
-                  <div className="text-red-600 text-sm">{errorMessage || "送信に失敗しました。もう一度お試しください。"}</div>
+                  <div className="text-red-600 text-sm">送信に失敗しました。もう一度お試しください。</div>
                 )}
 
-                <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg border">
-                  <Checkbox
-                    id="privacy-policy-contact"
-                    checked={agreedToPrivacy}
-                    onCheckedChange={(checked) => setAgreedToPrivacy(checked as boolean)}
-                    className="border-2 border-gray-400 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
-                  />
-                  <Label htmlFor="privacy-policy-contact" className="text-sm font-normal cursor-pointer flex-1">
-                    <a href="/privacy-policy" target="_blank" className="text-primary underline hover:text-primary/80">
-                      プライバシーポリシー
-                    </a>
-                    に同意して送信する <span className="text-red-500">*</span>
-                  </Label>
-                </div>
-
-                <Button type="submit" className="w-full bg-slate-800 hover:bg-slate-700" disabled={isSubmitting || !agreedToPrivacy}>
+                <Button type="submit" className="w-full bg-slate-800 hover:bg-slate-700" disabled={isSubmitting}>
                   {isSubmitting ? "送信中..." : "送信する"}
                 </Button>
               </form>
