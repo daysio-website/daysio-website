@@ -6,52 +6,84 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { Checkbox } from "@/components/ui/checkbox"
+import { Label } from "@/components/ui/label"
 import { useState } from "react"
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
     name: "",
-    facility: "",
+    company: "",
     email: "",
     phone: "",
+    interests: [] as string[],
     message: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+  const [errorMessage, setErrorMessage] = useState("")
+  const [agreedToPrivacy, setAgreedToPrivacy] = useState(false)
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
+  const handleCheckboxChange = (value: string, checked: boolean) => {
+    if (checked) {
+      setFormData((prev) => ({
+        ...prev,
+        interests: [...prev.interests, value],
+      }))
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        interests: prev.interests.filter((item) => item !== value),
+      }))
+    }
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus("idle")
+    setErrorMessage("")
 
     try {
-      const mailtoLink = `mailto:ec-support@kenshin-cloud.com?subject=お問い合わせ_DAYSIO_info&body=お名前: ${formData.name}%0D%0A施設名: ${formData.facility}%0D%0Aメールアドレス: ${formData.email}%0D%0A電話番号: ${formData.phone}%0D%0A%0D%0Aお問い合わせ内容:%0D%0A${formData.message}`
+      const response = await fetch("/api/consultation", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
 
-      window.open(mailtoLink, "_blank")
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.error || "送信に失敗しました。")
+      }
+
       setSubmitStatus("success")
 
       if (typeof window !== "undefined" && (window as any).gtag) {
         ;(window as any).gtag("event", "conversion", {
           send_to: "AW-780899147/qzU8CLaa5tYbEMumrvQC",
-          email: formData.email, // 拡張コンバージョン用にメールアドレスをハッシュ化して送信
+          email: formData.email,
         })
       }
 
       // フォームをリセット
       setFormData({
         name: "",
-        facility: "",
+        company: "",
         email: "",
         phone: "",
+        interests: [],
         message: "",
       })
+      setAgreedToPrivacy(false)
     } catch (error) {
       setSubmitStatus("error")
+      setErrorMessage(error instanceof Error ? error.message : "送信中にエラーが発生しました。")
     } finally {
       setIsSubmitting(false)
     }
@@ -68,7 +100,7 @@ export default function ContactSection() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          <Card className="border-2 border-dashed border-muted-foreground/30 flex flex-col justify-center min-h-[500px]">
+          <Card className="border-2 border-dashed border-muted-foreground/30 flex flex-col justify-center">
             <CardHeader className="text-center">
               <CardTitle>お問い合わせフォーム</CardTitle>
               <CardDescription>下記フォームよりお気軽にお問い合わせください。</CardDescription>
@@ -76,57 +108,143 @@ export default function ContactSection() {
             <CardContent className="space-y-4">
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
-                  <Input
-                    name="name"
-                    placeholder="お名前"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                    className="bg-white border-gray-300"
-                  />
-                  <Input
-                    name="facility"
-                    placeholder="施設名"
-                    value={formData.facility}
+                  <div className="space-y-1">
+                    <Label htmlFor="name" className="text-sm">
+                      お名前 <span className="text-red-500">*</span>
+                    </Label>
+                    <Input
+                      id="name"
+                      name="name"
+                      placeholder="山田 太郎"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      className="bg-white border-gray-300"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <Label htmlFor="company" className="text-sm">
+                      施設名 <span className="text-red-500">*</span>
+                    </Label>
+                    <Input
+                      id="company"
+                      name="company"
+                      placeholder="○○病院"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      required
+                      className="bg-white border-gray-300"
+                    />
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="space-y-1">
+                    <Label htmlFor="email" className="text-sm">
+                      メールアドレス <span className="text-red-500">*</span>
+                    </Label>
+                    <Input
+                      id="email"
+                      name="email"
+                      placeholder="example@hospital.com"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      className="bg-white border-gray-300"
+                    />
+                  </div>
+                  <div className="space-y-1">
+                    <Label htmlFor="phone" className="text-sm">
+                      電話番号 <span className="text-red-500">*</span>
+                    </Label>
+                    <Input
+                      id="phone"
+                      name="phone"
+                      placeholder="03-1234-5678"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      required
+                      className="bg-white border-gray-300"
+                    />
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <Label className="text-sm font-semibold">★ご希望の内容にチェックを入れてください★</Label>
+                  <div className="space-y-2">
+                    {["機能に関して質問したい(電話orビデオ通話)", "デモをしてほしい(ビデオ通話)", "その他"].map(
+                      (option) => (
+                        <div key={option} className="flex items-center space-x-2 p-2 bg-gray-50 rounded border">
+                          <Checkbox
+                            id={`contact-${option}`}
+                            checked={formData.interests.includes(option)}
+                            onCheckedChange={(checked) => handleCheckboxChange(option, checked as boolean)}
+                            className="border-2 border-gray-400 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+                          />
+                          <Label htmlFor={`contact-${option}`} className="text-sm font-normal cursor-pointer flex-1">
+                            {option}
+                          </Label>
+                        </div>
+                      ),
+                    )}
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <Label htmlFor="message" className="text-sm">
+                    自由記入欄
+                  </Label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    placeholder="ご質問やご要望がございましたら、こちらにご記入ください。"
+                    rows={3}
+                    value={formData.message}
                     onChange={handleInputChange}
                     className="bg-white border-gray-300"
                   />
                 </div>
-                <Input
-                  name="email"
-                  placeholder="メールアドレス"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="bg-white border-gray-300"
-                />
-                <Input
-                  name="phone"
-                  placeholder="電話番号"
-                  type="tel"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  className="bg-white border-gray-300"
-                />
-                <Textarea
-                  name="message"
-                  placeholder="お問い合わせ内容"
-                  rows={4}
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  className="bg-white border-gray-300"
-                />
 
                 {submitStatus === "success" && (
-                  <div className="text-green-600 text-sm">メールアプリが開きます。送信を完了してください。</div>
-                )}
-                {submitStatus === "error" && (
-                  <div className="text-red-600 text-sm">送信に失敗しました。もう一度お試しください。</div>
+                  <div className="p-3 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm">
+                    送信が完了しました。担当者より折り返しご連絡いたします。
+                  </div>
                 )}
 
-                <Button type="submit" className="w-full bg-slate-800 hover:bg-slate-700" disabled={isSubmitting}>
+                {submitStatus === "error" && (
+                  <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-red-800 text-sm">
+                    {errorMessage}
+                  </div>
+                )}
+
+                <div className="flex items-center space-x-2 p-3 bg-gray-50 rounded border">
+                  <Checkbox
+                    id="contact-privacy-policy"
+                    checked={agreedToPrivacy}
+                    onCheckedChange={(checked) => setAgreedToPrivacy(checked as boolean)}
+                    className="border-2 border-gray-400 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+                  />
+                  <Label htmlFor="contact-privacy-policy" className="text-sm font-normal cursor-pointer flex-1">
+                    <a href="/privacy-policy" target="_blank" className="text-primary underline hover:text-primary/80">
+                      プライバシーポリシー
+                    </a>
+                    に同意して送信する <span className="text-red-500">*</span>
+                  </Label>
+                </div>
+
+                <Button
+                  type="submit"
+                  className="w-full bg-slate-800 hover:bg-slate-700"
+                  disabled={
+                    isSubmitting ||
+                    !formData.name ||
+                    !formData.company ||
+                    !formData.email ||
+                    !formData.phone ||
+                    !agreedToPrivacy
+                  }
+                >
                   {isSubmitting ? "送信中..." : "送信する"}
                 </Button>
               </form>
