@@ -7,99 +7,81 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { Checkbox } from "@/components/ui/checkbox"
 import { useState } from "react"
-
-async function hashEmail(email: string): Promise<string> {
-  const encoder = new TextEncoder()
-  const data = encoder.encode(email.toLowerCase().trim())
-  const hashBuffer = await crypto.subtle.digest("SHA-256", data)
-  const hashArray = Array.from(new Uint8Array(hashBuffer))
-  const hashHex = hashArray.map((b) => b.toString(16).padStart(2, "0")).join("")
-  return hashHex
-}
 
 export function CTASection() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    organization: "",
+    company: "",
     phone: "",
+    interests: [] as string[],
     message: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [showSuccessModal, setShowSuccessModal] = useState(false)
-  const [copied, setCopied] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+  const [errorMessage, setErrorMessage] = useState("")
+  const [agreedToPrivacy, setAgreedToPrivacy] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleCheckboxChange = (value: string, checked: boolean) => {
+    if (checked) {
+      setFormData((prev) => ({
+        ...prev,
+        interests: [...prev.interests, value],
+      }))
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        interests: prev.interests.filter((item) => item !== value),
+      }))
+    }
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitStatus("idle")
+    setErrorMessage("")
 
-    // メール本文を作成
-    const emailBody =
-      `【お名前】\n${formData.name}\n\n` +
-      `【施設名・組織名】\n${formData.organization}\n\n` +
-      `【メールアドレス】\n${formData.email}\n\n` +
-      `【電話番号】\n${formData.phone || "未入力"}\n\n` +
-      `【お問い合わせ内容】\n${formData.message || "未入力"}`
+    try {
+      const response = await fetch("/api/consultation", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
 
-    // 件名とメール本文をURLエンコード
-    const subject = encodeURIComponent("【DAYSIO】お問い合わせ")
-    const body = encodeURIComponent(emailBody)
+      const result = await response.json()
 
-    const mailtoLink = `mailto:ec-support@kenshin-cloud.com?subject=${subject}&body=${body}`
+      if (!response.ok) {
+        throw new Error(result.error || "送信に失敗しました。")
+      }
 
-    // メールクライアントを開く
-    window.location.href = mailtoLink
+      setSubmitStatus("success")
 
-    if (typeof window !== "undefined" && (window as any).gtag) {
-      hashEmail(formData.email).then((hashedEmail) => {
+      if (typeof window !== "undefined" && (window as any).gtag) {
         ;(window as any).gtag("event", "conversion", {
           send_to: "AW-780899147/qzU8CLaa5tYbEMumrvQC",
-          email: hashedEmail,
+          email: formData.email,
         })
-      })
-    }
+      }
 
-    // フォームをリセット
-    setTimeout(() => {
-      setIsSubmitting(false)
+      // フォームをリセット
       setFormData({
         name: "",
         email: "",
-        organization: "",
+        company: "",
         phone: "",
+        interests: [],
         message: "",
       })
-    }, 1000)
-  }
-
-  const handleCopy = async () => {
-    const emailContent =
-      `【お名前】\n${formData.name}\n\n` +
-      `【施設名・組織名】\n${formData.organization}\n\n` +
-      `【メールアドレス】\n${formData.email}\n\n` +
-      `【電話番号】\n${formData.phone || "未入力"}\n\n` +
-      `【お問い合わせ内容】\n${formData.message || "未入力"}`
-
-    try {
-      await navigator.clipboard.writeText(emailContent)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
-    } catch (err) {
-      console.error("Failed to copy:", err)
+      setAgreedToPrivacy(false)
+    } catch (error) {
+      setSubmitStatus("error")
+      setErrorMessage(error instanceof Error ? error.message : "送信中にエラーが発生しました。")
+    } finally {
+      setIsSubmitting(false)
     }
-  }
-
-  const handleCloseModal = () => {
-    setShowSuccessModal(false)
-    setFormData({
-      name: "",
-      email: "",
-      organization: "",
-      phone: "",
-      message: "",
-    })
   }
 
   return (
@@ -154,68 +136,132 @@ export function CTASection() {
           </div>
           <Card className="border-border/50">
             <CardContent className="p-8">
-              <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-                <div className="flex flex-col gap-2">
-                  <Label htmlFor="name">お名前 *</Label>
-                  <Input
-                    id="name"
-                    required
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="山田 太郎"
-                    disabled={isSubmitting}
-                  />
+              <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="flex flex-col gap-2">
+                    <Label htmlFor="lp-name">お名前 *</Label>
+                    <Input
+                      id="lp-name"
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      placeholder="山田 太郎"
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <Label htmlFor="lp-company">施設名 *</Label>
+                    <Input
+                      id="lp-company"
+                      required
+                      value={formData.company}
+                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                      placeholder="〇〇クリニック・〇〇病院"
+                      disabled={isSubmitting}
+                    />
+                  </div>
                 </div>
-                <div className="flex flex-col gap-2">
-                  <Label htmlFor="organization">施設名 *</Label>
-                  <Input
-                    id="organization"
-                    required
-                    value={formData.organization}
-                    onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
-                    placeholder="〇〇クリニック・〇〇病院"
-                    disabled={isSubmitting}
-                  />
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="flex flex-col gap-2">
+                    <Label htmlFor="lp-email">メールアドレス *</Label>
+                    <Input
+                      id="lp-email"
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      placeholder="example@clinic.jp"
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <Label htmlFor="lp-phone">電話番号 *</Label>
+                    <Input
+                      id="lp-phone"
+                      type="tel"
+                      required
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      placeholder="03-1234-5678"
+                      disabled={isSubmitting}
+                    />
+                  </div>
                 </div>
-                <div className="flex flex-col gap-2">
-                  <Label htmlFor="email">メールアドレス *</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="example@clinic.jp"
-                    disabled={isSubmitting}
-                  />
+
+                <div className="flex flex-col gap-3">
+                  <Label className="font-semibold">ご希望の内容にチェックを入れてください</Label>
+                  <div className="space-y-2">
+                    {["機能に関して質問したい(電話orビデオ通話)", "デモをしてほしい(ビデオ通話)", "その他"].map(
+                      (option) => (
+                        <div key={option} className="flex items-center space-x-2 p-2 bg-muted/50 rounded border">
+                          <Checkbox
+                            id={`lp-${option}`}
+                            checked={formData.interests.includes(option)}
+                            onCheckedChange={(checked) => handleCheckboxChange(option, checked as boolean)}
+                            disabled={isSubmitting}
+                            className="border-2 border-gray-400 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+                          />
+                          <Label htmlFor={`lp-${option}`} className="text-sm font-normal cursor-pointer flex-1">
+                            {option}
+                          </Label>
+                        </div>
+                      ),
+                    )}
+                  </div>
                 </div>
+
                 <div className="flex flex-col gap-2">
-                  <Label htmlFor="phone">電話番号</Label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    placeholder="03-1234-5678"
-                    disabled={isSubmitting}
-                  />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <Label htmlFor="message">お問い合わせ内容</Label>
+                  <Label htmlFor="lp-message">自由記入欄</Label>
                   <Textarea
-                    id="message"
+                    id="lp-message"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="ご質問やご要望をお聞かせください"
-                    rows={4}
+                    placeholder="ご質問やご要望がございましたら、こちらにご記入ください。"
+                    rows={3}
                     disabled={isSubmitting}
                   />
                 </div>
+
+                {submitStatus === "success" && (
+                  <div className="p-3 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm">
+                    送信が完了しました。担当者より折り返しご連絡いたします。
+                  </div>
+                )}
+
+                {submitStatus === "error" && (
+                  <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-red-800 text-sm">
+                    {errorMessage}
+                  </div>
+                )}
+
+                <div className="flex items-center space-x-2 p-3 bg-muted/50 rounded border">
+                  <Checkbox
+                    id="lp-privacy-policy"
+                    checked={agreedToPrivacy}
+                    onCheckedChange={(checked) => setAgreedToPrivacy(checked as boolean)}
+                    disabled={isSubmitting}
+                    className="border-2 border-gray-400 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+                  />
+                  <Label htmlFor="lp-privacy-policy" className="text-sm font-normal cursor-pointer flex-1">
+                    <a href="/privacy-policy" target="_blank" className="text-primary underline hover:text-primary/80">
+                      プライバシーポリシー
+                    </a>
+                    に同意して送信する *
+                  </Label>
+                </div>
+
                 <Button
                   type="submit"
                   size="lg"
                   className="w-full bg-[#1e3a5f] hover:bg-[#2c4f7c] text-white"
-                  disabled={isSubmitting}
+                  disabled={
+                    isSubmitting ||
+                    !formData.name ||
+                    !formData.company ||
+                    !formData.email ||
+                    !formData.phone ||
+                    !agreedToPrivacy
+                  }
                 >
                   {isSubmitting ? "送信中..." : "送信する"}
                 </Button>
@@ -224,69 +270,6 @@ export function CTASection() {
           </Card>
         </div>
       </div>
-
-      <Dialog open={showSuccessModal} onOpenChange={setShowSuccessModal}>
-        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle className="text-2xl">お問い合わせ内容の確認</DialogTitle>
-            <DialogDescription>
-              以下の内容で受け付けました。ec-support@kenshin-cloud.com へメールをお送りください。
-            </DialogDescription>
-          </DialogHeader>
-          <div className="flex flex-col gap-4 py-4">
-            <div className="bg-muted p-4 rounded-lg">
-              <div className="flex items-center justify-between mb-2">
-                <p className="text-sm font-semibold text-muted-foreground">送信先</p>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => {
-                    navigator.clipboard.writeText("ec-support@kenshin-cloud.com")
-                  }}
-                >
-                  コピー
-                </Button>
-              </div>
-              <p className="text-lg font-mono">ec-support@kenshin-cloud.com</p>
-            </div>
-            <div className="bg-muted p-4 rounded-lg space-y-3">
-              <div className="flex items-center justify-between">
-                <p className="text-sm font-semibold text-muted-foreground">メール本文</p>
-                <Button variant="outline" size="sm" onClick={handleCopy}>
-                  {copied ? "コピー済み ✓" : "コピー"}
-                </Button>
-              </div>
-              <div className="text-sm space-y-2 whitespace-pre-wrap font-mono bg-background p-3 rounded border">
-                <p>
-                  <strong>【お名前】</strong>
-                </p>
-                <p>{formData.name}</p>
-                <p className="pt-2">
-                  <strong>【施設名・組織名】</strong>
-                </p>
-                <p>{formData.organization}</p>
-                <p className="pt-2">
-                  <strong>【メールアドレス】</strong>
-                </p>
-                <p>{formData.email}</p>
-                <p className="pt-2">
-                  <strong>【電話番号】</strong>
-                </p>
-                <p>{formData.phone || "未入力"}</p>
-                <p className="pt-2">
-                  <strong>【お問い合わせ内容】</strong>
-                </p>
-                <p>{formData.message || "未入力"}</p>
-              </div>
-            </div>
-            <div className="flex gap-3">
-              <Button className="flex-1" onClick={handleCloseModal}>
-                閉じる
-              </Button>
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
     </section>
   )
 }
