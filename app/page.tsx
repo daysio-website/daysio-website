@@ -10,8 +10,7 @@ import Footer from "@/components/footer"
 
 export const metadata = {
   title: "電カル連携×ワンクリック判定で健診業務を効率化｜DAYS-Daidai",
-  description:
-    "description: "手入力の転記ミスをゼロへ。電子カルテ連携とワンクリック自動判定で、健診業務の時間を大幅カット。最短1週間で導入可能なクラウド型健診システム。",",
+  description: "手入力の転記ミスをゼロへ。電子カルテ連携とワンクリック自動判定で、健診業務の時間を大幅カット。最短1週間で導入可能なクラウド型健診システム。",
   alternates: {
     canonical: "https://www.daysio.co.jp/",
   },
