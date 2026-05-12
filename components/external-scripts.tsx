@@ -4,9 +4,11 @@ import { useEffect, useState } from "react"
 import Script from "next/script"
 
 export function ExternalScripts() {
+  const [mounted, setMounted] = useState(false)
   const [isProduction, setIsProduction] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
     // Only load external scripts on the production domain, not in v0 preview
     const hostname = window.location.hostname
     if (hostname === "daysio.co.jp" || hostname === "www.daysio.co.jp" || hostname.endsWith(".vercel.app")) {
@@ -14,7 +16,8 @@ export function ExternalScripts() {
     }
   }, [])
 
-  if (!isProduction) return null
+  // Always return null on server and initial client render to avoid hydration mismatch
+  if (!mounted || !isProduction) return null
 
   return (
     <>

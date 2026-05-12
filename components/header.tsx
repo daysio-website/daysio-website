@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button"
-import { Menu } from "lucide-react"
+import { Menu, LogIn } from "lucide-react"
 import Image from "next/image"
 
 export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
-        <div className="flex items-center">
+      <div className="container mx-auto flex h-14 sm:h-16 items-center justify-between px-4">
+        <div className="flex items-center flex-shrink-0">
           <a href="https://www.daysio.co.jp/">
-            <Image src="/daysio-logo.png" alt="DAYSIO" width={160} height={50} className="h-10 w-auto" />
+            <Image src="/daysio-logo.png" alt="DAYSIO" width={160} height={50} className="h-8 sm:h-10 w-auto" />
           </a>
         </div>
 
@@ -42,8 +42,9 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Button variant="outline" asChild>
+          <Button variant="outline" size="sm" asChild>
             <a href="https://kenshin-cloud.com/mypage/login" target="_blank" rel="noopener noreferrer">
+              <LogIn className="size-4" />
               会員ページログイン
             </a>
           </Button>

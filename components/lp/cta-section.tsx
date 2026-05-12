@@ -85,7 +85,7 @@ export function CTASection() {
   }
 
   return (
-    <section id="contact" className="pt-2 pb-10 sm:pt-4 sm:pb-16 scroll-mt-20">
+    <section id="contact" className="pt-2 pb-10 sm:pt-4 sm:pb-16 scroll-mt-20 px-4">
       <div className="container max-w-5xl mx-auto">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
           <div className="flex flex-col gap-8">
@@ -135,9 +135,9 @@ export function CTASection() {
             </div>
           </div>
           <Card className="border-border/50">
-            <CardContent className="p-8">
+            <CardContent className="p-4 sm:p-8">
               <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-2">
                     <Label htmlFor="lp-name">お名前 *</Label>
                     <Input
@@ -161,7 +161,7 @@ export function CTASection() {
                     />
                   </div>
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-2">
                     <Label htmlFor="lp-email">メールアドレス *</Label>
                     <Input

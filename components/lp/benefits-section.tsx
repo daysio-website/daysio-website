@@ -30,17 +30,17 @@ const benefits = [
 
 export function BenefitsSection() {
   return (
-    <section id="benefits" className="pt-2 pb-20 sm:pt-4 sm:pb-32 bg-muted/20 scroll-mt-20">
+    <section id="benefits" className="pt-2 pb-12 sm:pt-4 sm:pb-32 bg-muted/20 scroll-mt-20 px-4">
       <div className="container max-w-5xl mx-auto">
-        <div className="flex flex-col gap-4 text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+        <div className="flex flex-col gap-3 sm:gap-4 text-center mb-8 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
             DAYS -Daidai- の<br />
             <span className="text-primary">
-              <span className="text-5xl sm:text-6xl">3</span>つ
+              <span className="text-4xl sm:text-5xl sm:text-6xl">3</span>つ
             </span>
             のポイント
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
             DAYS -Daidai-が多くの医療機関に選ばれている理由をご紹介します
           </p>
         </div>

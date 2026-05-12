@@ -1,8 +1,8 @@
 export function Footer() {
   return (
     <footer className="border-t border-border/40 bg-muted/30">
-      <div className="container py-12 max-w-7xl mx-auto">
-        <div className="grid gap-8 sm:grid-cols-2">
+      <div className="container py-8 sm:py-12 max-w-7xl mx-auto px-4">
+        <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2">
           <div className="flex flex-col gap-4 items-center text-center">
             <a
               href="https://www.daysio.co.jp/"
@@ -38,8 +38,8 @@ export function Footer() {
             </nav>
           </div>
         </div>
-        <div className="mt-12 pt-8 border-t border-border/40">
-          <p className="text-sm text-muted-foreground text-center">© 2025 株式会社DAYSIO. All rights reserved.</p>
+        <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-border/40">
+          <p className="text-xs sm:text-sm text-muted-foreground text-center">© 2025 株式会社DAYSIO. All rights reserved.</p>
         </div>
       </div>
     </footer>
