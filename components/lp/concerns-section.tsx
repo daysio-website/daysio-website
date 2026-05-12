@@ -35,7 +35,7 @@ const concerns = [
 
 export function ConcernsSection() {
   return (
-    <section className="py-20 sm:py-24 bg-muted/30">
+    <section className="py-12 sm:py-20 sm:py-24 bg-muted/30 px-4">
       <div className="container max-w-6xl mx-auto">
         <div className="flex flex-col gap-4 text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
@@ -49,11 +49,11 @@ export function ConcernsSection() {
           </h2>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-3 sm:gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-5">
           {concerns.map((concern, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-6 shadow-sm border border-border/50 flex flex-col items-center text-center gap-4 hover:shadow-md transition-shadow"
+              className={`bg-white rounded-xl p-4 sm:p-6 shadow-sm border border-border/50 flex flex-col items-center text-center gap-2 sm:gap-4 hover:shadow-md transition-shadow ${index === concerns.length - 1 ? "col-span-2 sm:col-span-2 lg:col-span-1 max-w-[50%] sm:max-w-none mx-auto lg:mx-0" : ""}`}
             >
               {concern.image ? (
                 <div className="flex h-14 w-14 items-center justify-center">
@@ -70,8 +70,8 @@ export function ConcernsSection() {
                   {/* <concern.icon className="h-7 w-7 text-primary" /> */}
                 </div>
               )}
-              <h3 className="text-base font-bold text-foreground whitespace-nowrap">{concern.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{concern.description}</p>
+              <h3 className="text-sm sm:text-base font-bold text-foreground">{concern.title}</h3>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed hidden sm:block">{concern.description}</p>
             </div>
           ))}
         </div>

@@ -33,49 +33,79 @@ const solutions = [
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="pt-2 pb-20 sm:pt-4 sm:pb-32 scroll-mt-20">
+    <section id="features" className="pt-2 pb-12 sm:pt-4 sm:pb-32 scroll-mt-20 px-4">
       <div className="container max-w-5xl mx-auto">
-        <div className="flex flex-col gap-4 text-center mb-8">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
+        <div className="flex flex-col gap-3 sm:gap-4 text-center mb-6 sm:mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-balance">
             DAYS-Daidai- が<br />
             <span className="text-primary">すべてのお悩みを解決</span>
             します！
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
             健診業務の課題を、クラウド型健診システムでまとめて解消します。
           </p>
         </div>
 
         <div className="border border-border rounded-lg overflow-hidden">
-          {/* Header Row */}
-          <div className="grid grid-cols-2">
-            <div className="bg-gray-100 border-r border-border p-4 text-center">
-              <span className="text-sm font-bold text-gray-700">Before</span>
+          {/* Desktop: 2 column layout */}
+          <div className="hidden sm:block">
+            {/* Header Row */}
+            <div className="grid grid-cols-2">
+              <div className="bg-gray-100 border-r border-border p-4 text-center">
+                <span className="text-sm font-bold text-gray-700">Before</span>
+              </div>
+              <div className="bg-[#1e3a5f] p-4 text-center">
+                <span className="text-sm font-bold text-white">After</span>
+              </div>
             </div>
-            <div className="bg-[#1e3a5f] p-4 text-center">
-              <span className="text-sm font-bold text-white">After</span>
-            </div>
+
+            {/* Content Rows */}
+            {solutions.map((item, index) => (
+              <div
+                key={index}
+                className={`grid grid-cols-2 ${index !== solutions.length - 1 ? "border-b border-border" : ""}`}
+              >
+                {/* Before Column */}
+                <div className="bg-white border-r border-border p-6">
+                  <h3 className="text-base font-bold text-gray-700 mb-2">{item.problem}</h3>
+                  <p className="text-sm text-gray-600">{item.problemDetail}</p>
+                </div>
+
+                {/* After Column */}
+                <div className="bg-gray-50 p-6">
+                  <h3 className="text-base font-bold text-[#1e3a5f] mb-2">{item.solution}</h3>
+                  <p className="text-sm text-foreground/70">{item.solutionDetail}</p>
+                </div>
+              </div>
+            ))}
           </div>
 
-          {/* Content Rows */}
-          {solutions.map((item, index) => (
-            <div
-              key={index}
-              className={`grid grid-cols-2 ${index !== solutions.length - 1 ? "border-b border-border" : ""}`}
-            >
-              {/* Before Column */}
-              <div className="bg-white border-r border-border p-6">
-                <h3 className="text-base font-bold text-gray-700 mb-2">{item.problem}</h3>
-                <p className="text-sm text-gray-600">{item.problemDetail}</p>
+          {/* Mobile: Stacked layout */}
+          <div className="sm:hidden">
+            {solutions.map((item, index) => (
+              <div
+                key={index}
+                className={`${index !== solutions.length - 1 ? "border-b border-border" : ""}`}
+              >
+                {/* Before */}
+                <div className="bg-gray-100 px-4 py-2">
+                  <span className="text-xs font-bold text-gray-700">Before</span>
+                </div>
+                <div className="bg-white p-4">
+                  <h3 className="text-sm font-bold text-gray-700 mb-1">{item.problem}</h3>
+                  <p className="text-xs text-gray-600">{item.problemDetail}</p>
+                </div>
+                {/* After */}
+                <div className="bg-[#1e3a5f] px-4 py-2">
+                  <span className="text-xs font-bold text-white">After</span>
+                </div>
+                <div className="bg-gray-50 p-4">
+                  <h3 className="text-sm font-bold text-[#1e3a5f] mb-1">{item.solution}</h3>
+                  <p className="text-xs text-foreground/70">{item.solutionDetail}</p>
+                </div>
               </div>
-
-              {/* After Column */}
-              <div className="bg-gray-50 p-6">
-                <h3 className="text-base font-bold text-[#1e3a5f] mb-2">{item.solution}</h3>
-                <p className="text-sm text-foreground/70">{item.solutionDetail}</p>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
