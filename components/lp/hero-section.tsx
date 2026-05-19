@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 import { useState } from "react"
 
 export function HeroSection() {
@@ -86,10 +87,13 @@ export function HeroSection() {
                 <span className="text-[10px] sm:text-xs font-medium">以上！</span>
               </div>
               <div className="border border-gray-200 rounded-xl p-1 sm:p-2 bg-gray-50">
-                <img
+                <Image
                   src={images[currentImageIndex].src || "/placeholder.svg"}
                   alt={images[currentImageIndex].alt}
-                  className="rounded-lg shadow-2xl w-full"
+                  width={600}
+                  height={400}
+                  priority={currentImageIndex === 0}
+                  className="rounded-lg shadow-2xl w-full h-auto"
                 />
               </div>
               <div className="flex justify-center gap-2 mt-4 sm:absolute sm:-bottom-8 sm:left-1/2 sm:-translate-x-1/2 sm:mb-0">
@@ -122,9 +126,11 @@ export function HeroSection() {
           <div className="flex justify-start items-center gap-4 sm:gap-8 overflow-x-auto pb-2 scrollbar-hide">
             {logos.map((logo, index) => (
               <div key={index} className="flex-shrink-0 inline-flex items-center">
-                <img
+                <Image
                   src={logo.src || "/placeholder.svg"}
                   alt={logo.alt}
+                  width={100}
+                  height={50}
                   className={
                     logo.alt === "国際医療福祉大学 成田病院" || logo.alt === "両国きたむら整形外科"
                       ? "h-6 sm:h-8 w-auto object-contain"
