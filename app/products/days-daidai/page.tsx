@@ -123,8 +123,25 @@ export default function DaysDaidaiPage() {
         </div>
       </section>
 
+      {/* Smart Kenshin Cloud Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-6">
+              スマート健診のクラウドサービスとして選ばれる理由
+            </h2>
+            <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              DAYS-Daidai- は、健診業務をクラウドで完結するスマート健診システムです。
+              受付・予約・結果管理・帳票出力をWeb上で一元化し、専用サーバーの設置不要で
+              即日利用を開始できます。インターネット環境とChromeがあれば、
+              どの端末からでもリアルタイムで業務が進められます。
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Features & Pricing Section */}
-      <section id="features" className="py-20 bg-gray-50 scroll-mt-24">
+      <section id="features" className="py-20 bg-white scroll-mt-24">
         <div className="container mx-auto px-6">
           <div className="mb-16">
             <div className="inline-block bg-[#0ea5e9] text-white px-4 py-2 rounded-full text-sm font-bold mb-6">
@@ -519,7 +536,7 @@ export default function DaysDaidaiPage() {
           <div className="inline-block bg-[#0ea5e9] text-white px-4 py-2 rounded-full text-sm font-bold mb-6">
             多言語
           </div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-4">多言語対応について</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-4">多言語対応の健診システムとして海外展開・訪日外国人対応をサポート</h2>
           <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl leading-relaxed mb-12">
             "日本式"の健診は、海外でも高品質な医療サービスとして高く評価されています。DAYS-Daidai-は日本式健診を海外でも提供できるよう、多言語対応・ローカライズ・検査機器連携などを総合的にサポートします。
           </p>
