@@ -50,7 +50,7 @@ export function HeroSection() {
                 <span className="block text-xl sm:text-3xl lg:text-4xl">{'健診業務の作業時間を最大85%削減。'}</span>
               </h1>
               <div className="mt-3 sm:mt-4 flex flex-col gap-1">
-                <p className="text-sm sm:text-lg leading-relaxed text-gray-800">{'判定コメント自動入力・報告書作成の自動化で、作業時間を最大85%削減。月額9,800円からご利用可能。'}</p>
+                <p className="text-sm sm:text-lg leading-relaxed text-gray-800">{'判定コメント自動入力・報告書作成の自動化で、作業時間を最大85%削減。'}</p>
                 <p className="text-sm sm:text-lg font-bold text-[#1e3a5f] mt-1">
                   <span className="relative inline-block">
                     <span className="relative z-10">{'月額9,800円からご利用可能！'}</span>
