@@ -3,6 +3,11 @@ import { Check } from "lucide-react"
 import DaysDaidaiHeader from "@/components/days-daidai-header"
 import DaysDaidaiFooter from "@/components/days-daidai-footer"
 
+export const metadata = {
+  title: "クラウド健診システムの料金プラン｜0円から始めるDAYS-Daidai - DAYSIO",
+  description: "DAYS-Daidai-の料金プランを比較。フリープラン（¥0/月）・安心サポートプラン（¥9,900/月）・グローバルプラン（¥29,700/月）の3プランから選択。多言語対応・他システム連携はグローバルプランで対応。",
+};
+
 export default function PricingPage() {
   return (
     <div className="min-h-screen bg-white">
