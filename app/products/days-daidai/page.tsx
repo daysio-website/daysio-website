@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ArrowRight, Shield, Cloud, CheckCircle } from "lucide-react"
@@ -61,9 +62,12 @@ export default function DaysDaidaiPage() {
             </div>
 
             <div className="relative flex justify-center items-center">
-              <img
+              <Image
                 src="/images/hero-medical-staff.png"
                 alt="医師と看護師がタブレットで健診データを確認"
+                width={600}
+                height={450}
+                priority
                 className="w-3/4 rounded-xl border-4 border-[#4AA8C7]"
               />
             </div>
@@ -119,8 +123,25 @@ export default function DaysDaidaiPage() {
         </div>
       </section>
 
+      {/* Smart Kenshin Cloud Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-6">
+              スマート健診のクラウドサービスとして選ばれる理由
+            </h2>
+            <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              DAYS-Daidai- は、健診業務をクラウドで完結するスマート健診システムです。
+              受付・予約・結果管理・帳票出力をWeb上で一元化し、専用サーバーの設置不要で
+              即日利用を開始できます。インターネット環境とChromeがあれば、
+              どの端末からでもリアルタイムで業務が進められます。
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Features & Pricing Section */}
-      <section id="features" className="py-20 bg-gray-50 scroll-mt-24">
+      <section id="features" className="py-20 bg-white scroll-mt-24">
         <div className="container mx-auto px-6">
           <div className="mb-16">
             <div className="inline-block bg-[#0ea5e9] text-white px-4 py-2 rounded-full text-sm font-bold mb-6">
@@ -229,9 +250,11 @@ export default function DaysDaidaiPage() {
                     <p className="text-sm md:text-base text-gray-600">健診データ収集 iPadアプリ</p>
                   </div>
                   <div className="flex-shrink-0 w-full md:w-48 order-1 md:order-2">
-                    <img
+                    <Image
                       src="/images/kenshin.jpg"
                       alt="KENSHIN Plus - 医療従事者がiPadを使用している様子"
+                      width={300}
+                      height={200}
                       className="w-full h-40 md:h-32 object-cover rounded-lg shadow-md"
                     />
                   </div>
@@ -248,9 +271,11 @@ export default function DaysDaidaiPage() {
                     <p className="text-sm md:text-base text-gray-600">再検査・２次検査フォローアップ業務支援システム</p>
                   </div>
                   <div className="flex-shrink-0 w-full md:w-48 order-1 md:order-2">
-                    <img
+                    <Image
                       src="/images/nijiken.jpg"
                       alt="NIJIKEN Tracker - 医療機器とタブレット操作"
+                      width={300}
+                      height={200}
                       className="w-full h-40 md:h-32 object-cover rounded-lg shadow-md"
                     />
                   </div>
@@ -511,7 +536,7 @@ export default function DaysDaidaiPage() {
           <div className="inline-block bg-[#0ea5e9] text-white px-4 py-2 rounded-full text-sm font-bold mb-6">
             多言語
           </div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-4">多言語対応について</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-4">多言語対応の健診システムとして海外展開・訪日外国人対応をサポート</h2>
           <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl leading-relaxed mb-12">
             "日本式"の健診は、海外でも高品質な医療サービスとして高く評価されています。DAYS-Daidai-は日本式健診を海外でも提供できるよう、多言語対応・ローカライズ・検査機器連携などを総合的にサポートします。
           </p>
@@ -538,7 +563,7 @@ export default function DaysDaidaiPage() {
             <Card className="p-8 border-gray-200 hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold text-[#0f172a] mb-4">海外進出支援（国内医療機関向け）</h3>
               <p className="text-gray-600 leading-relaxed">
-                日本の医療機関が海外に進出する際も、現地言語に対応した健診システムを導入することで、スムーズな運用とスタッフ教育が可能です。
+                日本の医療機関が海外に進出��る際も、現地言語に対応した健診システムを導入することで、スムーズな運用とスタッフ教育が可能です。
               </p>
             </Card>
           </div>

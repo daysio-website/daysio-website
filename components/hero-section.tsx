@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 import { ArrowRight, RefreshCcw, Hospital, DollarSign, ChevronLeft, ChevronRight } from "lucide-react"
 import { useState } from "react"
 
@@ -84,9 +85,12 @@ export default function HeroSection() {
           <div className="lg:col-span-2 relative max-w-2xl mx-auto w-full">
             <div className="border border-sky-300 bg-sky-100 rounded-2xl p-4 shadow-lg">
               <div className="relative aspect-video bg-white rounded-lg overflow-hidden">
-                <img
+                <Image
                   src={images[currentImageIndex].src || "/placeholder.svg"}
                   alt={images[currentImageIndex].alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  priority={currentImageIndex === 0}
                   className="w-full h-full object-contain transition-opacity duration-300"
                 />
 
