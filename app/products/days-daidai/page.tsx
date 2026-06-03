@@ -149,7 +149,7 @@ export default function DaysDaidaiPage() {
             </div>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-4">DAYS-Daidai-3つのプラン</h2>
             <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl leading-relaxed">
-              初期費��0円の「フリープラン」から、スタンダードな「安心サポートプラン」、上位の「グローバルプラン」まで、ご利用ニーズに合わせてお選びいただけます。
+              初期費���0円の「フリープラン」から、スタンダードな「安心サポートプラン」、上位の「グローバルプラン」まで、ご利用ニーズに合わせてお選びいただけます。
             </p>
           </div>
 
@@ -562,9 +562,9 @@ export default function DaysDaidaiPage() {
             {/* Card 3: 海外進出支援 */}
             <Card className="p-8 border-gray-200 hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold text-[#0f172a] mb-4">海外進出支援（国内医療機関向け）</h3>
-              <p className="text-gray-600 leading-relaxed">
-                日本の医療機関が海外に進出��る際も、現地言語に対応した健診システムを導入することで、スムーズな運用とスタッフ教育が可能です。
-              </p>
+  <p className="text-gray-600 leading-relaxed">
+    日本の医療機関が海外に進出する際も、現地言語に対応した健診システムを導入することで、スムーズな運用とスタッフ教育が可能です。
+  </p>
             </Card>
           </div>
         </div>
