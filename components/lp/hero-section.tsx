@@ -9,11 +9,11 @@ export function HeroSection() {
 
   const images = [
     {
-      src: "/images/e3-82-b9-e3-82-af-e3-83-aa-e3-83-bc-e3-83-b3-e3-82-b7-e3-83-a7-e3-83-83-e3-83-88-202026-01-14-20102924.png",
+      src: "/images/exam-results-input.png",
       alt: "検査結果入力画面",
     },
     {
-      src: "/images/e3-82-b9-e3-82-af-e3-83-aa-e3-83-bc-e3-83-b3-e3-82-b7-e3-83-a7-e3-83-83-e3-83-88-202026-01-14-20103213.png",
+      src: "/images/calendar-reservation.png",
       alt: "カレンダー・予約管理画面",
     },
   ]
