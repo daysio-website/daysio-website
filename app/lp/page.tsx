@@ -9,7 +9,7 @@ import { LPFooter } from "@/components/lp/footer"
 export const metadata = {
   title: "作業時間85%削減のクラウド健診システム｜DAYS-Daidai - DAYSIO",
   description:
-    "電カル連携・ワンクリック判定で作業時間を最大85%削減。月額9,800円から始められるクラウド健診システム。550以上の医療機関・健診施設で導入実績あり。",
+    "初期費用0円・最短1週間で導入可能。電カル連携・多言語対応・ペーパーレス化を一括実現。国内外550施設以上の導入実績、利用継続率95%以上。まずは無料相談から。",
   verification: {
     google: "ssdFuLrw1GeeA_DBkDg0wog06NRR-sYpdLkiTHZvt1w",
   },
