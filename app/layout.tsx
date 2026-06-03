@@ -32,6 +32,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja" className="scroll-smooth">
+      <head>
+        <meta charSet="utf-8" />
+      </head>
       <body className={`font-sans ${geistSans.variable} ${geistMono.variable}`}>
         <noscript>
           <iframe

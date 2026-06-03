@@ -149,7 +149,7 @@ export default function DaysDaidaiPage() {
             </div>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-4">DAYS-Daidai-3つのプラン</h2>
             <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl leading-relaxed">
-              初期費用0円の「フリープラン」から、スタンダードな「安心サポートプラン」、上位の「グローバルプラン」まで、ご利用ニーズに合わせてお選びいただけます。
+              初期費��0円の「フリープラン」から、スタンダードな「安心サポートプラン」、上位の「グローバルプラン」まで、ご利用ニーズに合わせてお選びいただけます。
             </p>
           </div>
 
@@ -537,8 +537,8 @@ export default function DaysDaidaiPage() {
             多言語
           </div>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-4">多言語対応の健診システムとして海外展開・訪日外国人対応をサポート</h2>
-          <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl leading-relaxed mb-12">
-            "日本式"の健診は、海外でも高品質な医療サービスとして高く評価されています。DAYS-Daidai-は日本式健診を海外でも提供できるよう、多言語対応・ローカライズ・検査機器連携などを総合的にサポートします。
+<p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl leading-relaxed mb-12">
+            "日本式"の健診は、海外でも高品質な医療サービスとして高く評価されています。DAYS-Daidai-は日本式健診を海外でも提供できるよう、多言語対応・ローカライズ・検査機器連携などを総合的にサポートします。現在、中国・ロンドン・ミャンマー・ベトナムのクリニックに採用されています。
           </p>
 
           {/* Cards for multilingual support features */}
