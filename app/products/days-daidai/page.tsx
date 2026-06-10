@@ -124,17 +124,21 @@ export default function DaysDaidaiPage() {
       </section>
 
       {/* Smart Kenshin Cloud Section */}
-      <section className="py-20 bg-gray-50">
+      <section id="smart-kenshin-cloud" className="py-20 bg-gray-50 scroll-mt-24">
         <div className="container mx-auto px-6">
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-6">
-              スマート健診のクラウドサービスとして選ばれる理由
+              スマート健診 クラウドサービスとして選ばれる理由
             </h2>
             <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              DAYS-Daidai- は、健診業務をクラウドで完結するスマート健診システムです。
+              DAYS-Daidai- は、健診業務をクラウドで完結するスマート健診 クラウドシステムです。
               受付・予約・結果管理・帳票出力をWeb上で一元化し、専用サーバーの設置不要で
               即日利用を開始できます。インターネット環境とChromeがあれば、
               どの端末からでもリアルタイムで業務が進められます。
+            </p>
+            <p className="text-base text-gray-500 max-w-3xl mx-auto mt-4 leading-relaxed">
+              スマート健診 クラウド導入実績は国内外550施設以上。利用継続率95%以上の信頼性で、
+              中小規模の健診センターから大型病院まで幅広くご利用いただいています。
             </p>
           </div>
         </div>

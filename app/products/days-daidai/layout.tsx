@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "クラウド健診システム｜台数無制限・多言語対応 - DAYSIO",
-  description: "ブラウザだけで即日使えるクラウド健診システム。台数無制限・多言語対応・60社以上との他システム連携実績。フリープラン（0円）から始められます。",
+  title: "スマート健診クラウドシステム DAYS-Daidai｜台数無制限・多言語対応 - DAYSIO",
+  description: "DAYS-Daidaiはスマート健診クラウドシステムです。ブラウザだけで即日利用開始。台数無制限・多言語対応・60社以上との連携実績。初期費用0円のフリープランあり。",
 }
 
 export default function DaysDaidaiLayout({
