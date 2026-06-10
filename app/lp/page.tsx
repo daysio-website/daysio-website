@@ -5,6 +5,7 @@ import { BenefitsSection } from "@/components/lp/benefits-section"
 import { FeaturesSection } from "@/components/lp/features-section"
 import { CTASection } from "@/components/lp/cta-section"
 import { LPFooter } from "@/components/lp/footer"
+import { StickyCTA } from "@/components/lp/sticky-cta"
 
 export const metadata = {
   title: "作業時間85%削減のクラウド健診システム｜DAYS-Daidai - DAYSIO",
@@ -29,6 +30,7 @@ export default function LPPage() {
         <FeaturesSection />
         <CTASection />
       </main>
+      <StickyCTA />
       <LPFooter />
     </>
   )
