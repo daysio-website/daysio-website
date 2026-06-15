@@ -49,11 +49,11 @@ export default function DaysDaidaiPage() {
                 DAYS-Daidai-とは
               </div>
               <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-[#0f172a] mb-6 leading-tight">
-                Webブラウザですぐ使える
+                スマート健診クラウドシステム
                 <br />
-                台数無制限の
+                ｜Webブラウザですぐ使える
                 <br />
-                健診クラウドシステム
+                台数無制限
               </h1>
               <p className="text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed">
                 DAYS-Daidai-
@@ -232,7 +232,7 @@ export default function DaysDaidaiPage() {
             </Link>
           </div>
 
-          {/* 自社関連製品セクション */}
+          {/* 自社���連製品セクション */}
           <div id="products" className="mb-16 scroll-mt-24 pt-8">
             <div className="inline-block bg-[#0ea5e9] text-white px-4 py-2 rounded-full text-sm font-bold mb-6">
               自社関連製品
