@@ -257,11 +257,11 @@ export default function ContactSection() {
               <div className="space-y-3">
                 <div className="text-muted-foreground">
                   <div className="font-medium">本社所在地</div>
-                  <div>東京都豊島区南池袋2-30-12 BITビル</div>
+                  <div>〒163-1435 東京都新宿区西新宿3-20-2 東京オペラシティタワー 35階</div>
                 </div>
                 <Button asChild className="w-full bg-slate-800 hover:bg-slate-700">
                   <a
-                    href="https://www.google.com/maps/search/東京都豊島区南池袋2丁目30-12+BITビル/@35.7280,139.7108,17z"
+                    href="https://www.google.com/maps/search/東京都新宿区西新宿3-20-2+東京オペラシティタワー/@35.6836,139.6862,17z"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -276,10 +276,8 @@ export default function ContactSection() {
               <div className="space-y-4">
                 <div>
                   <div className="font-medium">本社</div>
-                  <div className="text-muted-foreground">〒171-0022</div>
-                  <div className="text-muted-foreground">東京都豊島区南池袋2-30-12 BITビル</div>
-                  <div className="text-muted-foreground">TEL: 03-3985-9256</div>
-                  <div className="text-muted-foreground">FAX: 03-3985-9268</div>
+                  <div className="text-muted-foreground">〒163-1435</div>
+                  <div className="text-muted-foreground">東京都新宿区西新宿3-20-2 東京オペラシティタワー 35階</div>
                 </div>
               </div>
             </div>

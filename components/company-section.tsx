@@ -68,27 +68,15 @@ export function CompanySection() {
             <Card className="h-full">
               <CardContent className="p-6 h-full flex flex-col">
                 <h3 className="text-xl font-bold mb-4">事業所</h3>
-                <div className="grid md:grid-cols-2 gap-6 flex-1">
+                <div className="flex-1">
                   <div>
-                    <div className="font-medium mb-2">本社</div>
-                    <div className="text-muted-foreground">
+                    <div className="text-lg font-bold mb-3">本社</div>
+                    <div className="text-lg text-muted-foreground leading-relaxed">
                       〒163-1435
                       <br />
                       東京都新宿区西新宿3-20-2
                       <br />
                       東京オペラシティタワー 35階
-                    </div>
-                  </div>
-                  <div>
-                    <div className="font-medium mb-2">池袋オフィス</div>
-                    <div className="text-muted-foreground">
-                      〒171-0022
-                      <br />
-                      東京都豊島区南池袋2-30-12 BITビル
-                      <br />
-                      TEL: 03-3985-9256
-                      <br />
-                      FAX: 03-3985-9268
                     </div>
                   </div>
                 </div>
