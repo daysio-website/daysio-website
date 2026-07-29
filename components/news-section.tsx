@@ -58,7 +58,7 @@ export function NewsSection() {
                   <p className="font-semibold mb-2">【本件に関するお問い合わせ】</p>
                   <p className="mb-1">〒163-1435</p>
                   <p className="mb-2">東京都新宿区西新宿3-20-2 東京オペラシティタワー35F</p>
-                  <p>お問い合わせ窓口：03-5333-6750</p>
+                  <p>お問い合わせ窓口：03-3985-9256</p>
                 </div>
               </div>
             </CardContent>
