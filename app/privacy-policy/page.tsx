@@ -152,7 +152,8 @@ export default function PrivacyPolicyPage() {
             </section>
 
             <div className="text-right mt-12 space-y-1">
-              <p className="text-muted-foreground">制定　2026年8月1日</p>
+              <p className="text-muted-foreground">制定　2025年10月1日</p>
+              <p className="text-muted-foreground">改定　2026年8月1日</p>
               <p className="font-semibold mt-4">株式会社ＤＡＹＳＩＯ</p>
               <p className="text-muted-foreground">代表取締役社長　山下 時彦</p>
             </div>
