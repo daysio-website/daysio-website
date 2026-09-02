@@ -34,7 +34,7 @@ export default function PricingPage() {
               {/* Free Plan */}
               <Card className="p-8 bg-[#f5f0e8] border-none text-center">
                 <p className="text-sm text-gray-600 mb-2">まずは試してみたい方に</p>
-                <h2 className="text-2xl font-bold text-[#0f172a] mb-4">非課金フリープラン</h2>
+                <h2 className="text-2xl font-bold text-[#0f172a] mb-4">お試しコース</h2>
                 <div className="mb-6">
                   <p className="text-4xl font-bold text-[#0f172a]">¥ 0/月(税込)</p>
                   <p className="text-sm text-gray-600 mt-2">初期費用 0 円</p>
@@ -42,10 +42,10 @@ export default function PricingPage() {
 
                 <div className="text-left mb-6 space-y-2">
                   <p className="text-sm text-gray-700">
-                    無料で操作性をご体験いただけます。多忙な医療機関様でも使いやすい直感的で分かりやすい操作性により、健診業務をサポートいたします。
+                    期間限定で無料で操作性をご体験いただけます。多忙な医療機関様でも使いやすい直感的で分かりやすい操作性により、健診業務をサポートいたします。
                   </p>
                   <p className="text-sm text-gray-700">
-                    なお、非課金フリープランでは、サポートセンターのご利用に一部制限がございます。操作方法などご不明な点は「DAYS
+                    なお、お試しコースでは、サポートセンターのご利用に一部制限がございます。操作方法などご不明な点は「DAYS
                     Daidai 操作ガイド」をご確認ください。
                   </p>
                   <p className="text-xs text-gray-600">
@@ -96,7 +96,7 @@ export default function PricingPage() {
                     variant="outline"
                     className="w-full border-[#0ea5e9] text-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white bg-transparent"
                   >
-                    非課金フリープランを申し込む
+                    お試しコースを申し込む
                   </Button>
                 */}
                 {/* </CHANGE> */}
