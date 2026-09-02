@@ -42,7 +42,7 @@ export default function PricingPage() {
 
                 <div className="text-left mb-6 space-y-2">
                   <p className="text-sm text-gray-700">
-                    期間限定で無料で操作性をご体験いただけます。多忙な医療機関様でも使いやすい直感的で分かりやすい操作性により、健診業務をサポートいたします。
+                    期間限定＆無料にて操作性をご体験いただけます。多忙な医療機関様でも使いやすい直感的で分かりやすい操作性により、健診業務をサポートいたします。
                   </p>
                 </div>
 
