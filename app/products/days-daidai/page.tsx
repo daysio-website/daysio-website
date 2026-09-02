@@ -153,7 +153,7 @@ export default function DaysDaidaiPage() {
             </div>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-4">DAYS-Daidai-3つのプラン</h2>
             <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl leading-relaxed">
-              初期費用0円の「フリープラン」から、スタンダードな「安心サポートプラン」、上位の「グローバルプラン」まで、ご利用ニーズに合わせてお選びいただけます。
+              初期費用0円の「お試しプラン」から、スタンダードな「安心サポートプラン」、上位の「グローバルプラン」まで、ご利用ニーズに合わせてお選びいただけます。
             </p>
           </div>
 
@@ -162,7 +162,7 @@ export default function DaysDaidaiPage() {
               {/* Free Plan */}
               <Card className="p-8 bg-[#f5f0e8] border-gray-200 shadow-lg">
                 <p className="text-sm text-gray-600 mb-4 text-center">まずは試してみたい方に</p>
-                <h3 className="text-2xl font-bold text-[#0f172a] mb-6 text-center">お試しコース</h3>
+                <h3 className="text-2xl font-bold text-[#0f172a] mb-6 text-center">お試しプラン</h3>
                 <div className="mb-6 text-center">
                   <p className="text-4xl font-bold text-[#0f172a]">
                     ¥ 0<span className="text-lg font-normal">/月(税込)</span>

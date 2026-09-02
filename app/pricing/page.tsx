@@ -5,7 +5,7 @@ import DaysDaidaiFooter from "@/components/days-daidai-footer"
 
 export const metadata = {
   title: "クラウド健診システムの料金プラン｜0円から始めるDAYS-Daidai - DAYSIO",
-  description: "DAYS-Daidai-の料金プランを比較。フリープラン（¥0/月）・安心サポートプラン（¥9,900/月）・グローバルプラン（¥29,700/月）の3プランから選択。多言語対応・他システム連携はグローバルプランで対応。",
+  description: "DAYS-Daidai-の料金プランを比較。お試しプラン（¥0/月）・安心サポートプラン（¥9,900/月）・グローバルプラン（¥29,700/月）の3プランから選択。多言語対応・他システム連携はグローバルプランで対応。",
 };
 
 export default function PricingPage() {
@@ -34,7 +34,7 @@ export default function PricingPage() {
               {/* Free Plan */}
               <Card className="p-8 bg-[#f5f0e8] border-none text-center">
                 <p className="text-sm text-gray-600 mb-2">まずは試してみたい方に</p>
-                <h2 className="text-2xl font-bold text-[#0f172a] mb-4">お試しコース</h2>
+                <h2 className="text-2xl font-bold text-[#0f172a] mb-4">お試しプラン</h2>
                 <div className="mb-6">
                   <p className="text-4xl font-bold text-[#0f172a]">¥ 0/月(税込)</p>
                   <p className="text-sm text-gray-600 mt-2">初期費用 0 円</p>
@@ -86,7 +86,7 @@ export default function PricingPage() {
                     variant="outline"
                     className="w-full border-[#0ea5e9] text-[#0ea5e9] hover:bg-[#0ea5e9] hover:text-white bg-transparent"
                   >
-                    お試しコースを申し込む
+                    お試しプランを申し込む
                   </Button>
                 */}
                 {/* </CHANGE> */}
