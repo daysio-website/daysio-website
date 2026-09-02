@@ -55,7 +55,7 @@ export function CompanySection() {
                   </div>
                   <div className="grid grid-cols-3 gap-4">
                     <div className="font-medium">資本金</div>
-                    <div className="col-span-2">1億200万円</div>
+                    <div className="col-span-2">1億円</div>
                   </div>
                   <div className="grid grid-cols-3 gap-4">
                     <div className="font-medium">事業内容</div>
