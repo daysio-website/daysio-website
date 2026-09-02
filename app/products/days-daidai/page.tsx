@@ -541,7 +541,7 @@ export default function DaysDaidaiPage() {
             <Card className="p-8 border-gray-200 hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold text-[#0f172a] mb-4">多言語対応</h3>
               <p className="text-gray-600 leading-relaxed">
-                英語の帳票は標準提供、国内��展開しているクラウド型健診システムの機能はそのままに、さまざまな言語へ翻訳・ローカライズが可能です。
+                英語の帳票は標準提供、国内で展開しているクラウド型健診システムの機能はそのままに、さまざまな言語へ翻訳・ローカライズが可能です。
               </p>
             </Card>
 
