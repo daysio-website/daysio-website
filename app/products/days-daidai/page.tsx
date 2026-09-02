@@ -153,7 +153,7 @@ export default function DaysDaidaiPage() {
             </div>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-4">DAYS-Daidai-3つのプラン</h2>
             <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl leading-relaxed">
-              初期費用0円の「フリープラン」から、スタンダードな���安心サポートプラン」、上位の「グローバルプラン」まで、ご利用ニーズに合わせてお選びいただけます。
+              初期費用0円の「フリープラン」から、スタンダードな�����安心サポートプラン」、上位の「グローバルプラン」まで、ご利用ニーズに合わせてお選びいただけます。
             </p>
           </div>
 
@@ -172,16 +172,6 @@ export default function DaysDaidaiPage() {
                 <div className="space-y-2 text-sm text-gray-600">
                   <p>
                     期間限定で無料で操作性をご体験いただけます。多忙な医療機関様でも使いやすい直感的で分かりやすい操作性により、健診業務をサポートいたします。
-                  </p>
-                  <p>
-                    なお、お試しコースでは、サポートセンターのご利用に一部制限がございます。操作方法などご不明な点は「DAYS
-                    Daidai 操作ガイド」をご確認ください。
-                  </p>
-                  <p className="text-xs">
-                    ※「DAYS Daidai 操作ガイド」は、DAYS-Daidai-画面右下の「？」アイコンからアクセス可能です。
-                  </p>
-                  <p className="text-xs">
-                    ※2年目以降もデータの保管をご希望の場合は、「安心サポートプラン」へのご契約が必要となります。
                   </p>
                 </div>
               </Card>

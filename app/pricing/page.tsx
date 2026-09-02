@@ -44,16 +44,6 @@ export default function PricingPage() {
                   <p className="text-sm text-gray-700">
                     期間限定で無料で操作性をご体験いただけます。多忙な医療機関様でも使いやすい直感的で分かりやすい操作性により、健診業務をサポートいたします。
                   </p>
-                  <p className="text-sm text-gray-700">
-                    なお、お試しコースでは、サポートセンターのご利用に一部制限がございます。操作方法などご不明な点は「DAYS
-                    Daidai 操作ガイド」をご確認ください。
-                  </p>
-                  <p className="text-xs text-gray-600">
-                    ※「DAYS Daidai 操作ガイド」は、DAYS-Daidai-画面右下の「？」アイコンからアクセス可能です。
-                  </p>
-                  <p className="text-xs text-gray-600">
-                    ※2年目以降もデータの保管をご希望の場合は、「安心サポートプラン」へのご契約が必要となります。
-                  </p>
                 </div>
 
                 <div className="text-left space-y-2 mb-6">
