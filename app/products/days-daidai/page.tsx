@@ -153,7 +153,7 @@ export default function DaysDaidaiPage() {
             </div>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-4">DAYS-Daidai-3つのプラン</h2>
             <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl leading-relaxed">
-              初期費用0円の「フリープラン」から、スタンダードな���安心サポートプラン」、上位の「グローバルプラン」まで、ご利用ニーズに合わせてお選びいただけます。
+              初期費用0円の「フリープラン」から、スタンダードな「安心サポートプラン」、上位の「グローバルプラン」まで、ご利用ニーズに合わせてお選びいただけます。
             </p>
           </div>
 
@@ -172,16 +172,6 @@ export default function DaysDaidaiPage() {
                 <div className="space-y-2 text-sm text-gray-600">
                   <p>
                     期間限定で無料で操作性をご体験いただけます。多忙な医療機関様でも使いやすい直感的で分かりやすい操作性により、健診業務をサポートいたします。
-                  </p>
-                  <p>
-                    なお、お試しコースでは、サポートセンターのご利用に一部制限がございます。操作方法などご不明な点は「DAYS
-                    Daidai 操作ガイド」をご確認ください。
-                  </p>
-                  <p className="text-xs">
-                    ※「DAYS Daidai 操作ガイド」は、DAYS-Daidai-画面右下の「？」アイコンからアクセス可能です。
-                  </p>
-                  <p className="text-xs">
-                    ※2年目以降もデータの保管をご希望の場合は、「安心サポートプラン」へのご契約が必要となります。
                   </p>
                 </div>
               </Card>
@@ -459,7 +449,7 @@ export default function DaysDaidaiPage() {
                     name: "ジャパン・メディカル・カンパニー",
                     vals: ["", "", "", "", "", "", "", "", "〇", "", "", ""],
                   },
-                  { name: "株式��社タニタ", vals: ["", "△", "△", "", "", "", "", "", "", "", "", ""] },
+                  { name: "株式会社タニタ", vals: ["", "△", "△", "", "", "", "", "", "", "", "", ""] },
                   { name: "ディーメック株式会社", vals: ["", "", "", "", "", "", "", "", "", "〇", "", ""] },
                   { name: "テクマトリックス株式会社", vals: ["", "", "", "", "", "", "", "", "〇", "", "", ""] },
                   { name: "株式会社DNPハイパーテック", vals: ["", "", "", "", "", "", "〇", "", "", "", "", ""] },
@@ -540,9 +530,9 @@ export default function DaysDaidaiPage() {
           <div className="inline-block bg-[#0ea5e9] text-white px-4 py-2 rounded-full text-sm font-bold mb-6">
             多言語
           </div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-4">��言語対応の健診システムとして海外展開・訪日外国人対応をサポート</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-4">多言語対応の健診システムとして海外展開・訪日外国人対応をサポート</h2>
 <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl leading-relaxed mb-12">
-            "日本式"の健診は、海外でも高品質な医療サービスとして高く評価されています。DAYS-Daidai-は日本���健診を海外でも提供できるよう、多言語対応・ローカライズ・検査機器連携などを総合的にサポートします。現在、中国・ロンドン・ミャンマー・ベトナムのクリニックに採用されています。
+            "日本式"の健診は、海外でも高品質な医療サービスとして高く評価されています。DAYS-Daidai-は日本の健診を海外でも提供できるよう、多言語対応・ローカライズ・検査機器連携などを総合的にサポートします。現在、中国・ロンドン・ミャンマー・ベトナムのクリニックに採用されています。
           </p>
 
           {/* Cards for multilingual support features */}
@@ -551,7 +541,7 @@ export default function DaysDaidaiPage() {
             <Card className="p-8 border-gray-200 hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold text-[#0f172a] mb-4">多言語対応</h3>
               <p className="text-gray-600 leading-relaxed">
-                英語の帳票は標準提供、国内で展開しているクラウド型健診システムの機能はそのままに、さまざまな言語へ翻訳・ローカライズが可能です。
+                英語の帳票は標準���供、国内で展開しているクラウド型健診システムの機能はそのままに、さまざまな言語へ翻訳・ローカライズが可能です。
               </p>
             </Card>
 
