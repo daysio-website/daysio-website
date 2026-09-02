@@ -73,11 +73,7 @@ export default function HeroSection() {
               <div className="text-center">
                 <DollarSign className="h-8 w-8 text-primary mx-auto mb-2" />
                 <div className="text-2xl font-bold text-primary">0円</div>
-                <div className="text-sm text-muted-foreground">
-                  初期費用
-                  <br />
-                  (フリープラン)
-                </div>
+                <div className="text-sm text-muted-foreground">初期費用</div>
               </div>
             </div>
           </div>

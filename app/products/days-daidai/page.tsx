@@ -153,7 +153,7 @@ export default function DaysDaidaiPage() {
             </div>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-4">DAYS-Daidai-3つのプラン</h2>
             <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl leading-relaxed">
-              初期費���0円の「フリープラン」から、スタンダードな「安心サポートプラン」、上位の「グローバルプラン」まで、ご利用ニーズに合わせてお選びいただけます。
+              初期費用0円の「フリープラン」から、スタンダードな���安心サポートプラン」、上位の「グローバルプラン」まで、ご利用ニーズに合わせてお選びいただけます。
             </p>
           </div>
 
@@ -162,7 +162,7 @@ export default function DaysDaidaiPage() {
               {/* Free Plan */}
               <Card className="p-8 bg-[#f5f0e8] border-gray-200 shadow-lg">
                 <p className="text-sm text-gray-600 mb-4 text-center">まずは試してみたい方に</p>
-                <h3 className="text-2xl font-bold text-[#0f172a] mb-6 text-center">非課金フリープラン</h3>
+                <h3 className="text-2xl font-bold text-[#0f172a] mb-6 text-center">お試しコース</h3>
                 <div className="mb-6 text-center">
                   <p className="text-4xl font-bold text-[#0f172a]">
                     ¥ 0<span className="text-lg font-normal">/月(税込)</span>
@@ -171,10 +171,10 @@ export default function DaysDaidaiPage() {
                 </div>
                 <div className="space-y-2 text-sm text-gray-600">
                   <p>
-                    無料で操作性をご体験いただけます。多忙な医療機関様でも使いやすい直感的で分かりやすい操作性により、健診業務をサポートいたします。
+                    期間限定で無料で操作性をご体験いただけます。多忙な医療機関様でも使いやすい直感的で分かりやすい操作性により、健診業務をサポートいたします。
                   </p>
                   <p>
-                    なお、非課金フリープランでは、サポートセンターのご利用に一部制限がございます。操作方法などご不明な点は「DAYS
+                    なお、お試しコースでは、サポートセンターのご利用に一部制限がございます。操作方法などご不明な点は「DAYS
                     Daidai 操作ガイド」をご確認ください。
                   </p>
                   <p className="text-xs">
@@ -459,7 +459,7 @@ export default function DaysDaidaiPage() {
                     name: "ジャパン・メディカル・カンパニー",
                     vals: ["", "", "", "", "", "", "", "", "〇", "", "", ""],
                   },
-                  { name: "株式会社タニタ", vals: ["", "△", "△", "", "", "", "", "", "", "", "", ""] },
+                  { name: "株式��社タニタ", vals: ["", "△", "△", "", "", "", "", "", "", "", "", ""] },
                   { name: "ディーメック株式会社", vals: ["", "", "", "", "", "", "", "", "", "〇", "", ""] },
                   { name: "テクマトリックス株式会社", vals: ["", "", "", "", "", "", "", "", "〇", "", "", ""] },
                   { name: "株式会社DNPハイパーテック", vals: ["", "", "", "", "", "", "〇", "", "", "", "", ""] },
@@ -540,9 +540,9 @@ export default function DaysDaidaiPage() {
           <div className="inline-block bg-[#0ea5e9] text-white px-4 py-2 rounded-full text-sm font-bold mb-6">
             多言語
           </div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-4">多言語対応の健診システムとして海外展開・訪日外国人対応をサポート</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0f172a] mb-4">��言語対応の健診システムとして海外展開・訪日外国人対応をサポート</h2>
 <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl leading-relaxed mb-12">
-            "日本式"の健診は、海外でも高品質な医療サービスとして高く評価されています。DAYS-Daidai-は日本式健診を海外でも提供できるよう、多言語対応・ローカライズ・検査機器連携などを総合的にサポートします。現在、中国・ロンドン・ミャンマー・ベトナムのクリニックに採用されています。
+            "日本式"の健診は、海外でも高品質な医療サービスとして高く評価されています。DAYS-Daidai-は日本���健診を海外でも提供できるよう、多言語対応・ローカライズ・検査機器連携などを総合的にサポートします。現在、中国・ロンドン・ミャンマー・ベトナムのクリニックに採用されています。
           </p>
 
           {/* Cards for multilingual support features */}
