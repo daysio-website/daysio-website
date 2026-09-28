@@ -42,9 +42,9 @@ export function CompanySection() {
                       （東証プライム上場：9438）
                       <div className="mt-2">
                         <img
-                          src="/shamei_combi_main_large.gif"
-                          alt="エムティーアイグループ"
-                          className="h-6 w-32 object-contain"
+                          src="/mti-logo.png"
+                          alt="株式会社エムティーアイ"
+                          className="h-6 w-auto object-contain"
                         />
                       </div>
                     </div>
